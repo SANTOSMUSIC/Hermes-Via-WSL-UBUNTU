@@ -22,11 +22,11 @@ kanban.db-*
 *.pid
 *.sock
 
-# Logs
-logs/
-*.log
-gateway-starts.log
-gateway_state.json
+# Logs - DITRACK untuk audit trail aktivitas
+# logs/
+# *.log
+# gateway-starts.log
+# gateway_state.json
 
 # Cache
 cache/
@@ -108,8 +108,8 @@ cron/
 memories/
 
 # Profile-specific ignores
+# profiles/*/logs/
 profiles/*/cache/
-profiles/*/sessions/
 profiles/*/state/
 profiles/*/shared/
 profiles/*/pastes/
@@ -124,7 +124,7 @@ profiles/*/config.yaml.bak-*
 profiles/*/audio_cache/
 profiles/*/image_cache/
 profiles/*/backups/
-profiles/*/logs/
+# profiles/*/logs/ - DITRACK untuk audit trail
 profiles/*/models_dev_cache.json
 profiles/*/models_dev_cache.etag
 profiles/*/provider_models_cache.json

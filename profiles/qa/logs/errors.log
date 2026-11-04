@@ -1,0 +1,1746 @@
+2026-10-22 18:34:25,009 WARNING cli: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-10-22 18:37:05,326 WARNING [20261022_183424_5b2b23] agent.tool_executor: Tool terminal returned error (0.00s): {"output": "", "exit_code": -1, "error": "Foreground command uses '&' backgrounding. Re-send WITHOUT the '&' as terminal(command=\"<cmd>\", background=true) — add notify_on_complete=true for bounded j
+2026-10-22 18:38:24,707 WARNING [20261022_183424_5b2b23] agent.tool_executor: Tool browser_exec returned error (1.55s): {"error": "The local browser could not be started: Chrome exited early (exit code: 127) without writing DevToolsActivePort\n(also tried parsing stderr) Chrome exited before providing DevTools URL\nChr
+2026-10-22 18:38:34,328 WARNING [20261022_183424_5b2b23] agent.tool_executor: Tool read_file returned error (0.00s): {"error": "Access denied: /home/rafi_ansf/.hermes/kanban/boards/proyek-uji/workspaces/t_2f087228/frontend/.env is a secret-bearing environment file and cannot be read to prevent credential leakage. If
+2026-10-22 18:39:08,631 WARNING [20261022_183424_5b2b23] agent.tool_executor: Tool terminal returned error (0.06s): {"output": "", "exit_code": -15, "error": null, "exit_code_meaning": "Command terminated by signal 15: SIGTERM (terminated — kill/timeout or shutdown requested it to stop)"}
+2026-10-22 20:20:43,545 WARNING cli: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-10-22 20:20:59,441 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+2026-10-22 20:21:07,013 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+2026-10-22 20:21:07,028 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 1/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)
+2026-10-22 20:21:07,028 WARNING [20261022_202043_5331a7] agent.conversation_loop: Retrying API call in 2.204705783787677s (attempt 1/3) thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode policy=default error=Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+2026-10-22 20:21:11,910 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 4s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 4s)'}}
+2026-10-22 20:21:11,917 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 2/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 4s)
+2026-10-22 20:21:11,917 WARNING [20261022_202043_5331a7] agent.conversation_loop: Retrying API call in 5.350433348721029s (attempt 2/3) thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode policy=default error=Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 4s)'}}
+2026-10-22 20:21:19,887 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 8s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 8s)'}}
+2026-10-22 20:21:19,899 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 3/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 8s)
+2026-10-22 20:21:19,902 WARNING [20261022_202043_5331a7] agent.conversation_loop: Provider unavailable (overloaded) — auto-recovery cycle 1/5, retrying in 17s thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode
+2026-10-22 20:21:39,359 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 16s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 16s)'}}
+2026-10-22 20:21:39,365 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 1/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 16s)
+2026-10-22 20:21:39,366 WARNING [20261022_202043_5331a7] agent.conversation_loop: Retrying API call in 2.278374804977822s (attempt 1/3) thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode policy=default error=Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 16s)'}}
+2026-10-22 20:21:43,785 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 12s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 12s)'}}
+2026-10-22 20:21:43,796 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 2/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 12s)
+2026-10-22 20:21:43,796 WARNING [20261022_202043_5331a7] agent.conversation_loop: Retrying API call in 4.383928664675001s (attempt 2/3) thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode policy=default error=Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 12s)'}}
+2026-10-22 20:21:50,227 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 6s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 6s)'}}
+2026-10-22 20:21:50,239 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 3/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 6s)
+2026-10-22 20:21:50,240 WARNING [20261022_202043_5331a7] agent.conversation_loop: Provider unavailable (overloaded) — auto-recovery cycle 2/5, retrying in 33s thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode
+2026-10-22 20:22:31,106 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+2026-10-22 20:22:46,969 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+2026-10-22 20:22:46,980 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 1/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)
+2026-10-22 20:22:46,980 WARNING [20261022_202043_5331a7] agent.conversation_loop: Retrying API call in 2.398296832814208s (attempt 1/3) thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode policy=default error=Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+2026-10-22 20:22:58,292 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+2026-10-22 20:22:58,299 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 1/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)
+2026-10-22 20:22:58,303 WARNING [20261022_202043_5331a7] agent.conversation_loop: Retrying API call in 2.18587981180223s (attempt 1/3) thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode policy=default error=Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+2026-10-22 20:23:25,230 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+2026-10-22 20:23:25,231 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 1/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)
+2026-10-22 20:23:25,231 WARNING [20261022_202043_5331a7] agent.conversation_loop: Retrying API call in 2.8658887751478206s (attempt 1/3) thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode policy=default error=Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+2026-10-22 20:23:30,654 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 4s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 4s)'}}
+2026-10-22 20:23:30,655 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 2/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 4s)
+2026-10-22 20:23:30,655 WARNING [20261022_202043_5331a7] agent.conversation_loop: Retrying API call in 5.336464573775585s (attempt 2/3) thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode policy=default error=Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 4s)'}}
+2026-10-22 20:23:41,098 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 8s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 8s)'}}
+2026-10-22 20:23:43,118 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 3/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 8s)
+2026-10-22 20:23:43,120 WARNING [20261022_202043_5331a7] agent.conversation_loop: Provider unavailable (overloaded) — auto-recovery cycle 1/5, retrying in 17s thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode
+2026-10-22 20:24:03,161 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 16s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 16s)'}}
+2026-10-22 20:24:03,173 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 1/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 16s)
+2026-10-22 20:24:03,174 WARNING [20261022_202043_5331a7] agent.conversation_loop: Retrying API call in 2.8444572303752844s (attempt 1/3) thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode policy=default error=Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 16s)'}}
+2026-10-22 20:24:08,194 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 11s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 11s)'}}
+2026-10-22 20:24:08,206 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 2/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 11s)
+2026-10-22 20:24:08,206 WARNING [20261022_202043_5331a7] agent.conversation_loop: Retrying API call in 5.524061900005368s (attempt 2/3) thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode policy=default error=Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 11s)'}}
+2026-10-22 20:24:15,830 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 4s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 4s)'}}
+2026-10-22 20:24:15,843 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 3/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 4s)
+2026-10-22 20:24:15,844 WARNING [20261022_202043_5331a7] agent.conversation_loop: Provider unavailable (overloaded) — auto-recovery cycle 2/5, retrying in 33s thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode
+2026-10-22 20:25:15,126 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+2026-10-22 20:25:17,561 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 1/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)
+2026-10-22 20:25:17,561 WARNING [20261022_202043_5331a7] agent.conversation_loop: Retrying API call in 2.762043525108062s (attempt 1/3) thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode policy=default error=Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+2026-10-22 20:25:22,818 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 8s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 8s)'}}
+2026-10-22 20:25:22,831 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 2/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 8s)
+2026-10-22 20:25:22,832 WARNING [20261022_202043_5331a7] agent.conversation_loop: Retrying API call in 4.9201100068257055s (attempt 2/3) thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode policy=default error=Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 8s)'}}
+2026-10-22 20:25:29,853 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 1s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 1s)'}}
+2026-10-22 20:25:29,866 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 3/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 1s)
+2026-10-22 20:25:29,867 WARNING [20261022_202043_5331a7] agent.conversation_loop: Provider unavailable (overloaded) — auto-recovery cycle 1/5, retrying in 15s thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode
+2026-10-22 20:25:47,539 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 16s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 16s)'}}
+2026-10-22 20:25:47,550 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 1/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 16s)
+2026-10-22 20:25:47,550 WARNING [20261022_202043_5331a7] agent.conversation_loop: Retrying API call in 2.6349327798741116s (attempt 1/3) thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode policy=default error=Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 16s)'}}
+2026-10-22 20:25:52,369 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 12s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 12s)'}}
+2026-10-22 20:25:52,382 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 2/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 12s)
+2026-10-22 20:25:52,382 WARNING [20261022_202043_5331a7] agent.conversation_loop: Retrying API call in 5.586339657109491s (attempt 2/3) thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode policy=default error=Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 12s)'}}
+2026-10-22 20:26:00,005 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 4s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 4s)'}}
+2026-10-22 20:26:00,019 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 3/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 4s)
+2026-10-22 20:26:00,021 WARNING [20261022_202043_5331a7] agent.conversation_loop: Provider unavailable (overloaded) — auto-recovery cycle 2/5, retrying in 31s thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode
+2026-10-22 20:27:04,517 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+2026-10-22 20:27:07,552 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 1/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)
+2026-10-22 20:27:07,553 WARNING [20261022_202043_5331a7] agent.conversation_loop: Retrying API call in 2.3276579218645677s (attempt 1/3) thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode policy=default error=Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+2026-10-22 20:27:12,352 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 8s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 8s)'}}
+2026-10-22 20:27:12,360 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 2/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 8s)
+2026-10-22 20:27:12,360 WARNING [20261022_202043_5331a7] agent.conversation_loop: Retrying API call in 4.418322213988277s (attempt 2/3) thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode policy=default error=Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 8s)'}}
+2026-10-22 20:27:18,980 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)'}}
+2026-10-22 20:27:18,993 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 3/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2s)
+2026-10-22 20:27:18,995 WARNING [20261022_202043_5331a7] agent.conversation_loop: Provider unavailable (overloaded) — auto-recovery cycle 1/5, retrying in 17s thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode
+2026-10-22 20:27:39,480 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 16s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 16s)'}}
+2026-10-22 20:27:39,492 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 1/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 16s)
+2026-10-22 20:27:39,492 WARNING [20261022_202043_5331a7] agent.conversation_loop: Retrying API call in 2.1770767188575118s (attempt 1/3) thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode policy=default error=Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 16s)'}}
+2026-10-22 20:27:43,716 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 12s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 12s)'}}
+2026-10-22 20:27:43,730 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 2/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 12s)
+2026-10-22 20:27:43,730 WARNING [20261022_202043_5331a7] agent.conversation_loop: Retrying API call in 5.9589631326077255s (attempt 2/3) thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode policy=default error=Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 12s)'}}
+2026-10-22 20:27:51,754 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 4s)'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - {'error': {'message': '[nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 4s)'}}
+2026-10-22 20:27:51,765 WARNING [20261022_202043_5331a7] agent.conversation_loop: API call failed (attempt 3/3) error_type=InternalServerError thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode summary=HTTP 503: [nvidia/nvidia/nemotron-3-ultra-550b-a55b] [429]: {"status":429,"title":"Too Many Requests"} (reset after 4s)
+2026-10-22 20:27:51,766 WARNING [20261022_202043_5331a7] agent.conversation_loop: Provider unavailable (overloaded) — auto-recovery cycle 2/5, retrying in 33s thread=Thread-4 (_chat_run_agent):139835728713408 provider=custom base_url=http://localhost:20128/v1 model=hermes-kode
+2026-10-22 20:28:42,937 WARNING [20261022_202043_5331a7] agent.tool_executor: Tool terminal returned error (0.13s): {"output": "", "exit_code": -15, "error": null, "exit_code_meaning": "Command terminated by signal 15: SIGTERM (terminated — kill/timeout or shutdown requested it to stop)"}
+2026-10-26 08:02:58,103 WARNING cli: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-10-26 08:03:50,327 WARNING [20261026_080257_692c8d] agent.tool_executor: Tool terminal returned error (0.09s): {"output": "", "exit_code": 1, "error": null, "exit_code_meaning": "No matches found (not an error)"}
+2026-10-26 08:04:36,907 WARNING [20261026_080257_692c8d] agent.tool_executor: Tool terminal returned error (0.09s): {"output": "", "exit_code": -15, "error": null, "exit_code_meaning": "Command terminated by signal 15: SIGTERM (terminated — kill/timeout or shutdown requested it to stop)"}
+2026-10-26 08:04:49,272 WARNING [20261026_080257_692c8d] agent.tool_executor: Tool terminal returned error (0.06s): {"output": "", "exit_code": -15, "error": null, "exit_code_meaning": "Command terminated by signal 15: SIGTERM (terminated — kill/timeout or shutdown requested it to stop)"}
+2026-10-26 08:04:50,965 WARNING [20261026_080257_692c8d] agent.tool_executor: Tool terminal returned error (0.09s): {"output": "", "exit_code": 1, "error": null, "exit_code_meaning": "No matches found (not an error)"}
+2026-10-26 14:44:09,076 WARNING cli: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-03 15:00:43,026 WARNING cli: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-03 19:29:34,671 WARNING cli: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-03 19:29:35,986 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 401 - {'error': {'message': 'Invalid API key', 'type': 'authentication_error', 'code': 'invalid_api_key'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key', 'type': 'authentication_error', 'code': 'invalid_api_key'}}
+2026-11-03 19:29:35,989 WARNING [20261103_192934_277bec] agent.conversation_loop: API call failed (attempt 1/3, not retryable) error_type=AuthenticationError thread=Thread-4 (_chat_run_agent):123251468531392 provider=custom base_url=http://localhost:20128/v1 model=hermes-hemat summary=HTTP 401: Invalid API key
+2026-11-03 19:29:36,045 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 401 - {'error': {'message': 'Invalid API key', 'type': 'authentication_error', 'code': 'invalid_api_key'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key', 'type': 'authentication_error', 'code': 'invalid_api_key'}}
+2026-11-03 19:29:36,046 WARNING [20261103_192934_277bec] agent.conversation_loop: API call failed (attempt 1/3, not retryable) error_type=AuthenticationError thread=Thread-4 (_chat_run_agent):123251468531392 provider=custom base_url=http://localhost:20128/v1/ model=hermes-kode summary=HTTP 401: Invalid API key
+2026-11-03 19:29:36,109 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 401 - {'error': {'message': 'Invalid API key', 'type': 'authentication_error', 'code': 'invalid_api_key'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key', 'type': 'authentication_error', 'code': 'invalid_api_key'}}
+2026-11-03 19:29:36,121 WARNING [20261103_192934_277bec] agent.conversation_loop: API call failed (attempt 1/3, not retryable) error_type=AuthenticationError thread=Thread-4 (_chat_run_agent):123251468531392 provider=custom base_url=http://localhost:20128/v1/ model=hermes-kuat summary=HTTP 401: Invalid API key
+2026-11-03 19:29:36,176 ERROR [20261103_192934_277bec] agent.conversation_loop: Non-retryable client error: Error code: 401 - {'error': {'message': 'Invalid API key', 'type': 'authentication_error', 'code': 'invalid_api_key'}}
+2026-11-03 19:37:00,563 WARNING cli: Background MCP discovery previously exited with no connected servers; retrying discovery thread

@@ -1,0 +1,15 @@
+{
+  "id": "proc_f20860be0679",
+  "command": "cd /home/rafi_ansf/projects/personal-notes/backend && node src/index.js 2>&1",
+  "cwd": "/home/rafi_ansf/projects/personal-notes/backend",
+  "task_id": "default",
+  "owner_task_id": "20261104_132352_fc2ff3",
+  "session_key": "20261104_132352_fc2ff3",
+  "parent_session_id": "20261104_132352_fc2ff3",
+  "started_at": 1793774135.4852817,
+  "exit_code": 0,
+  "completion_reason": "exited",
+  "termination_source": "",
+  "notify_on_complete": false,
+  "output": "Database schema initialized\nServer running on port 3001 (development)\nUnhandled error: connect ECONNREFUSED 127.0.0.1:3308\nPOST /api/auth/register 500 6ms\nShutting down...\nServer stopped\n"
+}

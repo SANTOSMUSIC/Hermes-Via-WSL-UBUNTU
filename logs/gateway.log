@@ -1,0 +1,420 @@
+2026-10-21 19:09:15,103 INFO gateway.control_socket: Gateway control socket listening at /home/rafi_ansf/.hermes/gateway.sock
+2026-10-21 19:09:15,283 INFO gateway.run: Starting Hermes Gateway...
+2026-10-21 19:09:15,287 INFO gateway.run: Session storage: /home/rafi_ansf/.hermes/sessions
+2026-10-21 19:09:15,361 INFO gateway.run: Agent budget: max_iterations=150 (agent.max_turns from config.yaml, else the HERMES_MAX_ITERATIONS bridge)
+2026-10-21 19:09:15,361 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-10-21 19:09:15,492 WARNING gateway.run: No messaging platforms enabled.
+2026-10-21 19:09:15,492 INFO gateway.run: Gateway will continue running for cron job execution.
+2026-10-21 19:09:16,947 INFO gateway.run: Channel directory built: 0 target(s)
+2026-10-21 19:09:18,344 INFO gateway.run: Model context warmed: anthropic/claude-opus-4.6 -> 1000000 tokens (detected)
+2026-10-21 19:09:18,344 INFO gateway.run: Turn machinery warmed in 2.8s (21 tool schema(s) materialized)
+2026-10-21 19:09:18,378 INFO gateway.run: Press Ctrl+C to stop
+2026-10-21 19:09:18,381 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/home/rafi_ansf/.hermes/kanban/.dispatcher.lock)
+2026-10-21 19:09:18,381 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=5 (set kanban.max_in_progress in config.yaml to override)
+2026-10-21 19:09:18,387 INFO gateway.run: Cron scheduler will tick 1 profile(s): ['default']
+2026-10-21 19:09:18,393 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-10-21 19:09:23,382 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-10-21 21:00:42,322 INFO gateway.run: Received SIGTERM as a planned gateway stop — exiting cleanly
+2026-10-21 21:00:42,325 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=340 parent_name=systemd loadavg_1m=0.14
+2026-10-21 21:00:42,402 INFO gateway.run: Stopping gateway...
+2026-10-21 21:00:42,410 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.01s
+2026-10-21 21:00:42,414 INFO gateway.run: Shutdown phase: drain done at +0.01s (drain took 0.00s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0, deferred_at_start=0, deferred_now=0)
+2026-10-21 21:00:42,415 INFO gateway.run: Shutdown phase: all adapters disconnected at +0.01s
+2026-10-21 21:00:42,434 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +0.03s
+2026-10-21 21:00:42,436 INFO gateway.run: Shutdown phase: executor quiesced at +0.03s
+2026-10-21 21:00:42,438 INFO gateway.run: Gateway housekeeping stopped
+2026-10-21 21:00:42,652 INFO gateway.run: Shutdown phase: SessionDB close done at +0.25s
+2026-10-21 21:00:42,672 INFO gateway.run: Gateway stopped (total teardown 0.27s)
+2026-10-22 16:12:51,098 INFO gateway.control_socket: Gateway control socket listening at /home/rafi_ansf/.hermes/gateway.sock
+2026-10-22 16:12:51,195 INFO gateway.run: Starting Hermes Gateway...
+2026-10-22 16:12:51,196 INFO gateway.run: Session storage: /home/rafi_ansf/.hermes/sessions
+2026-10-22 16:12:51,247 INFO gateway.run: Agent budget: max_iterations=150 (agent.max_turns from config.yaml, else the HERMES_MAX_ITERATIONS bridge)
+2026-10-22 16:12:51,247 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-10-22 16:12:51,363 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-10-22 16:12:51,373 WARNING gateway.run: No messaging platforms enabled.
+2026-10-22 16:12:51,373 INFO gateway.run: Gateway will continue running for cron job execution.
+2026-10-22 16:12:52,015 INFO gateway.run: Channel directory built: 0 target(s)
+2026-10-22 16:12:55,439 INFO gateway.run: Model context warmed: anthropic/claude-opus-4.6 -> 1000000 tokens (detected)
+2026-10-22 16:12:55,440 INFO gateway.run: Turn machinery warmed in 4.0s (21 tool schema(s) materialized)
+2026-10-22 16:12:55,449 INFO gateway.run: Press Ctrl+C to stop
+2026-10-22 16:12:55,452 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/home/rafi_ansf/.hermes/kanban/.dispatcher.lock)
+2026-10-22 16:12:55,453 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=5 (set kanban.max_in_progress in config.yaml to override)
+2026-10-22 16:12:55,455 INFO gateway.run: Cron scheduler will tick 1 profile(s): ['default']
+2026-10-22 16:12:55,459 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-10-22 16:13:00,453 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-10-22 17:47:20,477 INFO gateway.run_profile_reconcile: [MULTIPLEX] Now serving profile 'supermaster' (0 adapter(s) connected; control-socket)
+2026-10-22 17:47:23,926 INFO gateway.run_profile_reconcile: [MULTIPLEX] Now serving profile 'backend' (0 adapter(s) connected; control-socket)
+2026-10-22 17:47:26,908 INFO gateway.run_profile_reconcile: [MULTIPLEX] Now serving profile 'frontend' (0 adapter(s) connected; control-socket)
+2026-10-22 17:47:29,799 INFO gateway.run_profile_reconcile: [MULTIPLEX] Now serving profile 'qa' (0 adapter(s) connected; control-socket)
+2026-10-22 17:47:32,766 INFO gateway.run_profile_reconcile: [MULTIPLEX] Now serving profile 'reviewer' (0 adapter(s) connected; control-socket)
+2026-10-22 17:49:25,748 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'reviewer' after config/.env change (0 adapter(s) connected)
+2026-10-22 17:49:25,755 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-10-22 17:51:29,673 INFO gateway.run_profile_reconcile: [MULTIPLEX] Now serving profile 'researcher' (0 adapter(s) connected; control-socket)
+2026-10-22 17:51:31,561 INFO gateway.run_profile_reconcile: [MULTIPLEX] Now serving profile 'writer' (0 adapter(s) connected; control-socket)
+2026-10-22 17:51:55,778 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'researcher' after config/.env change (0 adapter(s) connected)
+2026-10-22 17:51:55,780 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'writer' after config/.env change (0 adapter(s) connected)
+2026-10-22 18:00:15,338 INFO gateway.run: kanban dispatcher [proyek-uji]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-10-22 18:02:25,833 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'backend' after config/.env change (0 adapter(s) connected)
+2026-10-22 18:20:18,712 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[25128]
+2026-10-22 18:20:18,926 INFO gateway.run: kanban dispatcher [proyek-uji]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-10-22 18:34:22,411 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[35338]
+2026-10-22 18:34:22,567 INFO gateway.run: kanban dispatcher [proyek-uji]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-10-22 18:36:26,015 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'qa' after config/.env change (0 adapter(s) connected)
+2026-10-22 18:39:23,319 INFO gateway.run: kanban dispatcher [proyek-uji]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-10-22 18:40:23,377 INFO gateway.run: kanban dispatcher: reaped 2 zombie worker(s), pids=[42297, 45132]
+2026-10-22 19:04:26,953 INFO gateway.run: kanban dispatcher [proyek-uji]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-10-22 19:06:27,249 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[52679]
+2026-10-22 19:13:28,464 INFO gateway.run: kanban dispatcher [proyek-uji]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-10-22 19:50:35,329 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[56131]
+2026-10-22 19:55:36,493 INFO gateway.run: kanban dispatcher [proyek-uji]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-10-22 20:20:40,777 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[70822]
+2026-10-22 20:20:41,011 INFO gateway.run: kanban dispatcher [proyek-uji]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-10-22 20:29:42,559 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[79452]
+2026-10-22 20:29:42,786 INFO gateway.run: kanban dispatcher [proyek-uji]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-10-22 20:32:43,192 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[83094]
+2026-10-22 20:40:56,502 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-10-22 20:52:44,446 INFO gateway.run: Received SIGTERM as a planned gateway stop — exiting cleanly
+2026-10-22 20:52:44,446 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=272 parent_name=systemd loadavg_1m=0.25
+2026-10-22 20:52:44,502 INFO gateway.run: Stopping gateway...
+2026-10-22 20:52:44,507 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.00s
+2026-10-22 20:52:44,512 INFO gateway.run: Shutdown phase: drain done at +0.01s (drain took 0.00s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0, deferred_at_start=0, deferred_now=0)
+2026-10-22 20:52:44,513 INFO gateway.run: Shutdown phase: all adapters disconnected at +0.01s
+2026-10-22 20:52:44,542 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +0.04s
+2026-10-22 20:52:44,545 INFO gateway.run: Gateway housekeeping stopped
+2026-10-22 20:52:44,555 INFO gateway.run: Shutdown phase: executor quiesced at +0.05s
+2026-10-22 20:52:45,022 INFO gateway.run: Shutdown phase: SessionDB close done at +0.52s
+2026-10-22 20:52:45,044 INFO gateway.run: Gateway stopped (total teardown 0.54s)
+2026-10-26 07:48:43,047 INFO gateway.control_socket: Gateway control socket listening at /home/rafi_ansf/.hermes/gateway.sock
+2026-10-26 07:48:44,228 INFO gateway.run: Starting Hermes Gateway...
+2026-10-26 07:48:44,230 INFO gateway.run: Session storage: /home/rafi_ansf/.hermes/sessions
+2026-10-26 07:48:44,286 INFO gateway.run: Agent budget: max_iterations=150 (agent.max_turns from config.yaml, else the HERMES_MAX_ITERATIONS bridge)
+2026-10-26 07:48:44,286 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-10-26 07:48:44,408 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-10-26 07:48:46,885 WARNING gateway.run: No messaging platforms enabled.
+2026-10-26 07:48:46,886 INFO gateway.run: Gateway will continue running for cron job execution.
+2026-10-26 07:48:47,426 INFO gateway.run: Channel directory built: 0 target(s)
+2026-10-26 07:48:48,970 INFO gateway.run: Model context warmed: hermes-kode -> 1000000 tokens (detected)
+2026-10-26 07:48:48,970 INFO gateway.run: Turn machinery warmed in 4.6s (21 tool schema(s) materialized)
+2026-10-26 07:48:48,982 INFO gateway.run: Press Ctrl+C to stop
+2026-10-26 07:48:48,984 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/home/rafi_ansf/.hermes/kanban/.dispatcher.lock)
+2026-10-26 07:48:48,985 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=5 (set kanban.max_in_progress in config.yaml to override)
+2026-10-26 07:48:48,987 INFO gateway.run: Cron scheduler will tick 8 profile(s): ['default', 'backend', 'frontend', 'qa', 'researcher', 'reviewer', 'supermaster', 'writer']
+2026-10-26 07:48:48,994 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-10-26 07:48:53,985 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-10-26 07:51:54,402 INFO gateway.run: kanban dispatcher [proyek-uji]: spawned=2 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-10-26 07:54:19,015 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'frontend' after config/.env change (0 adapter(s) connected)
+2026-10-26 07:56:54,785 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[2795]
+2026-10-26 08:02:55,588 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[2796]
+2026-10-26 08:02:55,666 INFO gateway.run: kanban dispatcher [proyek-uji]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-10-26 08:05:56,066 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[36801]
+2026-10-26 08:05:56,146 INFO gateway.run: kanban dispatcher [proyek-uji]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-10-26 08:06:56,215 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[38919]
+2026-10-26 08:06:56,279 INFO gateway.run: kanban dispatcher [proyek-uji]: spawned=1 reclaimed=0 crashed=1 timed_out=0 promoted=0 auto_blocked=0
+2026-10-26 08:07:56,367 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[39319]
+2026-10-26 08:44:49,246 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'reviewer' after config/.env change (0 adapter(s) connected)
+2026-10-26 08:51:06,322 INFO gateway.run: kanban dispatcher [proyek-uji]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-10-26 08:54:06,528 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[54612]
+2026-10-26 14:25:02,319 INFO gateway.run: kanban dispatcher [proyek-uji]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-10-26 14:32:04,344 INFO gateway.run: kanban dispatcher [proyek-uji]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-10-26 14:33:04,430 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[150257]
+2026-10-26 14:39:05,345 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[164666]
+2026-10-26 14:55:18,646 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'backend' after config/.env change (0 adapter(s) connected)
+2026-10-26 14:56:18,661 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'backend' after config/.env change (0 adapter(s) connected)
+2026-10-26 14:57:18,672 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'frontend' after config/.env change (0 adapter(s) connected)
+2026-10-26 14:57:48,681 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'frontend' after config/.env change (0 adapter(s) connected)
+2026-10-26 14:57:48,687 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'qa' after config/.env change (0 adapter(s) connected)
+2026-10-26 14:57:48,694 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'reviewer' after config/.env change (0 adapter(s) connected)
+2026-10-26 14:58:18,704 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-10-26 15:07:18,750 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'reviewer' after config/.env change (0 adapter(s) connected)
+2026-10-26 15:07:18,757 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-10-26 15:31:18,882 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-10-26 15:31:27,069 INFO gateway.run: Received SIGTERM as a planned gateway stop — exiting cleanly
+2026-10-26 15:31:27,069 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=314 parent_name=systemd loadavg_1m=0.25
+2026-10-26 15:31:27,121 INFO gateway.run: Stopping gateway...
+2026-10-26 15:31:27,128 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.01s
+2026-10-26 15:31:27,130 INFO gateway.run: Shutdown phase: drain done at +0.01s (drain took 0.00s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0, deferred_at_start=0, deferred_now=0)
+2026-10-26 15:31:27,130 INFO gateway.run: Shutdown phase: all adapters disconnected at +0.01s
+2026-10-26 15:31:27,141 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +0.02s
+2026-10-26 15:31:27,142 INFO gateway.run: Shutdown phase: executor quiesced at +0.02s
+2026-10-26 15:31:27,144 INFO gateway.run: Gateway housekeeping stopped
+2026-10-26 15:31:27,475 INFO gateway.run: Shutdown phase: SessionDB close done at +0.35s
+2026-10-26 15:31:27,487 INFO gateway.run: Gateway stopped (total teardown 0.37s)
+2026-10-27 08:10:10,703 INFO gateway.control_socket: Gateway control socket listening at /home/rafi_ansf/.hermes/gateway.sock
+2026-10-27 08:10:11,839 INFO gateway.run: Starting Hermes Gateway...
+2026-10-27 08:10:11,842 INFO gateway.run: Session storage: /home/rafi_ansf/.hermes/sessions
+2026-10-27 08:10:11,906 INFO gateway.run: Agent budget: max_iterations=150 (agent.max_turns from config.yaml, else the HERMES_MAX_ITERATIONS bridge)
+2026-10-27 08:10:11,907 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-10-27 08:10:12,037 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-10-27 08:10:15,743 WARNING gateway.run: No messaging platforms enabled.
+2026-10-27 08:10:15,743 INFO gateway.run: Gateway will continue running for cron job execution.
+2026-10-27 08:10:16,414 INFO gateway.run: Channel directory built: 0 target(s)
+2026-10-27 08:10:17,276 INFO gateway.run: Model context warmed: hermes-kode -> 1000000 tokens (detected)
+2026-10-27 08:10:17,277 INFO gateway.run: Turn machinery warmed in 5.2s (21 tool schema(s) materialized)
+2026-10-27 08:10:17,291 INFO gateway.run: Press Ctrl+C to stop
+2026-10-27 08:10:17,299 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/home/rafi_ansf/.hermes/kanban/.dispatcher.lock)
+2026-10-27 08:10:17,299 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=5 (set kanban.max_in_progress in config.yaml to override)
+2026-10-27 08:10:17,301 INFO gateway.run: Cron scheduler will tick 8 profile(s): ['default', 'backend', 'frontend', 'qa', 'researcher', 'reviewer', 'supermaster', 'writer']
+2026-10-27 08:10:17,310 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-10-27 08:10:22,300 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-10-27 16:00:12,916 INFO gateway.run: Received SIGTERM as a planned gateway stop — exiting cleanly
+2026-10-27 16:00:12,916 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=301 parent_name=systemd loadavg_1m=0.14
+2026-10-27 16:00:13,013 INFO gateway.run: Stopping gateway...
+2026-10-27 16:00:13,021 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.01s
+2026-10-27 16:00:13,025 INFO gateway.run: Shutdown phase: drain done at +0.01s (drain took 0.00s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0, deferred_at_start=0, deferred_now=0)
+2026-10-27 16:00:13,026 INFO gateway.run: Shutdown phase: all adapters disconnected at +0.01s
+2026-10-27 16:00:13,048 INFO gateway.run: Gateway housekeeping stopped
+2026-10-27 16:00:13,047 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +0.03s
+2026-10-27 16:00:13,053 INFO gateway.run: Shutdown phase: executor quiesced at +0.04s
+2026-10-27 16:00:13,341 INFO gateway.run: Shutdown phase: SessionDB close done at +0.33s
+2026-10-27 16:00:13,355 INFO gateway.run: Gateway stopped (total teardown 0.34s)
+2026-10-29 08:23:01,082 INFO gateway.control_socket: Gateway control socket listening at /home/rafi_ansf/.hermes/gateway.sock
+2026-10-29 08:23:02,461 INFO gateway.run: Starting Hermes Gateway...
+2026-10-29 08:23:02,462 INFO gateway.run: Session storage: /home/rafi_ansf/.hermes/sessions
+2026-10-29 08:23:02,520 INFO gateway.run: Agent budget: max_iterations=150 (agent.max_turns from config.yaml, else the HERMES_MAX_ITERATIONS bridge)
+2026-10-29 08:23:02,521 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-10-29 08:23:02,648 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-10-29 08:23:05,551 WARNING gateway.run: No messaging platforms enabled.
+2026-10-29 08:23:05,551 INFO gateway.run: Gateway will continue running for cron job execution.
+2026-10-29 08:23:06,645 INFO gateway.run: Channel directory built: 0 target(s)
+2026-10-29 08:23:07,508 INFO gateway.run: Model context warmed: hermes-kode -> 1000000 tokens (detected)
+2026-10-29 08:23:07,508 INFO gateway.run: Turn machinery warmed in 4.9s (21 tool schema(s) materialized)
+2026-10-29 08:23:07,532 INFO gateway.run: Press Ctrl+C to stop
+2026-10-29 08:23:07,537 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/home/rafi_ansf/.hermes/kanban/.dispatcher.lock)
+2026-10-29 08:23:07,538 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=5 (set kanban.max_in_progress in config.yaml to override)
+2026-10-29 08:23:07,541 INFO gateway.run: Cron scheduler will tick 8 profile(s): ['default', 'backend', 'frontend', 'qa', 'researcher', 'reviewer', 'supermaster', 'writer']
+2026-10-29 08:23:07,551 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-10-29 08:23:12,538 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-10-29 09:22:31,598 INFO gateway.run: curator: curator: auto: no changes; llm: skipped (consolidation off)
+2026-10-29 11:59:16,666 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-10-29 11:59:46,689 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-10-29 12:02:46,726 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-10-29 12:13:16,793 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-10-29 12:13:46,818 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-10-29 13:05:12,585 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-10-29 13:06:44,930 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-10-29 13:54:15,688 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-10-29 13:54:47,073 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'frontend' after config/.env change (0 adapter(s) connected)
+2026-10-29 15:46:18,487 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'frontend' after config/.env change (0 adapter(s) connected)
+2026-10-29 15:46:18,498 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-10-29 15:57:53,595 INFO gateway.run: Received SIGTERM as a planned gateway stop — exiting cleanly
+2026-10-29 15:57:53,595 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=305 parent_name=systemd loadavg_1m=0.18
+2026-10-29 15:57:53,666 INFO gateway.run: Stopping gateway...
+2026-10-29 15:57:53,671 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.01s
+2026-10-29 15:57:53,677 INFO gateway.run: Shutdown phase: drain done at +0.01s (drain took 0.00s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0, deferred_at_start=0, deferred_now=0)
+2026-10-29 15:57:53,677 INFO gateway.run: Shutdown phase: all adapters disconnected at +0.01s
+2026-10-29 15:57:53,726 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +0.06s
+2026-10-29 15:57:53,729 INFO gateway.run: Gateway housekeeping stopped
+2026-10-29 15:57:53,728 INFO gateway.run: Shutdown phase: executor quiesced at +0.06s
+2026-10-29 15:57:54,327 INFO gateway.run: Shutdown phase: SessionDB close done at +0.66s
+2026-10-29 15:57:54,366 INFO gateway.run: Gateway stopped (total teardown 0.70s)
+2026-10-30 08:06:47,191 INFO gateway.control_socket: Gateway control socket listening at /home/rafi_ansf/.hermes/gateway.sock
+2026-10-30 08:06:48,235 INFO gateway.run: Starting Hermes Gateway...
+2026-10-30 08:06:48,236 INFO gateway.run: Session storage: /home/rafi_ansf/.hermes/sessions
+2026-10-30 08:06:48,287 INFO gateway.run: Agent budget: max_iterations=150 (agent.max_turns from config.yaml, else the HERMES_MAX_ITERATIONS bridge)
+2026-10-30 08:06:48,287 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-10-30 08:06:48,397 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-10-30 08:06:50,763 WARNING gateway.run: No messaging platforms enabled.
+2026-10-30 08:06:50,763 INFO gateway.run: Gateway will continue running for cron job execution.
+2026-10-30 08:06:51,319 INFO gateway.run: Channel directory built: 0 target(s)
+2026-10-30 08:06:54,011 INFO gateway.run: Model context warmed: hermes-kode -> 1000000 tokens (detected)
+2026-10-30 08:06:54,012 INFO gateway.run: Turn machinery warmed in 5.6s (21 tool schema(s) materialized)
+2026-10-30 08:06:54,027 INFO gateway.run: Press Ctrl+C to stop
+2026-10-30 08:06:54,034 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/home/rafi_ansf/.hermes/kanban/.dispatcher.lock)
+2026-10-30 08:06:54,035 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=5 (set kanban.max_in_progress in config.yaml to override)
+2026-10-30 08:06:54,038 INFO gateway.run: Cron scheduler will tick 8 profile(s): ['default', 'backend', 'frontend', 'qa', 'researcher', 'reviewer', 'supermaster', 'writer']
+2026-10-30 08:06:54,047 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-10-30 08:06:59,036 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-10-30 08:28:54,137 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 2026-10-30 13:41:18,325 INFO gateway.control_socket: Gateway control socket listening at /home/rafi_ansf/.hermes/gateway.sock
+2026-10-30 13:41:19,437 INFO gateway.run: Starting Hermes Gateway...
+2026-10-30 13:41:19,437 INFO gateway.run: Session storage: /home/rafi_ansf/.hermes/sessions
+2026-10-30 13:41:19,499 INFO gateway.run: Agent budget: max_iterations=150 (agent.max_turns from config.yaml, else the HERMES_MAX_ITERATIONS bridge)
+2026-10-30 13:41:19,499 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-10-30 13:41:19,622 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-10-30 13:41:22,462 WARNING gateway.run: No messaging platforms enabled.
+2026-10-30 13:41:22,465 INFO gateway.run: Gateway will continue running for cron job execution.
+2026-10-30 13:41:23,132 INFO gateway.run: Model context warmed: hermes-kode -> 1000000 tokens (detected)
+2026-10-30 13:41:23,133 INFO gateway.run: Turn machinery warmed in 3.5s (21 tool schema(s) materialized)
+2026-10-30 13:41:23,166 INFO gateway.run: Channel directory built: 0 target(s)
+2026-10-30 13:41:23,181 INFO gateway.run: Press Ctrl+C to stop
+2026-10-30 13:41:23,184 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/home/rafi_ansf/.hermes/kanban/.dispatcher.lock)
+2026-10-30 13:41:23,186 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=5 (set kanban.max_in_progress in config.yaml to override)
+2026-10-30 13:41:23,188 INFO gateway.run: Cron scheduler will tick 8 profile(s): ['default', 'backend', 'frontend', 'qa', 'researcher', 'reviewer', 'supermaster', 'writer']
+2026-10-30 13:41:23,196 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-10-30 13:41:28,186 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-10-30 15:56:06,687 INFO gateway.run: Received SIGTERM as a planned gateway stop — exiting cleanly
+2026-10-30 15:56:06,688 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=244 parent_name=systemd loadavg_1m=0.28
+2026-10-30 15:56:06,741 INFO gateway.run: Stopping gateway...
+2026-10-30 15:56:06,744 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.00s
+2026-10-30 15:56:06,749 INFO gateway.run: Shutdown phase: drain done at +0.01s (drain took 0.00s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0, deferred_at_start=0, deferred_now=0)
+2026-10-30 15:56:06,750 INFO gateway.run: Shutdown phase: all adapters disconnected at +0.01s
+2026-10-30 15:56:06,778 INFO gateway.run: Gateway housekeeping stopped
+2026-10-30 15:56:06,780 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +0.04s
+2026-10-30 15:56:06,780 INFO gateway.run: Shutdown phase: executor quiesced at +0.04s
+2026-10-30 15:56:07,084 INFO gateway.run: Shutdown phase: SessionDB close done at +0.34s
+2026-10-30 15:56:07,097 INFO gateway.run: Gateway stopped (total teardown 0.36s)
+2026-11-02 13:10:25,371 INFO gateway.control_socket: Gateway control socket listening at /home/rafi_ansf/.hermes/gateway.sock
+2026-11-02 13:10:26,416 INFO gateway.run: Starting Hermes Gateway...
+2026-11-02 13:10:26,416 INFO gateway.run: Session storage: /home/rafi_ansf/.hermes/sessions
+2026-11-02 13:10:26,469 INFO gateway.run: Agent budget: max_iterations=150 (agent.max_turns from config.yaml, else the HERMES_MAX_ITERATIONS bridge)
+2026-11-02 13:10:26,469 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-02 13:10:26,573 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-02 13:10:28,956 WARNING gateway.run: No messaging platforms enabled.
+2026-11-02 13:10:28,956 INFO gateway.run: Gateway will continue running for cron job execution.
+2026-11-02 13:10:29,503 INFO gateway.run: Channel directory built: 0 target(s)
+2026-11-02 13:10:30,369 INFO gateway.run: Model context warmed: hermes-kode -> 1000000 tokens (detected)
+2026-11-02 13:10:30,369 INFO gateway.run: Turn machinery warmed in 3.8s (21 tool schema(s) materialized)
+2026-11-02 13:10:30,384 INFO gateway.run: Press Ctrl+C to stop
+2026-11-02 13:10:30,389 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/home/rafi_ansf/.hermes/kanban/.dispatcher.lock)
+2026-11-02 13:10:30,389 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=5 (set kanban.max_in_progress in config.yaml to override)
+2026-11-02 13:10:30,391 INFO gateway.run: Cron scheduler will tick 8 profile(s): ['default', 'backend', 'frontend', 'qa', 'researcher', 'reviewer', 'supermaster', 'writer']
+2026-11-02 13:10:30,400 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-02 13:10:35,390 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-02 19:49:32,165 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-11-02 19:50:13,679 INFO gateway.run_profile_reconcile: [MULTIPLEX] Profile 'supermaster' unserved — 0 adapter(s) stopped and unrouted
+2026-11-02 19:50:13,687 INFO gateway.run_profile_reconcile: [MULTIPLEX] Now serving profile 'supermaster' (0 adapter(s) connected; control-socket)
+2026-11-02 19:51:32,906 INFO gateway.run_profile_reconcile: [MULTIPLEX] Profile 'supermaster' unserved — 0 adapter(s) stopped and unrouted
+2026-11-02 19:51:32,914 INFO gateway.run_profile_reconcile: [MULTIPLEX] Now serving profile 'supermaster' (0 adapter(s) connected; control-socket)
+2026-11-02 19:53:32,083 INFO gateway.run_profile_reconcile: [MULTIPLEX] Profile 'supermaster' unserved — 0 adapter(s) stopped and unrouted
+2026-11-02 19:53:32,091 INFO gateway.run_profile_reconcile: [MULTIPLEX] Now serving profile 'supermaster' (0 adapter(s) connected; control-socket)
+2026-11-02 19:57:32,204 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-11-02 19:58:03,042 INFO gateway.run_profile_reconcile: [MULTIPLEX] Profile 'supermaster' unserved — 0 adapter(s) stopped and unrouted
+2026-11-02 19:58:03,050 INFO gateway.run_profile_reconcile: [MULTIPLEX] Now serving profile 'supermaster' (0 adapter(s) connected; control-socket)
+2026-11-02 19:59:39,369 INFO gateway.run_profile_reconcile: [MULTIPLEX] Profile 'supermaster' unserved — 0 adapter(s) stopped and unrouted
+2026-11-02 19:59:39,377 INFO gateway.run_profile_reconcile: [MULTIPLEX] Now serving profile 'supermaster' (0 adapter(s) connected; control-socket)
+2026-11-02 19:59:56,041 INFO gateway.run_profile_reconcile: [MULTIPLEX] Profile 'supermaster' unserved — 0 adapter(s) stopped and unrouted
+2026-11-02 19:59:56,063 INFO gateway.run_profile_reconcile: [MULTIPLEX] Now serving profile 'supermaster' (0 adapter(s) connected; control-socket)
+2026-11-02 20:02:32,241 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'backend' after config/.env change (0 adapter(s) connected)
+2026-11-02 20:02:32,250 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'frontend' after config/.env change (0 adapter(s) connected)
+2026-11-02 20:02:32,261 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'qa' after config/.env change (0 adapter(s) connected)
+2026-11-02 20:02:32,270 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'researcher' after config/.env change (0 adapter(s) connected)
+2026-11-02 20:02:32,281 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'reviewer' after config/.env change (0 adapter(s) connected)
+2026-11-02 20:02:32,288 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'writer' after config/.env change (0 adapter(s) connected)
+2026-11-02 20:59:25,854 INFO gateway.run: Received SIGTERM as a planned gateway stop — exiting cleanly
+2026-11-02 20:59:25,855 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=272 parent_name=systemd loadavg_1m=0.61
+2026-11-02 20:59:25,900 INFO gateway.run: Stopping gateway...
+2026-11-02 20:59:25,909 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.01s
+2026-11-02 20:59:25,912 INFO gateway.run: Shutdown phase: drain done at +0.01s (drain took 0.00s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0, deferred_at_start=0, deferred_now=0)
+2026-11-02 20:59:25,913 INFO gateway.run: Shutdown phase: all adapters disconnected at +0.01s
+2026-11-02 20:59:25,944 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +0.04s
+2026-11-02 20:59:25,944 INFO gateway.run: Shutdown phase: executor quiesced at +0.04s
+2026-11-02 20:59:25,946 INFO gateway.run: Gateway housekeeping stopped
+2026-11-02 20:59:26,323 INFO gateway.run: Shutdown phase: SessionDB close done at +0.42s
+2026-11-02 20:59:26,336 INFO gateway.run: Gateway stopped (total teardown 0.44s)
+2026-11-03 13:13:06,673 INFO gateway.control_socket: Gateway control socket listening at /home/rafi_ansf/.hermes/gateway.sock
+2026-11-03 13:13:08,045 INFO gateway.run: Starting Hermes Gateway...
+2026-11-03 13:13:08,046 INFO gateway.run: Session storage: /home/rafi_ansf/.hermes/sessions
+2026-11-03 13:13:08,118 INFO gateway.run: Agent budget: max_iterations=150 (agent.max_turns from config.yaml, else the HERMES_MAX_ITERATIONS bridge)
+2026-11-03 13:13:08,119 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-03 13:13:08,262 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-03 13:13:11,315 WARNING gateway.run: No messaging platforms enabled.
+2026-11-03 13:13:11,315 INFO gateway.run: Gateway will continue running for cron job execution.
+2026-11-03 13:13:11,985 INFO gateway.run: Channel directory built: 0 target(s)
+2026-11-03 13:13:14,366 INFO gateway.run: Model context warmed: hermes-kode -> 1000000 tokens (detected)
+2026-11-03 13:13:14,366 INFO gateway.run: Turn machinery warmed in 6.1s (21 tool schema(s) materialized)
+2026-11-03 13:13:14,377 INFO gateway.run: Press Ctrl+C to stop
+2026-11-03 13:13:14,379 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/home/rafi_ansf/.hermes/kanban/.dispatcher.lock)
+2026-11-03 13:13:14,380 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=5 (set kanban.max_in_progress in config.yaml to override)
+2026-11-03 13:13:14,382 INFO gateway.run: Cron scheduler will tick 8 profile(s): ['default', 'backend', 'frontend', 'qa', 'researcher', 'reviewer', 'supermaster', 'writer']
+2026-11-03 13:13:14,389 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-03 13:13:19,380 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-03 14:13:14,628 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-11-03 14:35:44,717 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'researcher' after config/.env change (0 adapter(s) connected)
+2026-11-03 14:38:44,743 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'backend' after config/.env change (0 adapter(s) connected)
+2026-11-03 14:40:14,762 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'frontend' after config/.env change (0 adapter(s) connected)
+2026-11-03 14:52:44,823 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'reviewer' after config/.env change (0 adapter(s) connected)
+2026-11-03 14:52:44,833 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-11-03 15:27:41,580 INFO gateway.run: kanban dispatcher [proyek-uji]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-11-03 15:28:41,646 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[49403]
+2026-11-03 15:30:42,149 INFO gateway.run: kanban dispatcher [default]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-11-03 15:31:42,252 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[50972]
+2026-11-03 15:31:42,323 INFO gateway.run: kanban dispatcher [default]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-11-03 15:32:42,474 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[51429]
+2026-11-03 15:32:42,550 INFO gateway.run: kanban dispatcher [default]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-11-03 15:34:42,818 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[51922]
+2026-11-03 15:44:44,551 INFO gateway.run: kanban dispatcher [default]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-11-03 15:45:44,628 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[56347]
+2026-11-03 15:45:44,779 INFO gateway.run: kanban dispatcher [default]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-11-03 15:46:44,840 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[57005]
+2026-11-03 15:46:44,908 INFO gateway.run: kanban dispatcher [default]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-11-03 15:49:45,115 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[57511]
+2026-11-03 15:51:45,347 INFO gateway.run: kanban dispatcher [default]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-11-03 15:52:45,412 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[59545]
+2026-11-03 15:52:45,522 INFO gateway.run: kanban dispatcher [default]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-11-03 15:54:45,653 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[60102]
+2026-11-03 19:21:04,512 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'backend' after config/.env change (0 adapter(s) connected)
+2026-11-03 19:21:04,517 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'reviewer' after config/.env change (0 adapter(s) connected)
+2026-11-03 19:21:04,525 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-11-03 19:21:34,536 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'frontend' after config/.env change (0 adapter(s) connected)
+2026-11-03 19:27:04,571 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'qa' after config/.env change (0 adapter(s) connected)
+2026-11-03 19:27:04,576 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'researcher' after config/.env change (0 adapter(s) connected)
+2026-11-03 19:27:04,581 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'writer' after config/.env change (0 adapter(s) connected)
+2026-11-03 19:27:34,691 INFO gateway.run_profile_reconcile: [MULTIPLEX] Profile 'supermaster' unserved — 0 adapter(s) stopped and unrouted
+2026-11-03 19:27:38,579 INFO gateway.run_profile_reconcile: [MULTIPLEX] Now serving profile 'supermaster' (0 adapter(s) connected; control-socket)
+2026-11-03 19:36:34,624 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'backend' after config/.env change (0 adapter(s) connected)
+2026-11-03 19:36:34,628 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'frontend' after config/.env change (0 adapter(s) connected)
+2026-11-03 19:36:34,631 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'qa' after config/.env change (0 adapter(s) connected)
+2026-11-03 19:36:34,635 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'researcher' after config/.env change (0 adapter(s) connected)
+2026-11-03 19:36:34,639 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'reviewer' after config/.env change (0 adapter(s) connected)
+2026-11-03 19:36:34,644 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-11-03 19:36:34,647 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'writer' after config/.env change (0 adapter(s) connected)
+2026-11-03 19:39:55,745 INFO gateway.run: SIGUSR1 received (systemctl reload / hermes gateway restart): performing a graceful gateway restart — drain active turns, exit, supervisor relaunches. Not an in-process config reload.
+2026-11-03 19:39:55,797 INFO gateway.run: Stopping gateway for restart...
+2026-11-03 19:39:55,799 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.00s
+2026-11-03 19:39:55,800 INFO gateway.run: Shutdown phase: drain done at +0.00s (drain took 0.00s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0, deferred_at_start=0, deferred_now=0)
+2026-11-03 19:39:55,800 INFO gateway.run: Shutdown phase: all adapters disconnected at +0.00s
+2026-11-03 19:39:55,814 INFO gateway.run: Gateway housekeeping stopped
+2026-11-03 19:39:55,815 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +0.02s
+2026-11-03 19:39:55,815 INFO gateway.run: Shutdown phase: executor quiesced at +0.02s
+2026-11-03 19:39:55,910 INFO gateway.run: Shutdown phase: SessionDB close done at +0.11s
+2026-11-03 19:39:55,913 INFO gateway.run: Gateway stopped (total teardown 0.12s)
+2026-11-03 19:40:04,898 INFO gateway.control_socket: Gateway control socket listening at /home/rafi_ansf/.hermes/gateway.sock
+2026-11-03 19:40:06,110 INFO gateway.run: Starting Hermes Gateway...
+2026-11-03 19:40:06,113 INFO gateway.run: Session storage: /home/rafi_ansf/.hermes/sessions
+2026-11-03 19:40:06,180 INFO gateway.run: Agent budget: max_iterations=150 (agent.max_turns from config.yaml, else the HERMES_MAX_ITERATIONS bridge)
+2026-11-03 19:40:06,180 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-03 19:40:06,315 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-03 19:40:08,093 INFO gateway.run: Model context warmed: hermes-kode -> 262144 tokens (config)
+2026-11-03 19:40:08,369 INFO gateway.run: Turn machinery warmed in 2.0s (21 tool schema(s) materialized)
+2026-11-03 19:40:09,172 WARNING gateway.run: No messaging platforms enabled.
+2026-11-03 19:40:09,173 INFO gateway.run: Gateway will continue running for cron job execution.
+2026-11-03 19:40:09,771 INFO gateway.run: Channel directory built: 0 target(s)
+2026-11-03 19:40:09,795 INFO gateway.run: Press Ctrl+C to stop
+2026-11-03 19:40:09,798 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/home/rafi_ansf/.hermes/kanban/.dispatcher.lock)
+2026-11-03 19:40:09,798 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=5 (set kanban.max_in_progress in config.yaml to override)
+2026-11-03 19:40:09,800 INFO gateway.run: Cron scheduler will tick 8 profile(s): ['default', 'backend', 'frontend', 'qa', 'researcher', 'reviewer', 'supermaster', 'writer']
+2026-11-03 19:40:09,806 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-03 19:40:14,799 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-03 19:50:16,030 INFO gateway.run: kanban dispatcher [baseline-test]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-11-03 19:51:16,188 INFO gateway.run: kanban dispatcher [baseline-test]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-11-03 20:00:17,542 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[120050]
+2026-11-03 20:05:18,255 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[119441]
+2026-11-03 20:57:29,694 INFO gateway.run: Received SIGTERM as a planned gateway stop — exiting cleanly
+2026-11-03 20:57:29,697 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=333 parent_name=systemd loadavg_1m=0.92
+2026-11-03 20:57:29,809 INFO gateway.run: Stopping gateway...
+2026-11-03 20:57:29,824 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.01s
+2026-11-03 20:57:29,828 INFO gateway.run: Shutdown phase: drain done at +0.02s (drain took 0.00s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0, deferred_at_start=0, deferred_now=0)
+2026-11-03 20:57:29,829 INFO gateway.run: Shutdown phase: all adapters disconnected at +0.02s
+2026-11-03 20:57:29,862 INFO gateway.run: Gateway housekeeping stopped
+2026-11-03 20:57:29,875 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +0.07s
+2026-11-03 20:57:29,878 INFO gateway.run: Shutdown phase: executor quiesced at +0.07s
+2026-11-03 20:57:30,752 INFO gateway.run: Shutdown phase: SessionDB close done at +0.94s
+2026-11-03 20:57:30,768 INFO gateway.run: Gateway stopped (total teardown 0.96s)
+2026-11-04 13:05:11,014 INFO gateway.control_socket: Gateway control socket listening at /home/rafi_ansf/.hermes/gateway.sock
+2026-11-04 13:05:12,090 INFO gateway.run: Starting Hermes Gateway...
+2026-11-04 13:05:12,092 INFO gateway.run: Session storage: /home/rafi_ansf/.hermes/sessions
+2026-11-04 13:05:12,151 INFO gateway.run: Agent budget: max_iterations=150 (agent.max_turns from config.yaml, else the HERMES_MAX_ITERATIONS bridge)
+2026-11-04 13:05:12,151 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-04 13:05:12,269 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-04 13:05:14,805 WARNING gateway.run: No messaging platforms enabled.
+2026-11-04 13:05:14,805 INFO gateway.run: Gateway will continue running for cron job execution.
+2026-11-04 13:05:15,486 INFO gateway.run: Channel directory built: 0 target(s)
+2026-11-04 13:05:16,205 INFO gateway.run: Model context warmed: hermes-kode -> 262144 tokens (config)
+2026-11-04 13:05:16,206 INFO gateway.run: Turn machinery warmed in 3.9s (21 tool schema(s) materialized)
+2026-11-04 13:05:16,216 INFO gateway.run: Press Ctrl+C to stop
+2026-11-04 13:05:16,218 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/home/rafi_ansf/.hermes/kanban/.dispatcher.lock)
+2026-11-04 13:05:16,218 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=5 (set kanban.max_in_progress in config.yaml to override)
+2026-11-04 13:05:16,221 INFO gateway.run: Cron scheduler will tick 8 profile(s): ['default', 'backend', 'frontend', 'qa', 'researcher', 'reviewer', 'supermaster', 'writer']
+2026-11-04 13:05:16,228 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-04 13:05:21,219 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-04 13:38:46,356 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)

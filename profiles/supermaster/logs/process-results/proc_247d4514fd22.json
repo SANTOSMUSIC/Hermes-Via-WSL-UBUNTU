@@ -1,0 +1,15 @@
+{
+  "id": "proc_247d4514fd22",
+  "command": "cd /home/rafi_ansf/projects/personal-notes/backend && node src/index.js 2>&1",
+  "cwd": "/home/rafi_ansf/projects/personal-notes/backend",
+  "task_id": "default",
+  "owner_task_id": "20261104_132352_fc2ff3",
+  "session_key": "20261104_132352_fc2ff3",
+  "parent_session_id": "20261104_132352_fc2ff3",
+  "started_at": 1793775227.6683497,
+  "exit_code": 0,
+  "completion_reason": "exited",
+  "termination_source": "",
+  "notify_on_complete": false,
+  "output": "Database schema initialized\nServer running on port 3001 (development)\nPOST /login 200 198ms\nGET / 200 28ms\nPOST /login 200 197ms\nGET /1 200 4ms\nPOST /login 200 116ms\nPATCH /1 200 11ms\nPOST /login 200 127ms\nDELETE /1 204 7ms\nPOST /login 200 129ms\nGET / 200 3ms\nPOST /register 201 197ms\nPOST /refresh 200 809ms\nPOST /logout 200 805ms\nPOST /api/auth/refresh 401 1ms\nShutting down...\nServer stopped\n"
+}

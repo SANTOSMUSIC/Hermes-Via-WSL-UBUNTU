@@ -1,0 +1,15 @@
+{
+  "id": "proc_19d9b798bed0",
+  "command": "cd ~/projects/lpj/backend && node --loader ts-node/esm -e \"\nconst { NestFactory } = require('@nestjs/core');\nconst { AppModule } = require('./src/app.module');\nconst cookieParser = require('cookie-parser').default;\n\nasync function bootstrap() {\n  const app = await NestFactory.create(AppModule);\n  app.use(cookieParser());\n  app.enableCors({ origin: 'http://localhost:5173', credentials: true });\n  await app.listen(3000);\n  console.log('Server running on port 3000');\n}\nbootstrap().catch(console.error);\n\"",
+  "cwd": "/home/rafi_ansf/projects/lpj/backend",
+  "task_id": "default",
+  "owner_task_id": "20261102_200454_6b4073",
+  "session_key": "20261102_200454_6b4073",
+  "parent_session_id": "20261102_200454_6b4073",
+  "started_at": 1793627851.5570047,
+  "exit_code": 1,
+  "completion_reason": "exited",
+  "termination_source": "",
+  "notify_on_complete": false,
+  "output": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\nError [ERR_MODULE_NOT_FOUND]: Cannot find package 'ts-node' imported from /home/rafi_ansf/projects/lpj/backend/\n    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:331:9)\n    at packageResolve (node:internal/modules/esm/resolve:784:25)\n    at moduleResolve (node:internal/modules/esm/resolve:873:18)\n    at defaultResolve (node:internal/modules/esm/resolve:1006:11)\n    at nextResolve (node:internal/modules/esm/hooks:785:28)\n    at AsyncLoaderHooksOnLoaderHookWorker.resolve (node:internal/modules/esm/hooks:269:30)\n    at #resolve (node:internal/modules/esm/loader:684:37)\n    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)\n    at node:internal/modules/esm/loader:636:32\n    at TracingChannel.tracePromise (node:diagnostics_channel:370:14) {\n  code: 'ERR_MODULE_NOT_FOUND'\n}\n\nNode.js v24.22.1\n"
+}

@@ -1,0 +1,584 @@
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-10-21T14:00:42Z
+--- ps (top 60 by cpu, comm only) ---
+    PID    PPID USER     %CPU %MEM STAT COMMAND
+   8061    8057 rafi_an+ 25.0  0.2 S    head
+   8059    8057 rafi_an+ 25.0  0.1 R    ps
+   8057    8055 rafi_an+ 11.1  0.1 S    bash
+   8055    1709 rafi_an+  5.2  0.2 Ss   timeout
+   1709     340 rafi_an+  1.1  8.2 Rsl  hermes
+   6278      96 root      0.2  0.2 S    (udev-worker)
+   4792      96 root      0.1  0.2 S    (udev-worker)
+   8060    8057 rafi_an+  0.0  0.0 S    bash
+   6279      96 root      0.0  0.2 S    (udev-worker)
+   6274      96 root      0.0  0.2 S    (udev-worker)
+   6273      96 root      0.0  0.2 S    (udev-worker)
+   4793      96 root      0.0  0.2 S    (udev-worker)
+    342     340 rafi_an+  0.0  0.1 S    (sd-pam)
+    340       1 rafi_an+  0.0  0.3 Ss   systemd
+    297       2 root      0.0  0.0 Zs   login
+    152       1 root      0.0  0.2 Ss   systemd-logind
+    137       1 message+  0.0  0.1 Ss   dbus-daemon
+     96       1 root      0.0  0.2 Ss   systemd-udevd
+     88       1 systemd+  0.0  0.3 Ss   systemd-resolve
+     48       1 root      0.0  0.5 S<s  systemd-journal
+      8       2 root      0.0  0.0 Z+   init
+      3       2 root      0.0  0.0 S+   init-watcher
+      2       1 root      0.0  0.0 Sl+  init-systemd(Ub
+      1       0 root      0.0  0.4 Ss   systemd
+--- pstree of self ---
+hermes(1709)-+-timeout(8055)---bash(8057)-+-head(8065)
+             |                            `-pstree(8064)
+             |-{hermes}(1774)
+             |-{hermes}(1775)
+             |-{hermes}(1776)
+             |-{hermes}(1781)
+             |-{hermes}(1783)
+             |-{hermes}(1836)
+             |-{hermes}(2408)
+             |-{hermes}(2572)
+             |-{hermes}(8056)
+             |-{hermes}(8066)
+             `-{hermes}(8067)
+--- loadavg ---
+0.14 0.10 0.04 1/152 8068
+--- recent dmesg (oom/killed) ---
+[Wed Oct 21 17:22:24 2026] systemd-journald[48]: Collecting audit messages is disabled.
+[Wed Oct 21 17:22:24 2026] systemd-journald[48]: Received client request to flush runtime journal.
+[Wed Oct 21 17:22:24 2026] ACPI: AC: AC Adapter [AC1] (on-line)
+[Wed Oct 21 17:22:24 2026] ACPI: battery: Slot [BAT1] (battery present)
+[Wed Oct 21 17:22:24 2026] kvm_intel: Using Hyper-V Enlightened VMCS
+[Wed Oct 21 17:22:24 2026] vmentry_ctrl unsupported with eVMCS: 0x100000
+[Wed Oct 21 17:22:24 2026] vmexit_ctrl unsupported with eVMCS: 0x10000000
+[Wed Oct 21 17:22:28 2026] WSL (92) ERROR: CheckConnection: getaddrinfo() failed: -5
+[Wed Oct 21 17:23:10 2026] hv_balloon: Max. dynamic memory size: 3072 MB
+[Wed Oct 21 17:23:16 2026] TCP: eth0: Driver has suspect GRO implementation, TCP performance may be compromised.
+[Wed Oct 21 17:37:53 2026] mini_init (77): drop_caches: 3
+[Wed Oct 21 18:08:53 2026] mini_init (77): drop_caches: 3
+[Wed Oct 21 19:13:14 2026] mini_init (77): drop_caches: 3
+[Wed Oct 21 19:21:05 2026] mini_init (77): drop_caches: 3
+[Wed Oct 21 19:21:35 2026] mini_init (77): drop_caches: 3
+[Wed Oct 21 19:23:36 2026] WSL (92) ERROR: CheckConnection: getaddrinfo() failed: -5
+[Wed Oct 21 19:33:55 2026] mini_init (77): drop_caches: 3
+[Wed Oct 21 19:34:55 2026] mini_init (77): drop_caches: 3
+[Wed Oct 21 19:52:25 2026] mini_init (77): drop_caches: 3
+[Wed Oct 21 19:59:56 2026] mini_init (77): drop_caches: 3
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-10-22T13:52:44Z
+--- ps (top 60 by cpu, comm only) ---
+    PID    PPID USER     %CPU %MEM STAT COMMAND
+  91766   91764 rafi_an+ 57.1  0.1 R    ps
+  91768   91764 rafi_an+ 16.6  0.2 S    head
+  91764   91762 rafi_an+  5.0  0.1 S    bash
+    336     272 rafi_an+  0.8 13.4 Rsl  hermes
+  91701     100 root      0.1  0.2 S    (udev-worker)
+  91700     100 root      0.1  0.2 S    (udev-worker)
+  91767   91764 rafi_an+  0.0  0.0 S    bash
+  91762     336 rafi_an+  0.0  0.2 Ss   timeout
+    402       2 root      0.0  0.0 Zs   login
+    283     272 rafi_an+  0.0  0.1 S    (sd-pam)
+    272       1 rafi_an+  0.0  0.3 Ss   systemd
+    149       1 root      0.0  0.2 Ss   systemd-logind
+    117       1 message+  0.0  0.1 Ss   dbus-daemon
+    100       1 root      0.0  0.2 Ss   systemd-udevd
+     87       1 systemd+  0.0  0.2 Ss   systemd-resolve
+     48       1 root      0.0  0.5 S<s  systemd-journal
+      8       2 root      0.0  0.0 Z+   init
+      3       2 root      0.0  0.0 S+   init-watcher
+      2       1 root      0.0  0.0 Sl+  init-systemd(Ub
+      1       0 root      0.0  0.4 Rs   systemd
+--- pstree of self ---
+hermes(336)-+-timeout(91762)---bash(91764)-+-head(91772)
+            |                              `-pstree(91771)
+            |-{hermes}(601)
+            |-{hermes}(602)
+            |-{hermes}(603)
+            |-{hermes}(607)
+            |-{hermes}(609)
+            |-{hermes}(638)
+            |-{hermes}(3419)
+            |-{hermes}(15157)
+            |-{hermes}(19911)
+            `-{hermes}(91763)
+--- loadavg ---
+0.25 0.10 0.09 3/151 91773
+--- recent dmesg (oom/killed) ---
+[Thu Oct 22 16:12:47 2026] vmexit_ctrl unsupported with eVMCS: 0x10000000
+[Thu Oct 22 16:12:50 2026] WSL (91) ERROR: CheckConnection: getaddrinfo() failed: -5
+[Thu Oct 22 16:12:52 2026] TCP: eth0: Driver has suspect GRO implementation, TCP performance may be compromised.
+[Thu Oct 22 16:13:32 2026] hv_balloon: Max. dynamic memory size: 3072 MB
+[Thu Oct 22 16:16:54 2026] mini_init (76): drop_caches: 3
+[Thu Oct 22 16:21:15 2026] mini_init (76): drop_caches: 3
+[Thu Oct 22 16:30:46 2026] mini_init (76): drop_caches: 3
+[Thu Oct 22 16:41:56 2026] mini_init (76): drop_caches: 3
+[Thu Oct 22 16:55:17 2026] mini_init (76): drop_caches: 3
+[Thu Oct 22 17:00:17 2026] mini_init (76): drop_caches: 3
+[Thu Oct 22 17:06:17 2026] mini_init (76): drop_caches: 3
+[Thu Oct 22 17:08:47 2026] mini_init (76): drop_caches: 3
+[Thu Oct 22 17:26:58 2026] mini_init (76): drop_caches: 3
+[Thu Oct 22 17:35:18 2026] mini_init (76): drop_caches: 3
+[Thu Oct 22 17:37:38 2026] mini_init (76): drop_caches: 3
+[Thu Oct 22 17:41:18 2026] mini_init (76): drop_caches: 3
+[Thu Oct 22 18:44:19 2026] mini_init (76): drop_caches: 3
+[Thu Oct 22 18:49:19 2026] mini_init (76): drop_caches: 3
+[Thu Oct 22 18:50:19 2026] mini_init (76): drop_caches: 3
+[Thu Oct 22 18:57:39 2026] mini_init (76): drop_caches: 3
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-10-26T08:31:27Z
+--- ps (top 60 by cpu, comm only) ---
+    PID    PPID USER     %CPU %MEM STAT COMMAND
+ 185378  185376 rafi_an+ 50.0  0.1 R    ps
+    354     314 rafi_an+  1.1 11.2 Dsl  hermes
+ 185308      94 root      0.1  0.2 S    (udev-worker)
+ 185307      94 root      0.1  0.2 S    (udev-worker)
+ 185306      94 root      0.1  0.2 S    (udev-worker)
+ 185304      94 root      0.1  0.2 S    (udev-worker)
+ 185303      94 root      0.1  0.1 S    (udev-worker)
+ 185301      94 root      0.1  0.2 S    (udev-worker)
+ 183512      94 root      0.1  0.2 S    (udev-worker)
+ 183503      94 root      0.1  0.2 S    (udev-worker)
+ 185380  185376 rafi_an+  0.0  0.2 S    head
+ 185379  185376 rafi_an+  0.0  0.0 S    bash
+ 185376  185373 rafi_an+  0.0  0.1 S    bash
+ 185373     354 rafi_an+  0.0  0.2 Ss   timeout
+ 185310      94 root      0.0  0.2 S    (udev-worker)
+ 185309      94 root      0.0  0.1 S    (udev-worker)
+ 185305      94 root      0.0  0.1 S    (udev-worker)
+ 185302      94 root      0.0  0.2 S    (udev-worker)
+ 185300      94 root      0.0  0.2 S    (udev-worker)
+ 185255      94 root      0.0  0.2 S    (udev-worker)
+ 185254      94 root      0.0  0.2 S    (udev-worker)
+    412       2 root      0.0  0.0 Zs   login
+    320     314 rafi_an+  0.0  0.1 S    (sd-pam)
+    314       1 rafi_an+  0.0  0.4 Ss   systemd
+    151       1 root      0.0  0.2 Ss   systemd-logind
+    131       1 message+  0.0  0.1 Ss   dbus-daemon
+     94       1 root      0.0  0.3 Ss   systemd-udevd
+     85       1 systemd+  0.0  0.4 Ss   systemd-resolve
+     45       1 root      0.0  0.6 S<s  systemd-journal
+      8       2 root      0.0  0.0 Z+   init
+      3       2 root      0.0  0.0 S+   init-watcher
+      2       1 root      0.0  0.0 Sl+  init-systemd(Ub
+      1       0 root      0.0  0.4 Ss   systemd
+--- pstree of self ---
+hermes(354)-+-timeout(185373)---bash(185376)-+-head(185384)
+            |                                `-pstree(185383)
+            |-{hermes}(1261)
+            |-{hermes}(1262)
+            |-{hermes}(1263)
+            |-{hermes}(1264)
+            |-{hermes}(1478)
+            |-{hermes}(1521)
+            |-{hermes}(1641)
+            |-{hermes}(34647)
+            |-{hermes}(172666)
+            `-{hermes}(185374)
+--- loadavg ---
+0.25 0.18 0.07 2/164 185385
+--- recent dmesg (oom/killed) ---
+[Mon Oct 26 07:56:35 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Mon Oct 26 07:56:35 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+[Mon Oct 26 07:56:35 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Mon Oct 26 07:56:35 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Mon Oct 26 07:56:35 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Mon Oct 26 07:56:35 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+[Mon Oct 26 07:56:35 2026] systemd-journald[45]: Collecting audit messages is disabled.
+[Mon Oct 26 07:56:35 2026] systemd-journald[45]: Received client request to flush runtime journal.
+[Mon Oct 26 07:56:35 2026] misc dxg: dxgk: dxgkio_reserve_gpu_va: Ioctl failed: -75
+[Mon Oct 26 07:56:36 2026] ACPI: AC: AC Adapter [AC1] (on-line)
+[Mon Oct 26 07:56:36 2026] ACPI: battery: Slot [BAT1] (battery present)
+[Mon Oct 26 07:56:36 2026] kvm_intel: Using Hyper-V Enlightened VMCS
+[Mon Oct 26 07:56:36 2026] vmentry_ctrl unsupported with eVMCS: 0x100000
+[Mon Oct 26 07:56:36 2026] vmexit_ctrl unsupported with eVMCS: 0x10000000
+[Mon Oct 26 07:56:37 2026] TCP: eth0: Driver has suspect GRO implementation, TCP performance may be compromised.
+[Mon Oct 26 07:56:39 2026] WSL (92) ERROR: CheckConnection: getaddrinfo() failed: -5
+[Mon Oct 26 07:57:21 2026] hv_balloon: Max. dynamic memory size: 3072 MB
+[Mon Oct 26 13:10:35 2026] hv_utils: TimeSync IC version 4.0
+[Mon Oct 26 13:14:43 2026] WSL (92) ERROR: CheckConnection: getaddrinfo() failed: -5
+[Mon Oct 26 13:53:17 2026] mini_init (77): drop_caches: 3
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-10-27T09:00:13Z
+--- ps (top 60 by cpu, comm only) ---
+    PID    PPID USER     %CPU %MEM STAT COMMAND
+ 129673  129671 rafi_an+ 33.3  0.1 R    ps
+ 129669     347 rafi_an+ 11.1  0.2 Ss   timeout
+ 129671  129669 rafi_an+  6.6  0.1 S    bash
+    347     301 rafi_an+  1.0 11.1 Rsl  hermes
+ 128274      93 root      0.3  0.2 S    (udev-worker)
+ 128275      93 root      0.2  0.2 S    (udev-worker)
+ 129523      93 root      0.1  0.2 S    (udev-worker)
+ 129516      93 root      0.1  0.2 S    (udev-worker)
+ 129675  129671 rafi_an+  0.0  0.2 S    head
+ 129674  129671 rafi_an+  0.0  0.0 S    bash
+ 129564      93 root      0.0  0.1 S    (udev-worker)
+ 129563      93 root      0.0  0.2 S    (udev-worker)
+ 129562      93 root      0.0  0.2 S    (udev-worker)
+ 129561      93 root      0.0  0.2 S    (udev-worker)
+ 129560      93 root      0.0  0.2 S    (udev-worker)
+ 129559      93 root      0.0  0.2 S    (udev-worker)
+ 129558      93 root      0.0  0.2 S    (udev-worker)
+ 129557      93 root      0.0  0.2 S    (udev-worker)
+ 129556      93 root      0.0  0.1 S    (udev-worker)
+ 129517      93 root      0.0  0.2 S    (udev-worker)
+ 129514      93 root      0.0  0.2 S    (udev-worker)
+ 129513      93 root      0.0  0.2 S    (udev-worker)
+    402       2 root      0.0  0.0 Zs   login
+    306     301 rafi_an+  0.0  0.1 S    (sd-pam)
+    301       1 rafi_an+  0.0  0.4 Ss   systemd
+    146       1 root      0.0  0.3 Ss   systemd-logind
+    117       1 message+  0.0  0.1 Ss   dbus-daemon
+     93       1 root      0.0  0.4 Ss   systemd-udevd
+     85       1 systemd+  0.0  0.4 Ss   systemd-resolve
+     48       1 root      0.0  0.8 S<s  systemd-journal
+      8       2 root      0.0  0.0 Z+   init
+      3       2 root      0.0  0.0 S+   init-watcher
+      2       1 root      0.0  0.0 Sl+  init-systemd(Ub
+      1       0 root      0.0  0.5 Ss   systemd
+--- pstree of self ---
+hermes(347)-+-timeout(129669)---bash(129671)-+-head(129679)
+            |                                `-pstree(129678)
+            |-{hermes}(1278)
+            |-{hermes}(1280)
+            |-{hermes}(1281)
+            |-{hermes}(1282)
+            |-{hermes}(1506)
+            |-{hermes}(1528)
+            |-{hermes}(1696)
+            |-{hermes}(3254)
+            `-{hermes}(129670)
+--- loadavg ---
+0.14 0.10 0.03 2/164 129680
+--- recent dmesg (oom/killed) ---
+[Tue Oct 27 08:51:45 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Oct 27 08:51:45 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Oct 27 08:51:45 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Oct 27 08:51:45 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+[Tue Oct 27 08:51:45 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Oct 27 08:51:45 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Oct 27 08:51:45 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Oct 27 08:51:45 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+[Tue Oct 27 08:51:46 2026] systemd-journald[48]: Collecting audit messages is disabled.
+[Tue Oct 27 08:51:46 2026] systemd-journald[48]: Received client request to flush runtime journal.
+[Tue Oct 27 08:51:46 2026] misc dxg: dxgk: dxgkio_reserve_gpu_va: Ioctl failed: -75
+[Tue Oct 27 08:51:46 2026] ACPI: battery: Slot [BAT1] (battery present)
+[Tue Oct 27 08:51:47 2026] kvm_intel: Using Hyper-V Enlightened VMCS
+[Tue Oct 27 08:51:47 2026] vmentry_ctrl unsupported with eVMCS: 0x100000
+[Tue Oct 27 08:51:47 2026] vmexit_ctrl unsupported with eVMCS: 0x10000000
+[Tue Oct 27 08:51:47 2026] ACPI: AC: AC Adapter [AC1] (on-line)
+[Tue Oct 27 08:51:50 2026] WSL (89) ERROR: CheckConnection: getaddrinfo() failed: -5
+[Tue Oct 27 08:51:55 2026] TCP: eth0: Driver has suspect GRO implementation, TCP performance may be compromised.
+[Tue Oct 27 08:52:32 2026] hv_balloon: Max. dynamic memory size: 3072 MB
+[Tue Oct 27 13:33:09 2026] WSL (89) ERROR: CheckConnection: getaddrinfo() failed: -5
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-10-29T08:57:53Z
+--- ps (top 60 by cpu, comm only) ---
+    PID    PPID USER     %CPU %MEM STAT COMMAND
+ 127418  127416 rafi_an+ 50.0  0.1 R    ps
+ 127420  127416 rafi_an+ 33.3  0.2 S    head
+ 127416  127414 rafi_an+  9.5  0.1 S    bash
+    353     305 rafi_an+  1.9 11.3 Rsl  hermes
+ 127333      95 root      0.3  0.2 S    (udev-worker)
+ 126969      95 root      0.1  0.2 S    (udev-worker)
+ 126117      95 root      0.1  0.2 S    (udev-worker)
+ 127419  127416 rafi_an+  0.0  0.0 S    bash
+ 127414     353 rafi_an+  0.0  0.2 Ss   timeout
+ 127336      95 root      0.0  0.1 S    (udev-worker)
+ 127335      95 root      0.0  0.2 S    (udev-worker)
+ 127334      95 root      0.0  0.1 S    (udev-worker)
+ 127332      95 root      0.0  0.1 S    (udev-worker)
+ 127331      95 root      0.0  0.2 S    (udev-worker)
+ 127330      95 root      0.0  0.1 S    (udev-worker)
+ 127329      95 root      0.0  0.2 S    (udev-worker)
+ 127328      95 root      0.0  0.1 S    (udev-worker)
+ 127327      95 root      0.0  0.2 S    (udev-worker)
+ 127326      95 root      0.0  0.1 S    (udev-worker)
+ 127325      95 root      0.0  0.2 S    (udev-worker)
+ 127324      95 root      0.0  0.1 S    (udev-worker)
+ 127323      95 root      0.0  0.2 S    (udev-worker)
+ 126972      95 root      0.0  0.2 S    (udev-worker)
+ 126970      95 root      0.0  0.2 S    (udev-worker)
+ 126968      95 root      0.0  0.2 S    (udev-worker)
+ 126116      95 root      0.0  0.2 S    (udev-worker)
+    414       2 root      0.0  0.0 Zs   login
+    311     305 rafi_an+  0.0  0.1 S    (sd-pam)
+    305       1 rafi_an+  0.0  0.4 Ss   systemd
+    152       1 root      0.0  0.3 Ss   systemd-logind
+    117       1 message+  0.0  0.1 Ss   dbus-daemon
+     95       1 root      0.0  0.3 Ss   systemd-udevd
+     88       1 systemd+  0.0  0.4 Ss   systemd-resolve
+     48       1 root      0.0  0.8 S<s  systemd-journal
+      8       2 root      0.0  0.0 Z+   init
+      3       2 root      0.0  0.0 S+   init-watcher
+      2       1 root      0.0  0.0 Sl+  init-systemd(Ub
+      1       0 root      0.0  0.5 Ss   systemd
+--- pstree of self ---
+hermes(353)-+-timeout(127414)---bash(127416)-+-head(127424)
+            |                                `-pstree(127423)
+            |-{hermes}(1035)
+            |-{hermes}(1036)
+            |-{hermes}(1037)
+            |-{hermes}(1038)
+            |-{hermes}(1252)
+            |-{hermes}(1337)
+            |-{hermes}(1414)
+            |-{hermes}(4329)
+            |-{hermes}(49710)
+            `-{hermes}(127415)
+--- loadavg ---
+0.18 0.11 0.03 3/170 127425
+--- recent dmesg (oom/killed) ---
+[Thu Oct 29 09:12:20 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Thu Oct 29 09:12:20 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+[Thu Oct 29 09:12:20 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Thu Oct 29 09:12:20 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Thu Oct 29 09:12:20 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Thu Oct 29 09:12:20 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+[Thu Oct 29 09:12:20 2026] Failed to connect to system scope bus via local transport: No such file or directory
+[Thu Oct 29 09:12:20 2026] systemd-journald[48]: Collecting audit messages is disabled.
+[Thu Oct 29 09:12:21 2026] systemd-journald[48]: Received client request to flush runtime journal.
+[Thu Oct 29 09:12:21 2026] misc dxg: dxgk: dxgkio_reserve_gpu_va: Ioctl failed: -75
+[Thu Oct 29 09:12:21 2026] ACPI: AC: AC Adapter [AC1] (on-line)
+[Thu Oct 29 09:12:21 2026] ACPI: battery: Slot [BAT1] (battery present)
+[Thu Oct 29 09:12:21 2026] kvm_intel: Using Hyper-V Enlightened VMCS
+[Thu Oct 29 09:12:21 2026] vmentry_ctrl unsupported with eVMCS: 0x100000
+[Thu Oct 29 09:12:21 2026] vmexit_ctrl unsupported with eVMCS: 0x10000000
+[Thu Oct 29 09:12:23 2026] TCP: eth0: Driver has suspect GRO implementation, TCP performance may be compromised.
+[Thu Oct 29 09:12:24 2026] WSL (92) ERROR: CheckConnection: getaddrinfo() failed: -5
+[Thu Oct 29 09:13:06 2026] hv_balloon: Max. dynamic memory size: 3072 MB
+[Thu Oct 29 10:13:47 2026] WSL (92) ERROR: CheckConnection: getaddrinfo() failed: -5
+[Thu Oct 29 10:16:34 2026] WSL (92) ERROR: CheckConnection: getaddrinfo() failed: -5
+=== end ===
+                                                                    === shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-10-30T08:56:06Z
+--- ps (top 60 by cpu, comm only) ---
+    PID    PPID USER     %CPU %MEM STAT COMMAND
+  46644     302 rafi_an+ 35.0  0.2 Ss   timeout
+  46648   46646 rafi_an+ 33.3  0.1 R    ps
+  46646   46644 rafi_an+ 16.6  0.1 S    bash
+    302     244 rafi_an+  1.3  9.5 Rsl  hermes
+    282       1 mysql     0.7  1.1 Ssl  mysqld
+  46650   46646 rafi_an+  0.0  0.2 S    head
+  46649   46646 rafi_an+  0.0  0.0 S    bash
+    422       2 root      0.0  0.0 Zs   login
+    259     244 rafi_an+  0.0  0.0 S    (sd-pam)
+    244       1 rafi_an+  0.0  0.2 Ss   systemd
+    157       1 root      0.0  0.1 Ss   systemd-logind
+    140       1 message+  0.0  0.0 Ss   dbus-daemon
+     95       1 root      0.0  0.1 Ss   systemd-udevd
+     88       1 systemd+  0.0  0.0 Ss   systemd-resolve
+     48       1 root      0.0  0.3 S<s  systemd-journal
+      3       2 root      0.0  0.0 S+   init-watcher
+      2       1 root      0.0  0.0 Sl+  init-systemd(Ub
+      1       0 root      0.0  0.3 Ss   systemd
+--- pstree of self ---
+hermes(302)-+-timeout(46644)---bash(46646)-+-head(46654)
+            |                              `-pstree(46653)
+            |-{hermes}(1195)
+            |-{hermes}(1196)
+            |-{hermes}(1197)
+            |-{hermes}(1198)
+            |-{hermes}(1412)
+            |-{hermes}(1413)
+            |-{hermes}(1597)
+            |-{hermes}(2764)
+            `-{hermes}(46645)
+--- loadavg ---
+0.28 0.12 0.06 3/155 46655
+--- recent dmesg (oom/killed) ---
+[Fri Oct 30 14:14:09 2026] [    566]     0   566      955       47        0        0        47    45056        0             0 SessionLeader
+[Fri Oct 30 14:14:09 2026] [    567]     0   567      972       81       32        0        49    45056        0             0 Relay(418)
+[Fri Oct 30 14:14:09 2026] [    568]  1000   568     2260       68       32       36         0    61440     1088             0 bash
+[Fri Oct 30 14:14:09 2026] [    572]     0   572     2161       25        0       25         0    53248      192             0 login
+[Fri Oct 30 14:14:09 2026] [   1023]  1000  1023     2227       58       32       26         0    57344     1056             0 bash
+[Fri Oct 30 14:14:09 2026] [   1697]  1000  1697   396803      321      304       17         0   860160     4480             0 MainThread
+[Fri Oct 30 14:14:09 2026] [   1787]  1000  1787     2138       52       32       20         0    61440       64           200 dbus-daemon
+[Fri Oct 30 14:14:09 2026] [   1817]  1000  1817  2546283    15427    15377       50         0  3059712    13649             0 next-server (v1
+[Fri Oct 30 14:14:09 2026] [   1958]     0  1958      955       50       33        0        17    45056        0             0 SessionLeader
+[Fri Oct 30 14:14:09 2026] [   1960]     0  1960      972       34       34        0         0    45056       32             0 Relay(1812)
+[Fri Oct 30 14:14:09 2026] [   1963]  1000  1963     2260       85       32       53         0    61440     1056             0 bash
+[Fri Oct 30 14:14:09 2026] [   2231]  1000  2231   393474    17514    17500       14         0  1089536    61984             0 hermes
+[Fri Oct 30 14:14:09 2026] [   8859]  1000  8859    28879       90       32       58         0   118784     1792             0 python3
+[Fri Oct 30 14:14:09 2026] [  12430]  1000 12430     1271       13        0       13         0    57344       64             0 bash
+[Fri Oct 30 14:14:09 2026] [  12475]  1000 12475  1249282   565160   565116       44         0 31313920   258592             0 npm install pri
+[Fri Oct 30 14:14:09 2026] [  12867]     0 12867   411081       93       64       29         0   176128      448             0 wsl-pro-service
+[Fri Oct 30 14:14:09 2026] oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=distro-94,mems_allowed=0,global_oom,task_memcg=/wsl-user/distro-94/non-systemd,task=npm install pri,pid=12475,uid=1000
+[Fri Oct 30 14:14:09 2026] Out of memory: Killed process 12475 (npm install pri) total-vm:4997128kB, anon-rss:2260464kB, file-rss:176kB, shmem-rss:0kB, UID:1000 pgtables:30580kB oom_score_adj:0
+[Fri Oct 30 14:14:14 2026] systemd-journald[48]: Under memory pressure, flushing caches.
+[Fri Oct 30 14:14:14 2026] systemd-journald[48]: Under memory pressure, flushing caches.
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-11-02T13:59:25Z
+--- ps (top 60 by cpu, comm only) ---
+    PID    PPID USER     %CPU %MEM STAT COMMAND
+ 177770  177768 rafi_an+ 25.0  0.1 R    ps
+ 177766     364 rafi_an+  7.1  0.2 Ss   timeout
+ 176245  176244 rafi_an+  6.2 12.2 Sl   MainThread
+ 170826  170825 rafi_an+  2.1 11.4 Sl   MainThread
+    364     272 rafi_an+  0.9  9.8 Rsl  hermes
+    328       1 mysql     0.5  5.0 Rs   mysqld
+ 176677      96 root      0.1  0.1 S    (udev-worker)
+ 176341      96 root      0.1  0.1 S    (udev-worker)
+ 176233  176077 rafi_an+  0.1  2.4 Sl   npm run start:d
+ 170824  170823 rafi_an+  0.1  9.6 Sl   MainThread
+ 177772  177768 rafi_an+  0.0  0.2 S    head
+ 177771  177768 rafi_an+  0.0  0.0 S    bash
+ 177768  177766 rafi_an+  0.0  0.1 S    bash
+ 177671      96 root      0.0  0.1 S    (udev-worker)
+ 177670      96 root      0.0  0.1 S    (udev-worker)
+ 177669      96 root      0.0  0.1 S    (udev-worker)
+ 177668      96 root      0.0  0.1 S    (udev-worker)
+ 176676      96 root      0.0  0.1 S    (udev-worker)
+ 176340      96 root      0.0  0.1 S    (udev-worker)
+ 176244  176233 rafi_an+  0.0  0.0 S    sh
+ 176077       1 rafi_an+  0.0  0.2 Ss   bash
+ 170825  170802 rafi_an+  0.0  0.0 S    sh
+ 170823  170800 rafi_an+  0.0  0.0 S    sh
+ 170802  170801 rafi_an+  0.0  2.4 Sl   npm run start:d
+ 170801  170792 rafi_an+  0.0  0.0 S    sh
+ 170800  170799 rafi_an+  0.0  2.3 Sl   npm run dev
+ 170799  170792 rafi_an+  0.0  0.0 S    sh
+ 170792  170791 rafi_an+  0.0  2.2 Sl   MainThread
+ 170791  170780 rafi_an+  0.0  0.0 S    sh
+ 170780  170624 rafi_an+  0.0  2.3 Sl   npm run dev
+ 170624       1 rafi_an+  0.0  0.2 Ss   bash
+    484       2 root      0.0  0.0 Zs   login
+    297     272 rafi_an+  0.0  0.0 S    (sd-pam)
+    272       1 rafi_an+  0.0  0.3 Ss   systemd
+    157       1 root      0.0  0.2 Ss   systemd-logind
+    137       1 message+  0.0  0.1 Ss   dbus-daemon
+     96       1 root      0.0  0.2 Ss   systemd-udevd
+     87       1 systemd+  0.0  0.1 Ss   systemd-resolve
+     48       1 root      0.0  0.4 S<s  systemd-journal
+      3       2 root      0.0  0.0 S+   init-watcher
+      2       1 root      0.0  0.0 Sl+  init-systemd(Ub
+      1       0 root      0.0  0.3 Ss   systemd
+--- pstree of self ---
+hermes(364)-+-timeout(177766)---bash(177768)-+-head(177776)
+            |                                `-pstree(177775)
+            |-{hermes}(1090)
+            |-{hermes}(1091)
+            |-{hermes}(1093)
+            |-{hermes}(1317)
+            |-{hermes}(1467)
+            |-{hermes}(1498)
+            |-{hermes}(4605)
+            |-{hermes}(15011)
+            |-{hermes}(112800)
+            |-{hermes}(158612)
+            `-{hermes}(177767)
+--- loadavg ---
+0.61 0.47 0.23 2/254 177777
+--- recent dmesg (oom/killed) ---
+[Mon Nov  2 13:10:19 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Mon Nov  2 13:10:20 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Mon Nov  2 13:10:20 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Mon Nov  2 13:10:20 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+[Mon Nov  2 13:10:20 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Mon Nov  2 13:10:20 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Mon Nov  2 13:10:20 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Mon Nov  2 13:10:20 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+[Mon Nov  2 13:10:20 2026] systemd-journald[48]: Collecting audit messages is disabled.
+[Mon Nov  2 13:10:20 2026] systemd-journald[48]: Received client request to flush runtime journal.
+[Mon Nov  2 13:10:20 2026] misc dxg: dxgk: dxgkio_reserve_gpu_va: Ioctl failed: -75
+[Mon Nov  2 13:10:20 2026] ACPI: AC: AC Adapter [AC1] (on-line)
+[Mon Nov  2 13:10:20 2026] ACPI: battery: Slot [BAT1] (battery present)
+[Mon Nov  2 13:10:20 2026] kvm_intel: Using Hyper-V Enlightened VMCS
+[Mon Nov  2 13:10:20 2026] vmentry_ctrl unsupported with eVMCS: 0x100000
+[Mon Nov  2 13:10:20 2026] vmexit_ctrl unsupported with eVMCS: 0x10000000
+[Mon Nov  2 13:10:22 2026] TCP: eth0: Driver has suspect GRO implementation, TCP performance may be compromised.
+[Mon Nov  2 13:10:24 2026] WSL (91) ERROR: CheckConnection: getaddrinfo() failed: -5
+[Mon Nov  2 13:11:06 2026] hv_balloon: Max. dynamic memory size: 3072 MB
+[Mon Nov  2 13:42:22 2026] WSL (91) ERROR: CheckConnection: getaddrinfo() failed: -3
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-11-03T13:57:30Z
+--- ps (top 60 by cpu, comm only) ---
+    PID    PPID USER     %CPU %MEM STAT COMMAND
+ 147084  147082 rafi_an+ 20.0  0.1 R    ps
+ 147080  114964 rafi_an+ 15.2  0.2 Ss   timeout
+ 147082  147080 rafi_an+  9.3  0.1 S    bash
+ 114964     333 rafi_an+  1.1 10.3 Rsl  hermes
+ 125269     333 rafi_an+  0.6 17.2 Rs   mysqld
+    357       1 mysql     0.5  8.3 Ds   mysqld
+ 147001      92 root      0.2  0.1 S    (udev-worker)
+ 145556      92 root      0.1  0.1 S    (udev-worker)
+ 145555      92 root      0.1  0.1 S    (udev-worker)
+ 147086  147082 rafi_an+  0.0  0.2 S    head
+ 147085  147082 rafi_an+  0.0  0.0 S    bash
+ 147005      92 root      0.0  0.1 S    (udev-worker)
+ 147004      92 root      0.0  0.1 S    (udev-worker)
+ 147003      92 root      0.0  0.1 S    (udev-worker)
+ 147002      92 root      0.0  0.1 S    (udev-worker)
+ 147000      92 root      0.0  0.1 S    (udev-worker)
+ 146999      92 root      0.0  0.1 S    (udev-worker)
+ 146998      92 root      0.0  0.1 S    (udev-worker)
+ 146997      92 root      0.0  0.1 S    (udev-worker)
+ 146996      92 root      0.0  0.1 S    (udev-worker)
+ 146956      92 root      0.0  0.1 S    (udev-worker)
+ 146954      92 root      0.0  0.1 S    (udev-worker)
+ 146953      92 root      0.0  0.1 S    (udev-worker)
+ 146952      92 root      0.0  0.1 S    (udev-worker)
+ 146951      92 root      0.0  0.1 S    (udev-worker)
+ 146950      92 root      0.0  0.1 S    (udev-worker)
+ 146949      92 root      0.0  0.1 S    (udev-worker)
+ 146948      92 root      0.0  0.1 S    (udev-worker)
+    505       2 root      0.0  0.0 Zs   login
+    339     333 rafi_an+  0.0  0.0 S    (sd-pam)
+    333       1 rafi_an+  0.0  0.3 Ss   systemd
+    200       1 root      0.0  0.2 Ss   systemd-logind
+    137       1 message+  0.0  0.1 Ss   dbus-daemon
+     92       1 root      0.0  0.2 Ss   systemd-udevd
+     85       1 systemd+  0.0  0.2 Ss   systemd-resolve
+     48       1 root      0.0  0.5 S<s  systemd-journal
+      8       2 root      0.0  0.0 Z+   init
+      3       2 root      0.0  0.0 S+   init-watcher
+      2       1 root      0.0  0.0 Sl+  init-systemd(Ub
+      1       0 root      0.0  0.3 Ss   systemd
+--- pstree of self ---
+hermes(114964)-+-timeout(147080)---bash(147082)-+-head(147090)
+               |                                `-pstree(147089)
+               |-{hermes}(115032)
+               |-{hermes}(115033)
+               |-{hermes}(115034)
+               |-{hermes}(115035)
+               |-{hermes}(115250)
+               |-{hermes}(115293)
+               |-{hermes}(115412)
+               |-{hermes}(118415)
+               `-{hermes}(147081)
+--- loadavg ---
+0.92 0.29 0.15 4/177 147091
+--- recent dmesg (oom/killed) ---
+[Tue Nov  3 14:18:15 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Nov  3 14:18:15 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Nov  3 14:18:15 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Nov  3 14:18:15 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+[Tue Nov  3 14:18:15 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Nov  3 14:18:15 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Nov  3 14:18:15 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Nov  3 14:18:15 2026] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+[Tue Nov  3 14:18:15 2026] systemd-journald[48]: Collecting audit messages is disabled.
+[Tue Nov  3 14:18:15 2026] systemd-journald[48]: Received client request to flush runtime journal.
+[Tue Nov  3 14:18:16 2026] misc dxg: dxgk: dxgkio_reserve_gpu_va: Ioctl failed: -75
+[Tue Nov  3 14:18:16 2026] ACPI: AC: AC Adapter [AC1] (on-line)
+[Tue Nov  3 14:18:16 2026] ACPI: battery: Slot [BAT1] (battery present)
+[Tue Nov  3 14:18:17 2026] kvm_intel: Using Hyper-V Enlightened VMCS
+[Tue Nov  3 14:18:17 2026] vmentry_ctrl unsupported with eVMCS: 0x100000
+[Tue Nov  3 14:18:17 2026] vmexit_ctrl unsupported with eVMCS: 0x10000000
+[Tue Nov  3 14:18:20 2026] WSL (88) ERROR: CheckConnection: getaddrinfo() failed: -5
+[Tue Nov  3 14:18:21 2026] TCP: eth0: Driver has suspect GRO implementation, TCP performance may be compromised.
+[Tue Nov  3 14:19:01 2026] hv_balloon: Max. dynamic memory size: 3072 MB
+[Tue Nov  3 15:17:05 2026] WSL (88) ERROR: CheckConnection: getaddrinfo() failed: -5
+=== end ===

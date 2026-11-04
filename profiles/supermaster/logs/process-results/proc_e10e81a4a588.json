@@ -1,0 +1,15 @@
+{
+  "id": "proc_e10e81a4a588",
+  "command": "cd /home/rafi_ansf/projects/personal-notes/backend && node src/index.js 2>&1",
+  "cwd": "/home/rafi_ansf/projects/personal-notes/backend",
+  "task_id": "default",
+  "owner_task_id": "20261104_132352_fc2ff3",
+  "session_key": "20261104_132352_fc2ff3",
+  "parent_session_id": "20261104_132352_fc2ff3",
+  "started_at": 1793775724.7684605,
+  "exit_code": 0,
+  "completion_reason": "exited",
+  "termination_source": "",
+  "notify_on_complete": false,
+  "output": "Database schema initialized\nServer running on port 3001 (development)\nGET /health 200 3ms\nShutting down...\nServer stopped\n"
+}

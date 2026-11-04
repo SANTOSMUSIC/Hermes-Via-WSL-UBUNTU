@@ -1,0 +1,787 @@
+2026-10-22 17:51:35,466 INFO hermes_cli.boot_bootstrap: home maintenance: code changed to d923a5eb487a, running steps
+2026-10-26 07:48:44,163 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-10-26 07:48:44,165 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-10-26 07:48:44,166 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-10-26 07:48:44,200 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-10-26 07:48:44,201 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-10-26 07:48:44,202 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-10-26 07:48:44,203 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-10-26 07:48:44,204 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-10-26 07:48:44,205 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-10-26 07:48:44,209 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-10-26 07:48:44,209 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-10-26 07:48:44,210 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-10-26 07:48:44,215 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-10-26 07:48:44,216 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-10-26 07:48:44,218 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-10-26 07:48:44,219 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-10-26 07:48:44,220 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-10-26 07:48:44,221 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-10-26 07:48:44,221 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-10-26 07:48:44,222 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-10-26 07:48:44,223 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-10-26 07:48:44,224 INFO hermes_cli.plugins: Plugin 'web-openai-native' registered web provider: openai-native
+2026-10-26 07:48:44,225 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-10-26 07:48:44,226 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-10-26 07:48:44,226 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-10-26 07:48:44,227 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-10-26 07:48:44,228 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-10-26 07:48:44,228 INFO hermes_cli.plugins: Plugin discovery complete: 55 found, 51 enabled
+2026-10-27 08:10:11,779 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-10-27 08:10:11,780 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-10-27 08:10:11,781 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-10-27 08:10:11,812 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-10-27 08:10:11,813 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-10-27 08:10:11,815 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-10-27 08:10:11,816 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-10-27 08:10:11,817 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-10-27 08:10:11,818 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-10-27 08:10:11,820 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-10-27 08:10:11,820 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-10-27 08:10:11,822 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-10-27 08:10:11,825 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-10-27 08:10:11,827 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-10-27 08:10:11,828 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-10-27 08:10:11,830 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-10-27 08:10:11,831 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-10-27 08:10:11,832 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-10-27 08:10:11,832 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-10-27 08:10:11,833 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-10-27 08:10:11,834 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-10-27 08:10:11,835 INFO hermes_cli.plugins: Plugin 'web-openai-native' registered web provider: openai-native
+2026-10-27 08:10:11,835 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-10-27 08:10:11,836 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-10-27 08:10:11,837 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-10-27 08:10:11,838 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-10-27 08:10:11,838 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-10-27 08:10:11,839 INFO hermes_cli.plugins: Plugin discovery complete: 55 found, 51 enabled
+2026-10-29 08:23:02,388 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-10-29 08:23:02,390 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-10-29 08:23:02,391 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-10-29 08:23:02,426 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-10-29 08:23:02,428 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-10-29 08:23:02,430 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-10-29 08:23:02,432 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-10-29 08:23:02,433 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-10-29 08:23:02,434 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-10-29 08:23:02,436 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-10-29 08:23:02,437 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-10-29 08:23:02,439 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-10-29 08:23:02,444 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-10-29 08:23:02,446 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-10-29 08:23:02,448 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-10-29 08:23:02,450 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-10-29 08:23:02,451 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-10-29 08:23:02,452 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-10-29 08:23:02,453 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-10-29 08:23:02,454 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-10-29 08:23:02,455 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-10-29 08:23:02,455 INFO hermes_cli.plugins: Plugin 'web-openai-native' registered web provider: openai-native
+2026-10-29 08:23:02,456 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-10-29 08:23:02,457 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-10-29 08:23:02,458 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-10-29 08:23:02,459 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-10-29 08:23:02,460 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-10-29 08:23:02,460 INFO hermes_cli.plugins: Plugin discovery complete: 55 found, 51 enabled
+2026-10-30 08:06:48,183 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-10-30 08:06:48,184 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-10-30 08:06:48,184 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-10-30 08:06:48,213 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-10-30 08:06:48,214 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-10-30 08:06:48,215 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-10-30 08:06:48,216 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-10-30 08:06:48,217 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-10-30 08:06:48,218 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-10-30 08:06:48,219 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-10-30 08:06:48,220 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-10-30 08:06:48,221 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-10-30 08:06:48,224 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-10-30 08:06:48,225 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-10-30 08:06:48,226 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-10-30 08:06:48,227 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-10-30 08:06:48,228 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-10-30 08:06:48,228 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-10-30 08:06:48,229 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-10-30 08:06:48,230 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-10-30 08:06:48,230 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-10-30 08:06:48,231 INFO hermes_cli.plugins: Plugin 'web-openai-native' registered web provider: openai-native
+2026-10-30 08:06:48,232 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-10-30 08:06:48,233 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-10-30 08:06:48,233 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-10-30 08:06:48,234 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-10-30 08:06:48,235 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-10-30 08:06:48,235 INFO hermes_cli.plugins: Plugin discovery complete: 55 found, 51 enabled
+2026-10-30 09:06:06,033 INFO gateway.run: curator: curator: auto: no changes; llm: skipped (consolidation off)
+2026-10-30 13:41:19,384 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-10-30 13:41:19,385 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-10-30 13:41:19,386 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-10-30 13:41:19,415 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-10-30 13:41:19,416 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-10-30 13:41:19,417 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-10-30 13:41:19,417 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-10-30 13:41:19,418 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-10-30 13:41:19,419 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-10-30 13:41:19,421 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-10-30 13:41:19,421 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-10-30 13:41:19,422 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-10-30 13:41:19,425 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-10-30 13:41:19,426 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-10-30 13:41:19,427 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-10-30 13:41:19,428 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-10-30 13:41:19,428 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-10-30 13:41:19,429 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-10-30 13:41:19,430 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-10-30 13:41:19,430 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-10-30 13:41:19,431 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-10-30 13:41:19,432 INFO hermes_cli.plugins: Plugin 'web-openai-native' registered web provider: openai-native
+2026-10-30 13:41:19,433 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-10-30 13:41:19,434 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-10-30 13:41:19,435 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-10-30 13:41:19,435 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-10-30 13:41:19,436 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-10-30 13:41:19,436 INFO hermes_cli.plugins: Plugin discovery complete: 55 found, 51 enabled
+2026-11-02 13:10:26,364 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-02 13:10:26,365 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-02 13:10:26,366 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-02 13:10:26,395 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-02 13:10:26,396 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-02 13:10:26,397 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-02 13:10:26,398 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-02 13:10:26,399 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-02 13:10:26,399 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-02 13:10:26,400 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-02 13:10:26,401 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-02 13:10:26,402 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-02 13:10:26,404 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-02 13:10:26,406 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-02 13:10:26,407 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-11-02 13:10:26,407 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-02 13:10:26,408 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-02 13:10:26,408 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-02 13:10:26,409 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-02 13:10:26,410 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-02 13:10:26,410 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-02 13:10:26,411 INFO hermes_cli.plugins: Plugin 'web-openai-native' registered web provider: openai-native
+2026-11-02 13:10:26,412 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-02 13:10:26,413 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-02 13:10:26,413 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-02 13:10:26,414 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-02 13:10:26,415 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-02 13:10:26,415 INFO hermes_cli.plugins: Plugin discovery complete: 55 found, 51 enabled
+2026-11-03 13:13:07,973 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-03 13:13:07,974 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-03 13:13:07,975 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-03 13:13:08,014 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-03 13:13:08,016 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-03 13:13:08,018 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-03 13:13:08,019 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-03 13:13:08,020 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-03 13:13:08,021 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-03 13:13:08,023 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-03 13:13:08,023 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-03 13:13:08,024 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-03 13:13:08,028 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-03 13:13:08,030 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-03 13:13:08,031 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-11-03 13:13:08,033 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-03 13:13:08,034 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-03 13:13:08,035 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-03 13:13:08,036 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-03 13:13:08,036 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-03 13:13:08,037 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-03 13:13:08,038 INFO hermes_cli.plugins: Plugin 'web-openai-native' registered web provider: openai-native
+2026-11-03 13:13:08,039 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-03 13:13:08,039 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-03 13:13:08,040 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-03 13:13:08,041 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-03 13:13:08,044 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-03 13:13:08,044 INFO hermes_cli.plugins: Plugin discovery complete: 55 found, 51 enabled
+2026-11-03 15:06:14,655 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-03 15:06:14,662 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-03 15:06:14,670 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-03 15:06:14,821 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-03 15:06:14,823 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-03 15:06:14,827 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-03 15:06:14,830 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-03 15:06:14,831 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-03 15:06:14,835 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-03 15:06:14,839 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-03 15:06:14,839 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-03 15:06:14,846 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-03 15:06:14,880 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-03 15:06:14,881 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-03 15:06:14,882 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-11-03 15:06:14,885 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-03 15:06:14,933 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-03 15:06:14,957 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-03 15:06:14,996 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-03 15:06:15,031 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-03 15:06:15,059 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-03 15:06:15,061 INFO hermes_cli.plugins: Plugin 'web-openai-native' registered web provider: openai-native
+2026-11-03 15:06:15,084 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-03 15:06:15,101 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-03 15:06:15,125 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-03 15:06:15,141 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-03 15:06:15,143 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-03 15:06:15,145 INFO hermes_cli.plugins: Plugin discovery complete: 55 found, 51 enabled
+2026-11-03 15:06:15,303 INFO run_agent: Loaded environment variables from /home/rafi_ansf/.hermes/profiles/writer/.env
+2026-11-03 15:06:15,783 WARNING cli: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-03 15:06:16,069 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=MainThread:139244901058368 provider=custom base_url=http://localhost:20128/v1 model=hermes-hemat
+2026-11-03 15:06:16,077 INFO tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:06:16,078 INFO tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-03 15:06:16,078 INFO tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:06:16,079 INFO tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:06:16,080 INFO tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-11-03 15:06:16,117 INFO tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:06:16,117 INFO tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:06:16,118 INFO tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:06:16,118 INFO tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:06:16,119 INFO tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:06:16,120 INFO tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:06:16,192 INFO tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:06:16,201 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (hermes-hemat)
+2026-11-03 15:06:16,310 INFO agent.model_metadata: Cached context length hermes-hemat@http://localhost:20128/v1 -> 262,144 tokens
+2026-11-03 15:06:16,315 INFO tools.tool_search: tool_search activated (tier 1): 18 core/visible tools kept, 6 deferred (~5218 tokens), listing full (budget ~4000 tokens)
+2026-11-03 15:06:16,484 INFO [20261103_150615_156d07] agent.turn_context: conversation turn: session=20261103_150615_156d07 model=hermes-hemat provider=custom platform=cli history=0 msg='Balas satu kalimat singkat: kamu profil apa dan pakai model apa?'
+2026-11-03 15:06:16,846 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-5 (<lambda>):139244271023808 provider=custom base_url=http://localhost:20128/v1 model=hermes-hemat
+2026-11-03 15:06:19,401 INFO [20261103_150615_156d07] agent.conversation_loop: API call #1: model=hermes-hemat provider=custom in=14334 out=13 total=14347 latency=2.6s cache=4057/14334 (28%) id=chatcmpl-7pXpaoPRLNrz4-EP0avP0QY
+2026-11-03 15:06:19,452 INFO agent.auxiliary_client: Auxiliary auto-detect: using main provider custom (hermes-hemat)
+2026-11-03 15:06:19,452 INFO agent.auxiliary_client: Auxiliary title_generation: using custom (hermes-hemat) at http://localhost:20128/v1/
+2026-11-03 15:06:19,456 INFO [20261103_150615_156d07] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=hermes-hemat api_calls=1/500 budget=1/500 tool_turns=0 last_msg_role=assistant response_len=68 session=20261103_150615_156d07
+2026-11-03 15:06:19,656 INFO cli: CLI cleanup calling memory shutdown for session 20261103_150615_156d07 with 2 message(s)
+2026-11-03 15:06:19,665 INFO cli: CLI cleanup calling memory shutdown for session 20261103_150615_156d07 with 2 message(s)
+2026-11-03 15:31:43,329 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-03 15:31:43,344 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-03 15:31:43,354 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-03 15:31:43,580 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-03 15:31:43,581 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-03 15:31:43,583 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-03 15:31:43,585 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-03 15:31:43,588 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-03 15:31:43,591 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-03 15:31:43,593 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-03 15:31:43,594 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-03 15:31:43,597 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-03 15:31:43,906 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-03 15:31:43,909 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-03 15:31:43,913 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-11-03 15:31:43,916 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-03 15:31:43,925 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-03 15:31:43,935 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-03 15:31:43,938 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-03 15:31:43,943 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-03 15:31:43,950 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-03 15:31:43,952 INFO hermes_cli.plugins: Plugin 'web-openai-native' registered web provider: openai-native
+2026-11-03 15:31:43,953 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-03 15:31:43,965 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-03 15:31:43,972 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-03 15:31:43,988 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-03 15:31:44,035 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-03 15:31:44,038 INFO hermes_cli.plugins: Plugin discovery complete: 55 found, 51 enabled
+2026-11-03 15:31:44,110 INFO run_agent: Loaded environment variables from /home/rafi_ansf/.hermes/profiles/writer/.env
+2026-11-03 15:31:44,296 WARNING cli: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-03 15:31:44,695 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=MainThread:130135339833152 provider=custom base_url=http://localhost:20128/v1 model=hermes-hemat
+2026-11-03 15:31:44,704 INFO tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:31:44,705 INFO tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-03 15:31:44,706 INFO tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:31:44,707 INFO tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:31:44,708 INFO tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-11-03 15:31:44,733 INFO tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:31:44,734 INFO tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:31:44,734 INFO tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:31:44,735 INFO tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:31:44,736 INFO tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:31:44,737 INFO tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:31:44,744 INFO tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:31:44,758 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (hermes-hemat)
+2026-11-03 15:31:44,821 INFO tools.tool_search: tool_search activated (tier 1): 30 core/visible tools kept, 7 deferred (~5536 tokens), listing full (budget ~4000 tokens)
+2026-11-03 15:31:45,027 INFO [20261103_153143_d8b132] agent.turn_context: conversation turn: session=20261103_153143_d8b132 model=hermes-hemat provider=custom platform=cli history=0 msg='work kanban task t_97bfa122'
+2026-11-03 15:31:45,356 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-5 (<lambda>):130134709352128 provider=custom base_url=http://localhost:20128/v1 model=hermes-hemat
+2026-11-03 15:31:50,327 INFO [20261103_153143_d8b132] agent.conversation_loop: API call #1: model=hermes-hemat provider=custom in=21658 out=27 total=21685 latency=5.0s cache=12186/21658 (56%) id=chatcmpl-6JvpaseUA5O2juMP4vrU6Qk
+2026-11-03 15:31:50,456 INFO [20261103_153143_d8b132] agent.tool_executor: tool kanban_show completed (0.01s, 4664 chars)
+2026-11-03 15:31:55,754 INFO [20261103_153143_d8b132] agent.conversation_loop: API call #2: model=hermes-hemat provider=custom in=23052 out=50 total=23102 latency=5.3s cache=18280/23052 (79%) id=chatcmpl-7JvpavKlNK_5juMPmamt0Ak
+2026-11-03 15:31:55,761 INFO tools.file_tools: Creating new local environment for task default...
+2026-11-03 15:31:55,872 INFO tools.environments.base: Session snapshot created (session=759be6bd7d99, cwd=/home/rafi_ansf/.hermes/kanban/workspaces/t_97bfa122)
+2026-11-03 15:31:55,872 INFO tools.file_tools: local environment ready for task default
+2026-11-03 15:31:55,875 INFO [20261103_153143_d8b132] agent.tool_executor: tool read_file completed (0.12s, 2241 chars)
+2026-11-03 15:31:58,384 INFO [20261103_153143_d8b132] agent.conversation_loop: API call #3: model=hermes-hemat provider=custom in=23725 out=311 total=24036 latency=2.5s id=chatcmpl-8ZvparTEB6u7mNMPxpWZqQo
+2026-11-03 15:31:58,670 INFO [20261103_153143_d8b132] agent.tool_executor: tool write_file completed (0.28s, 249 chars)
+2026-11-03 15:32:01,085 INFO [20261103_153143_d8b132] agent.conversation_loop: API call #4: model=hermes-hemat provider=custom in=24131 out=121 total=24252 latency=2.4s cache=18271/24131 (76%) id=chatcmpl-9Jvpari2Ca-1juMPh4XtuAk
+2026-11-03 15:32:01,096 INFO [20261103_153143_d8b132] agent.tool_executor: tool kanban_complete completed (0.01s, 69 chars)
+2026-11-03 15:32:03,264 INFO [20261103_153143_d8b132] agent.conversation_loop: API call #5: model=hermes-hemat provider=custom in=24292 out=51 total=24343 latency=2.2s cache=18264/24292 (75%) id=chatcmpl-9pvpatjiHp2xjuMP7qTb8Qk
+2026-11-03 15:32:03,270 INFO [20261103_153143_d8b132] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=hermes-hemat api_calls=5/500 budget=5/500 tool_turns=4 last_msg_role=assistant response_len=186 session=20261103_153143_d8b132
+2026-11-03 15:32:03,525 INFO cli: CLI cleanup calling memory shutdown for session 20261103_153143_d8b132 with 10 message(s)
+2026-11-03 15:32:03,528 INFO tools.terminal_tool: Manually cleaned up environment for task: default
+2026-11-03 15:32:03,528 INFO tools.terminal_tool: Cleaned 1 environments
+2026-11-03 15:32:03,530 INFO cli: CLI cleanup calling memory shutdown for session 20261103_153143_d8b132 with 10 message(s)
+2026-11-03 15:45:45,724 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-03 15:45:45,730 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-03 15:45:45,735 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-03 15:45:46,056 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-03 15:45:46,064 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-03 15:45:46,070 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-03 15:45:46,078 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-03 15:45:46,101 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-03 15:45:46,124 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-03 15:45:46,154 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-03 15:45:46,154 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-03 15:45:46,196 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-03 15:45:46,390 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-03 15:45:46,405 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-03 15:45:46,416 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-11-03 15:45:46,420 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-03 15:45:46,430 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-03 15:45:46,433 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-03 15:45:46,442 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-03 15:45:46,448 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-03 15:45:46,452 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-03 15:45:46,457 INFO hermes_cli.plugins: Plugin 'web-openai-native' registered web provider: openai-native
+2026-11-03 15:45:46,467 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-03 15:45:46,469 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-03 15:45:46,509 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-03 15:45:46,516 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-03 15:45:46,518 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-03 15:45:46,520 INFO hermes_cli.plugins: Plugin discovery complete: 55 found, 51 enabled
+2026-11-03 15:45:46,627 INFO run_agent: Loaded environment variables from /home/rafi_ansf/.hermes/profiles/writer/.env
+2026-11-03 15:45:46,792 WARNING cli: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-03 15:45:47,144 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=MainThread:127213370828608 provider=custom base_url=http://localhost:20128/v1 model=hermes-hemat
+2026-11-03 15:45:47,152 INFO tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:45:47,153 INFO tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-03 15:45:47,154 INFO tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:45:47,155 INFO tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:45:47,155 INFO tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-11-03 15:45:47,203 INFO tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:45:47,204 INFO tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:45:47,204 INFO tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:45:47,205 INFO tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:45:47,206 INFO tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:45:47,209 INFO tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:45:47,219 INFO tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:45:47,234 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (hermes-hemat)
+2026-11-03 15:45:47,290 INFO tools.tool_search: tool_search activated (tier 1): 30 core/visible tools kept, 7 deferred (~5536 tokens), listing full (budget ~4000 tokens)
+2026-11-03 15:45:47,587 INFO [20261103_154546_f24b7b] agent.turn_context: conversation turn: session=20261103_154546_f24b7b model=hermes-hemat provider=custom platform=cli history=0 msg='work kanban task t_5bf8b172'
+2026-11-03 15:45:48,008 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-5 (<lambda>):127212743292608 provider=custom base_url=http://localhost:20128/v1 model=hermes-hemat
+2026-11-03 15:45:52,130 INFO [20261103_154546_f24b7b] agent.conversation_loop: API call #1: model=hermes-hemat provider=custom in=21658 out=27 total=21685 latency=4.1s cache=12186/21658 (56%) id=chatcmpl-M5_paoyePM_HjuMP7pWU4Ak
+2026-11-03 15:45:52,199 INFO [20261103_154546_f24b7b] agent.tool_executor: tool kanban_show completed (0.01s, 5098 chars)
+2026-11-03 15:45:55,778 INFO [20261103_154546_f24b7b] agent.conversation_loop: API call #2: model=hermes-hemat provider=custom in=23200 out=34 total=23234 latency=3.6s cache=18281/23200 (79%) id=chatcmpl-N5_paov7BMnn4-EP1azuiQo
+2026-11-03 15:45:55,785 INFO tools.file_tools: Creating new local environment for task default...
+2026-11-03 15:45:55,904 INFO tools.environments.base: Session snapshot created (session=ec5ba5a6e4cb, cwd=/home/rafi_ansf/.hermes/kanban/workspaces/t_5bf8b172)
+2026-11-03 15:45:55,905 INFO tools.file_tools: local environment ready for task default
+2026-11-03 15:45:55,907 INFO [20261103_154546_f24b7b] agent.tool_executor: tool read_file completed (0.12s, 2770 chars)
+2026-11-03 15:45:58,650 INFO [20261103_154546_f24b7b] agent.conversation_loop: API call #3: model=hermes-hemat provider=custom in=23959 out=323 total=24282 latency=2.7s cache=18278/23959 (76%) id=chatcmpl-OZ_patrTMpD0juMP27bjwAg
+2026-11-03 15:45:59,004 INFO [20261103_154546_f24b7b] agent.tool_executor: tool write_file completed (0.35s, 255 chars)
+2026-11-03 15:46:00,436 INFO [20261103_154546_f24b7b] agent.conversation_loop: API call #4: model=hermes-hemat provider=custom in=24383 out=34 total=24417 latency=1.4s cache=20304/24383 (83%) id=chatcmpl-PJ_pasijEvPKjuMP9KCT2Ak
+2026-11-03 15:46:00,447 INFO [20261103_154546_f24b7b] agent.tool_executor: tool read_file completed (0.00s, 1625 chars)
+2026-11-03 15:46:02,457 INFO [20261103_154546_f24b7b] agent.conversation_loop: API call #5: model=hermes-hemat provider=custom in=24781 out=125 total=24906 latency=1.9s cache=20298/24781 (82%) id=chatcmpl-PZ_pavaEM_SojuMP0c-qsQo
+2026-11-03 15:46:02,475 INFO [20261103_154546_f24b7b] agent.tool_executor: tool kanban_complete completed (0.01s, 69 chars)
+2026-11-03 15:46:06,125 INFO [20261103_154546_f24b7b] agent.conversation_loop: API call #6: model=hermes-hemat provider=custom in=24946 out=353 total=25299 latency=3.6s cache=20290/24946 (81%) id=chatcmpl-QJ_papw7w6WO4w_M0e7ICg
+2026-11-03 15:46:06,141 INFO [20261103_154546_f24b7b] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=hermes-hemat api_calls=6/500 budget=6/500 tool_turns=5 last_msg_role=assistant response_len=1664 session=20261103_154546_f24b7b
+2026-11-03 15:46:06,356 INFO cli: CLI cleanup calling memory shutdown for session 20261103_154546_f24b7b with 12 message(s)
+2026-11-03 15:46:06,366 INFO tools.terminal_tool: Manually cleaned up environment for task: default
+2026-11-03 15:46:06,369 INFO tools.terminal_tool: Cleaned 1 environments
+2026-11-03 15:46:06,378 INFO cli: CLI cleanup calling memory shutdown for session 20261103_154546_f24b7b with 12 message(s)
+2026-11-03 15:51:46,560 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-03 15:51:46,587 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-03 15:51:46,609 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-03 15:51:46,804 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-03 15:51:46,806 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-03 15:51:46,809 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-03 15:51:46,817 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-03 15:51:46,819 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-03 15:51:46,822 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-03 15:51:46,824 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-03 15:51:46,824 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-03 15:51:46,829 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-03 15:51:46,872 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-03 15:51:46,874 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-03 15:51:46,878 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-11-03 15:51:46,927 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-03 15:51:47,106 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-03 15:51:47,172 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-03 15:51:47,176 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-03 15:51:47,184 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-03 15:51:47,188 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-03 15:51:47,191 INFO hermes_cli.plugins: Plugin 'web-openai-native' registered web provider: openai-native
+2026-11-03 15:51:47,198 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-03 15:51:47,207 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-03 15:51:47,212 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-03 15:51:47,218 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-03 15:51:47,225 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-03 15:51:47,228 INFO hermes_cli.plugins: Plugin discovery complete: 55 found, 51 enabled
+2026-11-03 15:51:47,384 INFO run_agent: Loaded environment variables from /home/rafi_ansf/.hermes/profiles/writer/.env
+2026-11-03 15:51:47,560 WARNING cli: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-03 15:51:47,973 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=MainThread:139013696538432 provider=custom base_url=http://localhost:20128/v1 model=hermes-hemat
+2026-11-03 15:51:47,983 INFO tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:51:47,984 INFO tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-03 15:51:47,985 INFO tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:51:47,986 INFO tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:51:47,987 INFO tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-11-03 15:51:48,012 INFO tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:51:48,013 INFO tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:51:48,015 INFO tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:51:48,016 INFO tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:51:48,017 INFO tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:51:48,018 INFO tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:51:48,025 INFO tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 15:51:48,037 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (hermes-hemat)
+2026-11-03 15:51:48,092 INFO tools.tool_search: tool_search activated (tier 1): 30 core/visible tools kept, 7 deferred (~5536 tokens), listing full (budget ~4000 tokens)
+2026-11-03 15:51:48,334 INFO [20261103_155147_a4179c] agent.turn_context: conversation turn: session=20261103_155147_a4179c model=hermes-hemat provider=custom platform=cli history=0 msg='work kanban task t_2008ace5'
+2026-11-03 15:51:48,641 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-5 (<lambda>):139013140756160 provider=custom base_url=http://localhost:20128/v1 model=hermes-hemat
+2026-11-03 15:51:58,163 INFO [20261103_155147_a4179c] agent.conversation_loop: API call #1: model=hermes-hemat provider=custom in=21656 out=26 total=21682 latency=9.5s id=chatcmpl-m6DparDxLJi90r4P96PIyQQ
+2026-11-03 15:51:58,205 INFO [20261103_155147_a4179c] agent.tool_executor: tool kanban_show completed (0.01s, 6086 chars)
+2026-11-03 15:52:02,038 INFO [20261103_155147_a4179c] agent.conversation_loop: API call #2: model=hermes-hemat provider=custom in=23629 out=34 total=23663 latency=3.8s id=chatcmpl-pKDpaqWsHN-1694PtIKTuQM
+2026-11-03 15:52:02,044 INFO tools.file_tools: Creating new local environment for task default...
+2026-11-03 15:52:02,150 INFO tools.environments.base: Session snapshot created (session=a36b4fd0fb32, cwd=/home/rafi_ansf/.hermes/kanban/workspaces/t_2008ace5)
+2026-11-03 15:52:02,151 INFO tools.file_tools: local environment ready for task default
+2026-11-03 15:52:02,153 INFO [20261103_155147_a4179c] agent.tool_executor: tool read_file completed (0.11s, 1625 chars)
+2026-11-03 15:52:05,176 INFO [20261103_155147_a4179c] agent.conversation_loop: API call #3: model=hermes-hemat provider=custom in=24027 out=34 total=24061 latency=3.0s id=chatcmpl-qKDpapiENvrt694PvcD2eQ
+2026-11-03 15:52:05,188 INFO [20261103_155147_a4179c] agent.tool_executor: tool read_file completed (0.00s, 2770 chars)
+2026-11-03 15:52:08,568 INFO [20261103_155147_a4179c] agent.conversation_loop: API call #4: model=hermes-hemat provider=custom in=24786 out=468 total=25254 latency=3.4s cache=20307/24786 (82%) id=chatcmpl-qqDpapfLM-nj694PuITO0AQ
+2026-11-03 15:52:08,997 INFO [20261103_155147_a4179c] agent.tool_executor: tool write_file completed (0.42s, 255 chars)
+2026-11-03 15:52:17,428 INFO [20261103_155147_a4179c] agent.conversation_loop: API call #5: model=hermes-hemat provider=custom in=25355 out=75 total=25430 latency=8.4s id=chatcmpl-r6DpasznPNH8694PverE2QQ
+2026-11-03 15:52:17,472 INFO [20261103_155147_a4179c] agent.tool_executor: tool kanban_complete completed (0.04s, 69 chars)
+2026-11-03 15:52:24,589 INFO [20261103_155147_a4179c] agent.conversation_loop: API call #6: model=hermes-hemat provider=custom in=25469 out=185 total=25654 latency=7.1s id=chatcmpl-t6DpasqPGaC0694P3ZuLqQY
+2026-11-03 15:52:24,599 INFO [20261103_155147_a4179c] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=hermes-hemat api_calls=6/500 budget=6/500 tool_turns=5 last_msg_role=assistant response_len=669 session=20261103_155147_a4179c
+2026-11-03 15:52:24,856 INFO cli: CLI cleanup calling memory shutdown for session 20261103_155147_a4179c with 12 message(s)
+2026-11-03 15:52:24,860 INFO tools.terminal_tool: Manually cleaned up environment for task: default
+2026-11-03 15:52:24,860 INFO tools.terminal_tool: Cleaned 1 environments
+2026-11-03 15:52:24,862 INFO cli: CLI cleanup calling memory shutdown for session 20261103_155147_a4179c with 12 message(s)
+2026-11-03 19:29:42,251 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-03 19:29:42,274 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-03 19:29:42,302 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-03 19:29:42,523 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-03 19:29:42,527 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-03 19:29:42,529 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-03 19:29:42,534 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-03 19:29:42,537 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-03 19:29:42,566 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-03 19:29:42,589 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-03 19:29:42,589 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-03 19:29:42,622 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-03 19:29:42,792 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-03 19:29:42,804 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-03 19:29:42,821 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-11-03 19:29:42,828 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-03 19:29:42,832 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-03 19:29:42,840 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-03 19:29:42,841 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-03 19:29:42,848 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-03 19:29:42,852 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-03 19:29:42,859 INFO hermes_cli.plugins: Plugin 'web-openai-native' registered web provider: openai-native
+2026-11-03 19:29:42,863 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-03 19:29:42,869 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-03 19:29:42,871 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-03 19:29:42,873 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-03 19:29:42,881 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-03 19:29:42,882 INFO hermes_cli.plugins: Plugin discovery complete: 55 found, 51 enabled
+2026-11-03 19:29:43,020 INFO run_agent: Loaded environment variables from /home/rafi_ansf/.hermes/profiles/writer/.env
+2026-11-03 19:29:43,189 WARNING cli: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-03 19:29:43,502 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=MainThread:130191581067072 provider=custom base_url=http://localhost:20128/v1 model=hermes-hemat
+2026-11-03 19:29:43,516 INFO tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:29:43,518 INFO tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-03 19:29:43,519 INFO tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:29:43,519 INFO tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:29:43,520 INFO tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-11-03 19:29:43,554 INFO tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:29:43,555 INFO tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:29:43,555 INFO tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:29:43,555 INFO tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:29:43,555 INFO tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:29:43,556 INFO tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:29:43,564 INFO tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:29:43,575 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (hermes-hemat)
+2026-11-03 19:29:43,621 INFO tools.tool_search: tool_search activated (tier 1): 18 core/visible tools kept, 6 deferred (~5218 tokens), listing full (budget ~4000 tokens)
+2026-11-03 19:29:43,661 INFO agent.model_metadata: Reconciling stale local cache entry hermes-hemat@http://localhost:20128/v1: 262,144 -> 200,000 (live probe)
+2026-11-03 19:29:43,670 INFO agent.model_metadata: Cached context length hermes-hemat@http://localhost:20128/v1 -> 200,000 tokens
+2026-11-03 19:29:43,819 INFO [20261103_192942_3152ec] agent.turn_context: conversation turn: session=20261103_192942_3152ec model=hermes-hemat provider=custom platform=cli history=0 msg='balas OK'
+2026-11-03 19:29:44,163 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-5 (<lambda>):130190960211648 provider=custom base_url=http://localhost:20128/v1 model=hermes-hemat
+2026-11-03 19:29:44,299 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 401 - {'error': {'message': 'Invalid API key', 'type': 'authentication_error', 'code': 'invalid_api_key'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key', 'type': 'authentication_error', 'code': 'invalid_api_key'}}
+2026-11-03 19:29:44,299 INFO run_agent: OpenAI client closed (stream_error_cleanup, shared=False, tcp_force_closed=0) thread=Thread-5 (<lambda>):130190960211648 provider=custom base_url=http://localhost:20128/v1 model=hermes-hemat
+2026-11-03 19:29:44,300 WARNING [20261103_192942_3152ec] agent.conversation_loop: API call failed (attempt 1/3, not retryable) error_type=AuthenticationError thread=Thread-4 (_chat_run_agent):130191426827968 provider=custom base_url=http://localhost:20128/v1 model=hermes-hemat summary=HTTP 401: Invalid API key
+2026-11-03 19:29:44,363 INFO [20261103_192942_3152ec] agent.model_metadata: Cached context length hermes-kode@http://localhost:20128/v1 -> 1,000,000 tokens
+2026-11-03 19:29:44,365 INFO [20261103_192942_3152ec] agent.chat_completion_helpers: Fallback hermes-kode: reasoning_config resolved: {'enabled': True, 'effort': 'low'}
+2026-11-03 19:29:44,365 INFO [20261103_192942_3152ec] agent.chat_completion_helpers: Fallback hermes-kode: extra_body resolved: None
+2026-11-03 19:29:44,365 INFO [20261103_192942_3152ec] agent.chat_completion_helpers: Fallback activated: hermes-hemat → hermes-kode (custom)
+2026-11-03 19:29:44,370 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6 (<lambda>):130190941333184 provider=custom base_url=http://localhost:20128/v1/ model=hermes-kode
+2026-11-03 19:29:44,377 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 401 - {'error': {'message': 'Invalid API key', 'type': 'authentication_error', 'code': 'invalid_api_key'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key', 'type': 'authentication_error', 'code': 'invalid_api_key'}}
+2026-11-03 19:29:44,377 INFO run_agent: OpenAI client closed (stream_error_cleanup, shared=False, tcp_force_closed=0) thread=Thread-6 (<lambda>):130190941333184 provider=custom base_url=http://localhost:20128/v1/ model=hermes-kode
+2026-11-03 19:29:44,388 WARNING [20261103_192942_3152ec] agent.conversation_loop: API call failed (attempt 1/3, not retryable) error_type=AuthenticationError thread=Thread-4 (_chat_run_agent):130191426827968 provider=custom base_url=http://localhost:20128/v1/ model=hermes-kode summary=HTTP 401: Invalid API key
+2026-11-03 19:29:44,421 INFO [20261103_192942_3152ec] agent.model_metadata: Cached context length hermes-kuat@http://localhost:20128/v1 -> 1,000,000 tokens
+2026-11-03 19:29:44,423 INFO [20261103_192942_3152ec] agent.chat_completion_helpers: Fallback hermes-kuat: reasoning_config resolved: {'enabled': True, 'effort': 'low'}
+2026-11-03 19:29:44,423 INFO [20261103_192942_3152ec] agent.chat_completion_helpers: Fallback hermes-kuat: extra_body resolved: None
+2026-11-03 19:29:44,423 INFO [20261103_192942_3152ec] agent.chat_completion_helpers: Fallback activated: hermes-kode → hermes-kuat (custom)
+2026-11-03 19:29:44,427 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-7 (<lambda>):130190726395584 provider=custom base_url=http://localhost:20128/v1/ model=hermes-kuat
+2026-11-03 19:29:44,433 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 401 - {'error': {'message': 'Invalid API key', 'type': 'authentication_error', 'code': 'invalid_api_key'}}
+Traceback (most recent call last):
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3756, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        self.agent, lambda: self._call_wire(stream_attempt_id))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2501, in _with_stream_emitters
+    response = run()
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3757, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3733, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3075, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **_relay_stream_identity(self.agent, "provider"), finalizer=relay_response.finalize,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        completed_response_predicate=lambda value: hasattr(value, "choices"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metadata=_relay_stream_metadata(self.agent, "chat_completions"), defer_logical_completion=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 331, in __init__
+    self._start_unmanaged(request)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/relay_llm.py", line 337, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 3066, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/hermes-agent/agent/chat_completion_helpers.py", line 2959, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rafi_ansf/.hermes/installs/031eda30dd5b63c3/environments/ad53cfcffc3c4e4a9c891fcbc9d27827/venv/lib/python3.14/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key', 'type': 'authentication_error', 'code': 'invalid_api_key'}}
+2026-11-03 19:29:44,433 INFO run_agent: OpenAI client closed (stream_error_cleanup, shared=False, tcp_force_closed=0) thread=Thread-7 (<lambda>):130190726395584 provider=custom base_url=http://localhost:20128/v1/ model=hermes-kuat
+2026-11-03 19:29:44,434 WARNING [20261103_192942_3152ec] agent.conversation_loop: API call failed (attempt 1/3, not retryable) error_type=AuthenticationError thread=Thread-4 (_chat_run_agent):130191426827968 provider=custom base_url=http://localhost:20128/v1/ model=hermes-kuat summary=HTTP 401: Invalid API key
+2026-11-03 19:29:44,496 ERROR [20261103_192942_3152ec] agent.conversation_loop: Non-retryable client error: Error code: 401 - {'error': {'message': 'Invalid API key', 'type': 'authentication_error', 'code': 'invalid_api_key'}}
+2026-11-03 19:29:44,742 INFO cli: CLI cleanup calling memory shutdown for session 20261103_192942_3152ec with 2 message(s)
+2026-11-03 19:29:44,754 INFO cli: CLI cleanup calling memory shutdown for session 20261103_192942_3152ec with 2 message(s)
+2026-11-03 19:37:29,916 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-03 19:37:29,925 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-03 19:37:29,936 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-03 19:37:30,105 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-03 19:37:30,109 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-03 19:37:30,111 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-03 19:37:30,113 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-03 19:37:30,117 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-03 19:37:30,118 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-03 19:37:30,120 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-03 19:37:30,120 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-03 19:37:30,155 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-03 19:37:30,264 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-03 19:37:30,281 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-03 19:37:30,288 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-11-03 19:37:30,295 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-03 19:37:30,303 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-03 19:37:30,315 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-03 19:37:30,337 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-03 19:37:30,367 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-03 19:37:30,384 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-03 19:37:30,391 INFO hermes_cli.plugins: Plugin 'web-openai-native' registered web provider: openai-native
+2026-11-03 19:37:30,400 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-03 19:37:30,410 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-03 19:37:30,411 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-03 19:37:30,412 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-03 19:37:30,431 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-03 19:37:30,432 INFO hermes_cli.plugins: Plugin discovery complete: 55 found, 51 enabled
+2026-11-03 19:37:30,623 INFO run_agent: Loaded environment variables from /home/rafi_ansf/.hermes/profiles/writer/.env
+2026-11-03 19:37:30,785 WARNING cli: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-03 19:37:31,102 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=MainThread:139475687442240 provider=custom base_url=http://localhost:20128/v1 model=hermes-hemat
+2026-11-03 19:37:31,117 INFO tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:37:31,118 INFO tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-03 19:37:31,119 INFO tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:37:31,120 INFO tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:37:31,121 INFO tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-11-03 19:37:31,145 INFO tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:37:31,146 INFO tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:37:31,146 INFO tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:37:31,147 INFO tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:37:31,148 INFO tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:37:31,149 INFO tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:37:31,154 INFO tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-03 19:37:31,164 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (hermes-hemat)
+2026-11-03 19:37:31,211 INFO tools.tool_search: tool_search activated (tier 1): 18 core/visible tools kept, 6 deferred (~5218 tokens), listing full (budget ~4000 tokens)
+2026-11-03 19:37:31,396 INFO [20261103_193730_5a7513] agent.turn_context: conversation turn: session=20261103_193730_5a7513 model=hermes-hemat provider=custom platform=cli history=0 msg='balas OK'
+2026-11-03 19:37:31,683 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-5 (<lambda>):139475126572736 provider=custom base_url=http://localhost:20128/v1 model=hermes-hemat
+2026-11-03 19:37:38,837 INFO [20261103_193730_5a7513] agent.conversation_loop: API call #1: model=hermes-hemat provider=custom in=14438 out=135 total=14573 latency=7.2s cache=6087/14438 (42%) id=chatcmpl-gdXpatHzGouOjuMPx7a1wAk
+2026-11-03 19:37:38,861 INFO [20261103_193730_5a7513] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=hermes-hemat api_calls=1/500 budget=1/500 tool_turns=0 last_msg_role=assistant response_len=2 session=20261103_193730_5a7513
+2026-11-03 19:37:38,866 INFO agent.auxiliary_client: Auxiliary auto-detect: using main provider custom (hermes-hemat)
+2026-11-03 19:37:38,866 INFO agent.auxiliary_client: Auxiliary title_generation: using custom (hermes-hemat) at http://localhost:20128/v1/
+2026-11-03 19:37:39,098 INFO cli: CLI cleanup calling memory shutdown for session 20261103_193730_5a7513 with 2 message(s)
+2026-11-03 19:37:39,106 INFO cli: CLI cleanup calling memory shutdown for session 20261103_193730_5a7513 with 2 message(s)
+2026-11-03 19:40:06,045 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-03 19:40:06,046 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-03 19:40:06,047 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-03 19:40:06,082 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-03 19:40:06,083 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-03 19:40:06,084 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-03 19:40:06,085 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-03 19:40:06,087 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-03 19:40:06,088 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-03 19:40:06,090 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-03 19:40:06,090 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-03 19:40:06,092 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-03 19:40:06,096 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-03 19:40:06,097 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-03 19:40:06,098 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-11-03 19:40:06,099 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-03 19:40:06,101 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-03 19:40:06,102 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-03 19:40:06,103 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-03 19:40:06,103 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-03 19:40:06,104 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-03 19:40:06,105 INFO hermes_cli.plugins: Plugin 'web-openai-native' registered web provider: openai-native
+2026-11-03 19:40:06,106 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-03 19:40:06,106 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-03 19:40:06,108 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-03 19:40:06,109 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-03 19:40:06,110 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-03 19:40:06,110 INFO hermes_cli.plugins: Plugin discovery complete: 55 found, 51 enabled
+2026-11-04 13:05:12,036 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-04 13:05:12,037 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-04 13:05:12,038 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-04 13:05:12,068 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-04 13:05:12,069 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-04 13:05:12,070 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-04 13:05:12,071 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-04 13:05:12,072 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-04 13:05:12,073 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-04 13:05:12,074 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-04 13:05:12,074 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-04 13:05:12,075 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-04 13:05:12,078 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-04 13:05:12,079 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-04 13:05:12,080 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-11-04 13:05:12,081 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-04 13:05:12,082 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-04 13:05:12,083 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-04 13:05:12,084 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-04 13:05:12,084 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-04 13:05:12,085 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-04 13:05:12,086 INFO hermes_cli.plugins: Plugin 'web-openai-native' registered web provider: openai-native
+2026-11-04 13:05:12,087 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-04 13:05:12,087 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-04 13:05:12,088 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-04 13:05:12,089 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-04 13:05:12,089 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-04 13:05:12,090 INFO hermes_cli.plugins: Plugin discovery complete: 55 found, 51 enabled

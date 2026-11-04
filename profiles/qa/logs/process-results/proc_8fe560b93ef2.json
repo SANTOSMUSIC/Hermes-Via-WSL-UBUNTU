@@ -1,0 +1,15 @@
+{
+  "id": "proc_8fe560b93ef2",
+  "command": "cd /home/rafi_ansf/projects/proyek-uji/backend && npm run start:prod &",
+  "cwd": "/home/rafi_ansf/projects/proyek-uji/frontend",
+  "task_id": "default",
+  "owner_task_id": "20261026_080257_692c8d",
+  "session_key": "20261026_080257_692c8d",
+  "parent_session_id": "20261026_080257_692c8d",
+  "started_at": 1792976636.046804,
+  "exit_code": 0,
+  "completion_reason": "exited",
+  "termination_source": "",
+  "notify_on_complete": false,
+  "output": "[1] 37880\n\n> backend@0.0.1 start:prod\n> node dist/main\n\n"
+}

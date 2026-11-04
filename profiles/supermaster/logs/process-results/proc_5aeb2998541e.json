@@ -1,0 +1,15 @@
+{
+  "id": "proc_5aeb2998541e",
+  "command": "cd /home/rafi_ansf/projects/personal-notes/backend && node src/index.js 2>&1",
+  "cwd": "/home/rafi_ansf/projects/personal-notes/backend",
+  "task_id": "default",
+  "owner_task_id": "20261104_132352_fc2ff3",
+  "session_key": "20261104_132352_fc2ff3",
+  "parent_session_id": "20261104_132352_fc2ff3",
+  "started_at": 1793774661.9453206,
+  "exit_code": 0,
+  "completion_reason": "exited",
+  "termination_source": "",
+  "notify_on_complete": false,
+  "output": "Database schema initialized\nServer running on port 3001 (development)\nUnhandled error: Table 'personal_notes.users' doesn't exist\nPOST /api/auth/register 500 25ms\nShutting down...\nServer stopped\n"
+}

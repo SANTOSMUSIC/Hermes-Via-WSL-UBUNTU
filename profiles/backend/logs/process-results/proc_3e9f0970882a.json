@@ -1,0 +1,15 @@
+{
+  "id": "proc_3e9f0970882a",
+  "command": "cd /home/rafi_ansf/.hermes/kanban/boards/baseline-test/workspaces/t_1f6377d4 && node src/index.js",
+  "cwd": "/home/rafi_ansf/.hermes/kanban/boards/baseline-test/workspaces/t_1f6377d4",
+  "task_id": "default",
+  "owner_task_id": "20261103_195017_ea4028",
+  "session_key": "20261103_195017_ea4028",
+  "parent_session_id": "20261103_195017_ea4028",
+  "started_at": 1793710856.1324985,
+  "exit_code": 137,
+  "completion_reason": "exited",
+  "termination_source": "",
+  "notify_on_complete": false,
+  "output": "Database connected successfully\nDatabase schema initialized\nServer running on port 3001\nEnvironment: development\nbash: [127103: 1 (255)] tcsetattr: Inappropriate ioctl for device\n"
+}

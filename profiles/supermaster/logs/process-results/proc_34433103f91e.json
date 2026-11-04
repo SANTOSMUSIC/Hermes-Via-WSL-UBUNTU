@@ -1,0 +1,15 @@
+{
+  "id": "proc_34433103f91e",
+  "command": "cd /home/rafi_ansf/projects/personal-notes/frontend && npm run dev 2>&1",
+  "cwd": "/home/rafi_ansf/projects/personal-notes/backend",
+  "task_id": "default",
+  "owner_task_id": "20261104_132352_fc2ff3",
+  "session_key": "20261104_132352_fc2ff3",
+  "parent_session_id": "20261104_132352_fc2ff3",
+  "started_at": 1793777547.7263486,
+  "exit_code": 143,
+  "completion_reason": "exited",
+  "termination_source": "",
+  "notify_on_complete": false,
+  "output": "\n> baseline-frontend@0.0.0 dev\n> vite\n\n\n  VITE v8.3.5  ready in 1177 ms\n\n  ➜  Local:   http://localhost:5173/\n  ➜  Network: use --host to expose\n2:32:31 PM [vite] (client) [optimizer] bundling dependencies...\n2:40:17 PM [vite] (client) hmr update /src/index.css, /src/pages/Notes.jsx, /src/context/AuthContext.jsx\n2:40:25 PM [vite] (client) hmr update /src/context/AuthContext.jsx, /src/index.css\nbash: [33384: 2 (255)] tcsetattr: Inappropriate ioctl for device\n"
+}

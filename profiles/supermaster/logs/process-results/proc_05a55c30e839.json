@@ -1,0 +1,15 @@
+{
+  "id": "proc_05a55c30e839",
+  "command": "cd /home/rafi_ansf/.hermes/kanban/boards/baseline-test/workspaces/t_1f6377d4 && node src/index.js",
+  "cwd": "/home/rafi_ansf/.hermes/kanban/boards/baseline-test/workspaces/t_1f6377d4",
+  "task_id": "default",
+  "owner_task_id": "20261103_194504_5b6ad4",
+  "session_key": "20261103_194504_5b6ad4",
+  "parent_session_id": "20261103_194504_5b6ad4",
+  "started_at": 1793711001.0367198,
+  "exit_code": 1,
+  "completion_reason": "exited",
+  "termination_source": "",
+  "notify_on_complete": true,
+  "output": "Database connected successfully\nDatabase schema initialized\nnode:events:505\n    throw er; // Unhandled 'error' event\n    ^\n\nError: listen EADDRINUSE: address already in use :::3001\n    at Server.setupListenHandle [as _listen2] (node:net:2390:16)\n    at listenInCluster (node:net:2499:12)\n    at Server.listen (node:net:2624:7)\n    at app.listen (/home/rafi_ansf/.hermes/kanban/boards/baseline-test/workspaces/t_1f6377d4/node_modules/express/lib/application.js:635:24)\n    at start (file:///home/rafi_ansf/.hermes/kanban/boards/baseline-test/workspaces/t_1f6377d4/src/index.js:37:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\nEmitted 'error' event on Server instance at:\n    at emitErrorNT (node:net:2478:8)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\n  code: 'EADDRINUSE',\n  errno: -98,\n  syscall: 'listen',\n  address: '::',\n  port: 3001\n}\n\nNode.js v24.22.1\n"
+}

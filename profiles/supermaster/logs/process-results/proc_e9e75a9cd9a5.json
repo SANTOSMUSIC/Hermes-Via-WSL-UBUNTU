@@ -1,0 +1,15 @@
+{
+  "id": "proc_e9e75a9cd9a5",
+  "command": "cd /home/rafi_ansf/projects/personal-notes/frontend && npm run dev 2>&1",
+  "cwd": "/home/rafi_ansf/projects/personal-notes/backend",
+  "task_id": "default",
+  "owner_task_id": "20261104_132352_fc2ff3",
+  "session_key": "20261104_132352_fc2ff3",
+  "parent_session_id": "20261104_132352_fc2ff3",
+  "started_at": 1793778037.5281835,
+  "exit_code": 143,
+  "completion_reason": "exited",
+  "termination_source": "",
+  "notify_on_complete": false,
+  "output": "\n> baseline-frontend@0.0.0 dev\n> vite\n\nPort 5173 is in use, trying another one...\n\n  VITE v8.3.5  ready in 921 ms\n\n  ➜  Local:   http://localhost:5174/\n  ➜  Network: use --host to expose\nbash: [36160: 2 (255)] tcsetattr: Inappropriate ioctl for device\n"
+}

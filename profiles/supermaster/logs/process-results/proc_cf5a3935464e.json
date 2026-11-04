@@ -1,0 +1,15 @@
+{
+  "id": "proc_cf5a3935464e",
+  "command": "node -v && npm -v\nfor p in bcrypt jsonwebtoken cookie-parser zod helmet express-rate-limit jest supertest vitest @testing-library/react react-router-dom cors dotenv express mysql2 react react-dom vite tailwindcss; do\n  v=$(npm view $p version)\n  echo \"$p $v | engines: $(npm view $p engines.node 2>/dev/null)\"\n  npm view $p time --json | grep \"\\\"$v\\\"\"\ndone",
+  "cwd": "/home/rafi_ansf",
+  "task_id": "default",
+  "owner_task_id": "20261030_091048_7600cb",
+  "session_key": "20261030_091048_7600cb",
+  "parent_session_id": "20261030_110515_8f549b",
+  "started_at": 1793333354.528462,
+  "exit_code": 0,
+  "completion_reason": "exited",
+  "termination_source": "",
+  "notify_on_complete": true,
+  "output": "v24.22.1\n11.19.1\nbcrypt 6.0.0 | engines: >= 18\n  \"6.0.0\": \"2025-05-11T18:06:24.247Z\"\njsonwebtoken 9.0.3 | engines: >=12\n  \"9.0.3\": \"2025-12-04T10:27:57.257Z\"\ncookie-parser 1.4.7 | engines: >= 0.8.0\n  \"1.4.7\": \"2024-10-08T18:26:16.210Z\"\nzod 4.6.7 | engines: \n  \"4.6.7\": \"2026-10-12T16:29:37.778Z\"\nhelmet 8.3.0 | engines: >=18.0.0\n  \"8.3.0\": \"2026-07-12T01:20:06.201Z\"\nexpress-rate-limit 8.7.2 | engines: >= 16\n  \"8.7.2\": \"2026-10-29T16:25:54.133Z\"\njest 30.5.2 | engines: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0\n  \"30.5.2\": \"2026-09-18T13:58:07.141Z\"\nsupertest 7.3.1 | engines: >=14.18.0\n  \"7.3.1\": \"2026-10-02T14:51:40.083Z\"\nvitest 5.0.5 | engines: ^22.12.0 || ^24.0.0 || >=26.0.0\n  \"5.0.5\": \"2026-10-15T14:29:01.396Z\",\n@testing-library/react 16.3.3 | engines: >=18\n  \"16.3.3\": \"2026-08-27T17:41:18.735Z\"\nreact-router-dom 7.18.5 | engines: >=20.0.0\n  \"7.18.5\": \"2026-10-27T21:14:19.826Z\"\ncors 2.8.6 | engines: >= 0.10\n  \"2.8.6\": \"2026-01-22T14:41:30.223Z\"\ndotenv 18.0.9 | engines: >=12\n  \"18.0.9\": \"2026-10-22T18:28:31.107Z\"\nexpress 5.3.0 | engines: >= 18\n  \"5.3.0\": \"2026-10-09T12:56:54.505Z\"\nmysql2 3.24.6 | engines: >= 8.0\n  \"3.24.6\": \"2026-10-13T14:33:39.196Z\"\nreact 19.3.1 | engines: >=0.10.0\n  \"19.3.1\": \"2026-10-14T16:47:15.290Z\",\nreact-dom 19.3.1 | engines: \n  \"19.3.1\": \"2026-10-14T16:49:10.081Z\",\nvite 8.3.5 | engines: ^20.19.0 || >=22.12.0\n  \"8.3.5\": \"2026-10-21T06:38:54.907Z\"\ntailwindcss 4.3.3 | engines: \n  \"4.3.3\": \"2026-07-16T12:03:35.267Z\",\n"
+}

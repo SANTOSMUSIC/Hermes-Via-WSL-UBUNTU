@@ -1,0 +1,15 @@
+{
+  "id": "proc_ee0ab394030c",
+  "command": "cd /home/rafi_ansf/projects/proyek-uji/frontend && npm run dev &",
+  "cwd": "/home/rafi_ansf/projects/proyek-uji/frontend",
+  "task_id": "default",
+  "owner_task_id": "20261026_080257_692c8d",
+  "session_key": "20261026_080257_692c8d",
+  "parent_session_id": "20261026_080257_692c8d",
+  "started_at": 1792976645.2692893,
+  "exit_code": 0,
+  "completion_reason": "exited",
+  "termination_source": "",
+  "notify_on_complete": false,
+  "output": "[1] 38195\n\n> frontend@0.0.0 dev\n> vite\n\nPort 5173 is in use, trying another one...\nPort 5174 is in use, trying another one...\n\n  VITE v8.3.5  ready in 209 ms\n\n  ➜  Local:   http://localhost:5175/\n  ➜  Network: use --host to expose\n"
+}

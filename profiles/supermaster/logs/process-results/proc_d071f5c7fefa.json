@@ -1,0 +1,15 @@
+{
+  "id": "proc_d071f5c7fefa",
+  "command": "node -v && npm -v",
+  "cwd": "/home/rafi_ansf",
+  "task_id": "default",
+  "owner_task_id": "20261030_091048_7600cb",
+  "session_key": "20261030_091048_7600cb",
+  "parent_session_id": "20261030_110515_8f549b",
+  "started_at": 1793333344.3611157,
+  "exit_code": 0,
+  "completion_reason": "exited",
+  "termination_source": "",
+  "notify_on_complete": false,
+  "output": "v24.22.1\n11.19.1\n"
+}
