@@ -1,0 +1,20 @@
+model:
+  default: hermes-hemat
+  provider: custom
+  base_url: http://localhost:20128/v1
+  api_key: ${HERMES_CUSTOM_LOCALHOST_20128_API_KEY}
+_config_version: 50
+telemetry:
+  shared_metrics:
+    enabled: false
+    send: false
+    offer_version: 2
+fallback_providers:
+  - provider: custom
+    model: hermes-kode
+    base_url: http://localhost:20128/v1
+  - provider: custom
+    model: hermes-kuat
+    base_url: http://localhost:20128/v1
+agent:
+  reasoning_effort: "low"

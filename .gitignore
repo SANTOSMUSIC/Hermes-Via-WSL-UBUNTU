@@ -1,0 +1,142 @@
+# Secrets and sensitive files
+.env
+.env.*
+*.key
+*.pem
+auth.json
+auth.lock
+
+# Database files
+state.db
+state.db-*
+state.db-shm
+state.db-wal
+*.sqlite
+*.sqlite3
+shared-state.db
+kanban.db
+kanban.db-*
+
+# Lock files
+*.lock
+*.pid
+*.sock
+
+# Logs
+logs/
+*.log
+gateway-starts.log
+gateway_state.json
+
+# Cache
+cache/
+models_dev_cache.json
+models_dev_cache.etag
+provider_models_cache.json
+context_length_cache.yaml
+.skills_prompt_snapshot.json
+
+# Runtime and sessions
+runtime/
+sessions/
+terminal-sessions/
+pending_messages/
+spawn-ledger.json
+
+# Backups (optional - can be large)
+backups/
+*.bak-*
+*.backup
+
+# Audio/image cache
+audio_cache/
+image_cache/
+
+# Node modules and build artifacts
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+
+# Hermes specific
+.hermes-update-in-progress.lock
+.install_id.lock
+.scratch_tip_shown
+install_id
+channel_directory.json
+gateway.lock
+pairing/
+source-checks/
+telemetry/
+sandboxes/
+hooks/
+platforms/
+installs/
+tools/
+hermes-agent/
+shared/
+team/
+plans/
+kanban/
+scripts/
+skills/
+cron/
+memories/
+
+# Profile-specific ignores
+profiles/*/cache/
+profiles/*/sessions/
+profiles/*/state/
+profiles/*/shared/
+profiles/*/pastes/
+profiles/*/pending/
+profiles/*/.curator_backups/
+profiles/*/lsp/
+profiles/*/.hermes_history
+profiles/*/processes.json
+profiles/*/plugin-update-checks/
+profiles/*/SOUL.md.bak-*
+profiles/*/config.yaml.bak-*
+profiles/*/audio_cache/
+profiles/*/image_cache/
+profiles/*/backups/
+profiles/*/logs/
+profiles/*/models_dev_cache.json
+profiles/*/models_dev_cache.etag
+profiles/*/provider_models_cache.json
+profiles/*/context_length_cache.yaml
+profiles/*/.skills_prompt_snapshot.json
+profiles/*/home/
+profiles/*/hooks/
+profiles/*/memories/
+profiles/*/plans/
+profiles/*/platforms/
+profiles/*/plugins/
+profiles/*/runtime/
+profiles/*/sandboxes/
+profiles/*/skins/
+profiles/*/source-checks/
+profiles/*/telemetry/
+profiles/*/terminal-sessions/
+profiles/*/workspace/
+
+# Root level ignores
+.hermes_history
+config.yaml.bak-*
+plugin-update-checks/
+state/
