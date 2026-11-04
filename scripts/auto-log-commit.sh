@@ -8,7 +8,7 @@ REPO_ROOT="/home/rafi_ansf/.hermes"
 cd "$REPO_ROOT"
 
 # Load environment
-export PATH="/usr/local/bin:/usr/bin:/bin:$PATH"
+export PATH="/home/rafi_ansf/.local/bin:/usr/local/bin:/usr/bin:/bin:$PATH"
 
 TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S WIB')
 

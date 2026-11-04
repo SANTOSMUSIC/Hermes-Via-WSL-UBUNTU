@@ -7,7 +7,11 @@ Usage: python3 -m scripts.auto_git_activity "kategori" "deskripsi" "detail"
 
 import subprocess
 import sys
+import os
 from pathlib import Path
+
+# Ensure git-lfs is in PATH
+os.environ["PATH"] = "/home/rafi_ansf/.local/bin:" + os.environ.get("PATH", "")
 
 REPO_ROOT = Path("/home/rafi_ansf/.hermes")
 GIT_ACTIVITY_SCRIPT = REPO_ROOT / "scripts" / "git-activity.sh"

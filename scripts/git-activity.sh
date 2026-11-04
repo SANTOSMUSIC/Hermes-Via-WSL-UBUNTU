@@ -7,6 +7,9 @@ set -euo pipefail
 REPO_ROOT="/home/rafi_ansf/.hermes"
 cd "$REPO_ROOT"
 
+# Ensure git-lfs is available
+export PATH="/home/rafi_ansf/.local/bin:$PATH"
+
 KATEGORI="${1:-chore}"
 DESKRIPSI="${2:-update}"
 DETAIL="${3:-}"
