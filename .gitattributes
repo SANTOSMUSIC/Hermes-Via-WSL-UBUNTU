@@ -1,0 +1,9 @@
+logs/ubuntu/auth.log* filter=lfs diff=lfs merge=lfs -text
+logs/ubuntu/dmesg* filter=lfs diff=lfs merge=lfs -text
+logs/ubuntu/journalctl* filter=lfs diff=lfs merge=lfs -text
+logs/agent.log filter=lfs diff=lfs merge=lfs -text
+logs/errors.log filter=lfs diff=lfs merge=lfs -text
+profiles/*/logs/agent.log filter=lfs diff=lfs merge=lfs -text
+logs/ubuntu/syslog* filter=lfs diff=lfs merge=lfs -text
+profiles/*/logs/errors.log filter=lfs diff=lfs merge=lfs -text
+logs/ubuntu/kern.log* filter=lfs diff=lfs merge=lfs -text
