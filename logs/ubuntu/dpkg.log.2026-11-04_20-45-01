@@ -1,0 +1,16 @@
+2026-11-02 15:07:39 startup archives unpack
+2026-11-02 15:07:39 install python3-ruamel.yaml.clib:amd64 <none> 0.2.15+ds-1build1
+2026-11-02 15:07:39 status half-installed python3-ruamel.yaml.clib:amd64 0.2.15+ds-1build1
+2026-11-02 15:07:39 status unpacked python3-ruamel.yaml.clib:amd64 0.2.15+ds-1build1
+2026-11-02 15:07:39 install python3-ruamel.yaml:all <none> 0.18.10+ds-1build1
+2026-11-02 15:07:39 status half-installed python3-ruamel.yaml:all 0.18.10+ds-1build1
+2026-11-02 15:07:39 status unpacked python3-ruamel.yaml:all 0.18.10+ds-1build1
+2026-11-02 15:07:39 startup packages configure
+2026-11-02 15:07:39 configure python3-ruamel.yaml.clib:amd64 0.2.15+ds-1build1 <none>
+2026-11-02 15:07:39 status unpacked python3-ruamel.yaml.clib:amd64 0.2.15+ds-1build1
+2026-11-02 15:07:39 status half-configured python3-ruamel.yaml.clib:amd64 0.2.15+ds-1build1
+2026-11-02 15:07:39 status installed python3-ruamel.yaml.clib:amd64 0.2.15+ds-1build1
+2026-11-02 15:07:39 configure python3-ruamel.yaml:all 0.18.10+ds-1build1 <none>
+2026-11-02 15:07:39 status unpacked python3-ruamel.yaml:all 0.18.10+ds-1build1
+2026-11-02 15:07:39 status half-configured python3-ruamel.yaml:all 0.18.10+ds-1build1
+2026-11-02 15:07:40 status installed python3-ruamel.yaml:all 0.18.10+ds-1build1
