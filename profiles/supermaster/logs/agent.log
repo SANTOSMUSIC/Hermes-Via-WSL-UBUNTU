@@ -21074,3 +21074,14 @@ openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API
 2026-11-04 20:07:01,685 INFO [20261104_192448_830f71] agent.conversation_loop: API call #77: model=hermes-kuat provider=custom in=70432 out=38 total=70470 latency=4.3s cache=70144/70432 (100%) id=chatcmpl-a0a59ff3-b3f5-4f9f-b28d-9f1f68ecfaf5
 2026-11-04 20:07:01,765 INFO [20261104_192448_830f71] agent.tool_executor: tool terminal completed (0.07s, 365 chars)
 2026-11-04 20:07:04,993 INFO [20261104_192448_830f71] agent.conversation_loop: API call #78: model=hermes-kuat provider=custom in=70638 out=96 total=70734 latency=3.2s cache=70144/70638 (99%) id=chatcmpl-45421908-b964-4991-b17a-f36aafc23df0
+2026-11-04 20:07:07,465 INFO [20261104_192448_830f71] agent.tool_executor: tool terminal completed (2.45s, 494 chars)
+2026-11-04 20:07:25,347 INFO [20261104_192448_830f71] agent.conversation_loop: API call #79: model=hermes-kuat provider=custom in=70935 out=61 total=70996 latency=17.8s cache=70144/70935 (99%) id=chatcmpl-3603ff14-4de9-427c-8e56-93b7aa2960c5
+2026-11-04 20:07:25,450 INFO [20261104_192448_830f71] agent.tool_executor: tool terminal completed (0.09s, 656 chars)
+2026-11-04 20:08:43,546 WARNING agent.chat_completion_helpers: Streaming failed after partial delivery, not retrying: upstream connection lost
+2026-11-04 20:08:43,546 INFO run_agent: OpenAI client closed (stream_error_cleanup, shared=False, tcp_force_closed=0) thread=Thread-209 (<lambda>):133671370618560 provider=custom base_url=http://localhost:20128/v1 model=hermes-kuat
+2026-11-04 20:08:43,547 WARNING [20261104_192448_830f71] agent.chat_completion_helpers: Partial stream delivered before error; returning length-truncated stub with 594 chars of recovered content so the loop can continue from where the stream died: upstream connection lost
+2026-11-04 20:08:43,562 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-210 (<lambda>):133670872536768 provider=custom base_url=http://localhost:20128/v1 model=hermes-kuat
+2026-11-04 20:09:48,615 INFO [20261104_192448_830f71] agent.conversation_loop: API call #80: model=hermes-kuat provider=custom in=70735 out=76 total=70811 latency=65.0s cache=48224/70735 (68%) id=chatcmpl-9640b76a-e799-4561-a7b4-022e0caaccc1
+2026-11-04 20:09:48,708 INFO [20261104_192448_830f71] agent.tool_executor: tool terminal completed (0.08s, 559 chars)
+2026-11-04 20:11:04,705 INFO [20261104_192448_830f71] agent.conversation_loop: API call #81: model=hermes-kuat provider=custom in=71017 out=754 total=71771 latency=75.9s cache=70144/71017 (99%) id=chatcmpl-92d9f606-06c4-4e59-ae7f-242ce75f1015
+2026-11-04 20:11:04,834 INFO [20261104_192448_830f71] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=hermes-kuat api_calls=31/500 budget=31/500 tool_turns=76 last_msg_role=assistant response_len=2887 session=20261104_192448_830f71

@@ -1,0 +1,198 @@
+2026-10-29T10:17:01.190477+07:00 VINCENT CRON[35939]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-29T10:17:01.215788+07:00 VINCENT CRON[35939]: pam_unix(cron:session): session closed for user root
+2026-10-29T11:17:01.602148+07:00 VINCENT CRON[53875]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-29T11:17:01.636954+07:00 VINCENT CRON[53875]: pam_unix(cron:session): session closed for user root
+2026-10-29T13:17:01.707834+07:00 VINCENT CRON[78648]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-29T13:17:01.799049+07:00 VINCENT CRON[78648]: pam_unix(cron:session): session closed for user root
+2026-10-29T14:17:02.074355+07:00 VINCENT CRON[96502]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-29T14:17:02.116197+07:00 VINCENT CRON[96502]: pam_unix(cron:session): session closed for user root
+2026-10-29T15:17:01.124415+07:00 VINCENT CRON[114792]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-29T15:17:01.136014+07:00 VINCENT CRON[114792]: pam_unix(cron:session): session closed for user root
+2026-10-29T15:57:50.609814+07:00 VINCENT systemd-logind[152]: The system will power off now!
+2026-10-29T15:57:51.010800+07:00 VINCENT systemd-logind[152]: System is powering down.
+2026-10-30T08:06:43.172387+07:00 VINCENT systemd-logind[147]: New seat seat0.
+2026-10-30T08:06:43.379387+07:00 VINCENT (systemd): pam_unix(systemd-user:session): session opened for user rafi_ansf(uid=1000) by rafi_ansf(uid=0)
+2026-10-30T08:06:43.379469+07:00 VINCENT systemd-logind[147]: New session 'c1' of user 'rafi_ansf' with class 'manager' and type 'unspecified'.
+2026-10-30T08:06:44.768233+07:00 VINCENT login: pam_unix(login:session): session opened for user rafi_ansf(uid=1000) by rafi_ansf(uid=0)
+2026-10-30T08:06:44.772544+07:00 VINCENT systemd-logind[147]: New session 'c2' of user 'rafi_ansf' with class 'user' and type 'tty'.
+2026-10-30T08:17:01.780897+07:00 VINCENT CRON[4917]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-30T08:17:01.787659+07:00 VINCENT CRON[4917]: pam_unix(cron:session): session closed for user root
+2026-10-30T09:17:01.822898+07:00 VINCENT CRON[24232]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-30T09:17:01.827435+07:00 VINCENT CRON[24232]: pam_unix(cron:session): session closed for user root
+2026-10-30T10:02:01.858798+07:00 VINCENT CRON[38172]: pam_unix(cron:session): session opened for user rafi_ansf(uid=1000) by rafi_ansf(uid=0)
+2026-10-30T10:02:01.914655+07:00 VINCENT CRON[38172]: pam_unix(cron:session): session closed for user rafi_ansf
+2026-10-30T10:15:01.922945+07:00 VINCENT CRON[42174]: pam_unix(cron:session): session opened for user rafi_ansf(uid=1000) by rafi_ansf(uid=0)
+2026-10-30T10:15:01.967504+07:00 VINCENT CRON[42174]: pam_unix(cron:session): session closed for user rafi_ansf
+2026-10-30T10:17:01.971781+07:00 VINCENT CRON[42771]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-30T10:17:01.973308+07:00 VINCENT CRON[42771]: pam_unix(cron:session): session closed for user root
+2026-10-30T10:19:36.558657+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-30T10:19:36.563620+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/2 ; PWD=/home/rafi_ansf/.9router ; USER=root ; COMMAND=/usr/bin/apt install -y sqlite3
+2026-10-30T10:19:43.595214+07:00 VINCENT sudo: pam_unix(sudo:session): session closed for user root
+2026-10-30T10:59:04.067503+07:00 VINCENT unix_chkpwd[55819]: password check failed for user (rafi_ansf)
+2026-10-30T10:59:04.072887+07:00 VINCENT sudo: pam_unix(sudo:auth): authentication failure; logname= uid=1000 euid=0 tty=/dev/pts/2 ruser=rafi_ansf rhost=  user=rafi_ansf
+2026-10-30T11:00:27.732137+07:00 VINCENT unix_chkpwd[56233]: password check failed for user (rafi_ansf)
+2026-10-30T11:01:00.567329+07:00 VINCENT login: pam_unix(login:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-30T11:01:00.605172+07:00 VINCENT systemd-logind[147]: New session 'c3' of user 'root' with class 'user-early' and type 'tty'.
+2026-10-30T11:01:00.690296+07:00 VINCENT (systemd): pam_unix(systemd-user:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-30T11:01:00.695690+07:00 VINCENT systemd-logind[147]: New session 'c4' of user 'root' with class 'manager-early' and type 'unspecified'.
+2026-10-30T11:01:01.018568+07:00 VINCENT login: ROOT LOGIN ON pts/5
+2026-10-30T11:01:36.006956+07:00 VINCENT passwd[56614]: pam_unix(passwd:chauthtok): password changed for rafi_ansf
+2026-10-30T11:01:44.716550+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-30T11:01:44.717677+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/2 ; PWD=/mnt/d/Document ; USER=root ; COMMAND=/usr/bin/apt update
+2026-10-30T11:01:48.049995+07:00 VINCENT sudo: pam_unix(sudo:session): session closed for user root
+2026-10-30T11:01:48.059776+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-30T11:01:48.060238+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/2 ; PWD=/mnt/d/Document ; USER=root ; COMMAND=/usr/bin/apt install -y mysql-server
+2026-10-30T11:02:22.498710+07:00 VINCENT groupadd[57236]: group added to /etc/group: name=mysql, GID=106
+2026-10-30T11:02:22.513923+07:00 VINCENT groupadd[57236]: group added to /etc/gshadow: name=mysql
+2026-10-30T11:02:22.515245+07:00 VINCENT groupadd[57236]: new group: name=mysql, GID=106
+2026-10-30T11:02:22.563671+07:00 VINCENT useradd[57245]: new user: name=mysql, UID=102, GID=106, home=/nonexistent, shell=/bin/false, from=none
+2026-10-30T11:02:35.106422+07:00 VINCENT sudo: pam_unix(sudo:session): session closed for user root
+2026-10-30T11:02:35.126146+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-30T11:02:35.126428+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/2 ; PWD=/mnt/d/Document ; USER=root ; COMMAND=/usr/sbin/service mysql start
+2026-10-30T11:02:35.478944+07:00 VINCENT sudo: pam_unix(sudo:session): session closed for user root
+2026-10-30T11:03:49.390424+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-30T11:03:49.397957+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/2 ; PWD=/mnt/d/Document ; USER=root ; COMMAND=/usr/sbin/service mysql start
+2026-10-30T11:03:49.637113+07:00 VINCENT sudo: pam_unix(sudo:session): session closed for user root
+2026-10-30T11:03:49.647112+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-30T11:03:49.647557+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/2 ; PWD=/mnt/d/Document ; USER=root ; COMMAND=/usr/sbin/service mysql status
+2026-10-30T11:03:49.666283+07:00 VINCENT sudo: pam_unix(sudo:session): session closed for user root
+2026-10-30T11:03:49.705724+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-30T11:03:49.706505+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/2 ; PWD=/mnt/d/Document ; USER=root ; COMMAND=/usr/bin/grep -rn bind-address /etc/mysql/
+2026-10-30T11:03:49.708017+07:00 VINCENT sudo: pam_unix(sudo:session): session closed for user root
+2026-10-30T11:04:16.263354+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-30T11:04:16.266409+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/2 ; PWD=/mnt/d/Document ; USER=root ; COMMAND=/usr/bin/mysql 
+2026-10-30T11:04:16.288960+07:00 VINCENT sudo: pam_unix(sudo:session): session closed for user root
+2026-10-30T11:04:25.175926+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-30T11:04:25.176839+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/2 ; PWD=/mnt/d/Document ; USER=root ; COMMAND=/usr/bin/mysql -e SHOW GRANTS FOR \'notes_app\'@\'localhost\'; SHOW GRANTS FOR \'notes_migrate\'@\'localhost\'; SHOW DATABASES LIKE \'notes_db\';
+2026-10-30T11:04:25.191874+07:00 VINCENT sudo: pam_unix(sudo:session): session closed for user root
+2026-10-30T11:17:02.033960+07:00 VINCENT CRON[65726]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-30T11:17:02.043811+07:00 VINCENT CRON[65726]: pam_unix(cron:session): session closed for user root
+2026-10-30T13:17:01.621641+07:00 VINCENT CRON[78762]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-30T13:17:01.635685+07:00 VINCENT CRON[78762]: pam_unix(cron:session): session closed for user root
+                                                                                                                                                                                    2026-10-30T13:41:13.230487+07:00 VINCENT systemd-logind[157]: New seat seat0.
+2026-10-30T13:41:13.476410+07:00 VINCENT (systemd): pam_unix(systemd-user:session): session opened for user rafi_ansf(uid=1000) by rafi_ansf(uid=0)
+2026-10-30T13:41:13.476616+07:00 VINCENT systemd-logind[157]: New session 'c1' of user 'rafi_ansf' with class 'manager' and type 'unspecified'.
+2026-10-30T13:41:16.327961+07:00 VINCENT login: pam_unix(login:session): session opened for user rafi_ansf(uid=1000) by rafi_ansf(uid=0)
+2026-10-30T13:41:16.331166+07:00 VINCENT systemd-logind[157]: New session 'c2' of user 'rafi_ansf' with class 'user' and type 'tty'.
+2026-10-30T14:17:01.381956+07:00 VINCENT CRON[14326]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-30T14:17:01.399334+07:00 VINCENT CRON[14326]: pam_unix(cron:session): session closed for user root
+2026-10-30T15:17:01.715157+07:00 VINCENT CRON[35039]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-30T15:17:01.717353+07:00 VINCENT CRON[35039]: pam_unix(cron:session): session closed for user root
+2026-10-30T15:56:03.292893+07:00 VINCENT systemd-logind[157]: The system will power off now!
+2026-10-30T15:56:04.482998+07:00 VINCENT systemd-logind[157]: System is powering down.
+2026-11-02T13:10:21.123662+07:00 VINCENT systemd-logind[157]: New seat seat0.
+2026-11-02T13:10:21.222538+07:00 VINCENT (systemd): pam_unix(systemd-user:session): session opened for user rafi_ansf(uid=1000) by rafi_ansf(uid=0)
+2026-11-02T13:10:21.223188+07:00 VINCENT systemd-logind[157]: New session 'c1' of user 'rafi_ansf' with class 'manager' and type 'unspecified'.
+2026-11-02T13:10:23.468342+07:00 VINCENT login: pam_unix(login:session): session opened for user rafi_ansf(uid=1000) by rafi_ansf(uid=0)
+2026-11-02T13:10:23.473309+07:00 VINCENT systemd-logind[157]: New session 'c2' of user 'rafi_ansf' with class 'user' and type 'tty'.
+2026-11-02T13:17:01.711297+07:00 VINCENT CRON[4425]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-02T13:17:01.716756+07:00 VINCENT CRON[4425]: pam_unix(cron:session): session closed for user root
+2026-11-02T14:17:01.756294+07:00 VINCENT CRON[23779]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-02T14:17:01.759650+07:00 VINCENT CRON[23779]: pam_unix(cron:session): session closed for user root
+2026-11-02T15:06:26.170718+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-11-02T15:06:26.173521+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/3 ; PWD=/home/rafi_ansf ; USER=root ; COMMAND=/usr/bin/apt update
+2026-11-02T15:07:29.193294+07:00 VINCENT sudo: pam_unix(sudo:session): session closed for user root
+2026-11-02T15:07:29.209087+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-11-02T15:07:29.209362+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/3 ; PWD=/home/rafi_ansf ; USER=root ; COMMAND=/usr/bin/apt install -y python3-ruamel.yaml python3-yaml
+2026-11-02T15:07:40.494562+07:00 VINCENT sudo: pam_unix(sudo:session): session closed for user root
+2026-11-02T15:17:01.779683+07:00 VINCENT CRON[43282]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-02T15:17:01.781117+07:00 VINCENT CRON[43282]: pam_unix(cron:session): session closed for user root
+2026-11-02T16:17:01.832510+07:00 VINCENT CRON[74977]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-02T16:17:01.837277+07:00 VINCENT CRON[74977]: pam_unix(cron:session): session closed for user root
+2026-11-02T17:17:01.906518+07:00 VINCENT CRON[107471]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-02T17:17:01.922784+07:00 VINCENT CRON[107471]: pam_unix(cron:session): session closed for user root
+2026-11-02T18:17:01.954885+07:00 VINCENT CRON[125451]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-02T18:17:01.961559+07:00 VINCENT CRON[125451]: pam_unix(cron:session): session closed for user root
+2026-11-02T19:17:02.018264+07:00 VINCENT CRON[143679]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-02T19:17:02.030635+07:00 VINCENT CRON[143679]: pam_unix(cron:session): session closed for user root
+2026-11-02T20:17:01.068074+07:00 VINCENT CRON[164268]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-02T20:17:01.075625+07:00 VINCENT CRON[164268]: pam_unix(cron:session): session closed for user root
+2026-11-02T20:59:22.535314+07:00 VINCENT systemd-logind[157]: The system will power off now!
+2026-11-02T20:59:23.575177+07:00 VINCENT systemd-logind[157]: System is powering down.
+2026-11-02T20:59:23.716859+07:00 VINCENT login: pam_unix(login:session): session closed for user rafi_ansf
+2026-11-03T13:12:58.782663+07:00 VINCENT systemd-logind[200]: New seat seat0.
+2026-11-03T13:12:59.075801+07:00 VINCENT (systemd): pam_unix(systemd-user:session): session opened for user rafi_ansf(uid=1000) by rafi_ansf(uid=0)
+2026-11-03T13:12:59.078120+07:00 VINCENT systemd-logind[200]: New session 'c1' of user 'rafi_ansf' with class 'manager' and type 'unspecified'.
+2026-11-03T13:13:03.433489+07:00 VINCENT login: pam_unix(login:session): session opened for user rafi_ansf(uid=1000) by rafi_ansf(uid=0)
+2026-11-03T13:13:03.443747+07:00 VINCENT systemd-logind[200]: New session 'c2' of user 'rafi_ansf' with class 'user' and type 'tty'.
+2026-11-03T13:17:01.680429+07:00 VINCENT CRON[3152]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-03T13:17:01.684771+07:00 VINCENT CRON[3152]: pam_unix(cron:session): session closed for user root
+2026-11-03T14:17:01.710713+07:00 VINCENT CRON[22576]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-03T14:17:01.714606+07:00 VINCENT CRON[22576]: pam_unix(cron:session): session closed for user root
+2026-11-03T15:17:01.750667+07:00 VINCENT CRON[45462]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-03T15:17:01.758173+07:00 VINCENT CRON[45462]: pam_unix(cron:session): session closed for user root
+2026-11-03T16:17:01.784335+07:00 VINCENT CRON[67855]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-03T16:17:01.797472+07:00 VINCENT CRON[67855]: pam_unix(cron:session): session closed for user root
+2026-11-03T17:17:01.903282+07:00 VINCENT CRON[86519]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-03T17:17:01.924489+07:00 VINCENT CRON[86519]: pam_unix(cron:session): session closed for user root
+2026-11-03T19:17:01.751869+07:00 VINCENT CRON[103524]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-03T19:17:01.758312+07:00 VINCENT CRON[103524]: pam_unix(cron:session): session closed for user root
+2026-11-03T19:50:35.316219+07:00 VINCENT sudo: pam_unix(sudo:auth): conversation failed
+2026-11-03T19:50:35.319910+07:00 VINCENT sudo: pam_unix(sudo:auth): auth could not identify password for [rafi_ansf]
+2026-11-03T19:51:46.730371+07:00 VINCENT sudo: pam_unix(sudo:auth): conversation failed
+2026-11-03T19:51:46.731707+07:00 VINCENT sudo: pam_unix(sudo:auth): auth could not identify password for [rafi_ansf]
+2026-11-03T19:51:55.063585+07:00 VINCENT sudo: pam_unix(sudo:auth): conversation failed
+2026-11-03T19:51:55.063699+07:00 VINCENT sudo: pam_unix(sudo:auth): auth could not identify password for [rafi_ansf]
+2026-11-03T19:52:00.477033+07:00 VINCENT sudo: pam_unix(sudo:auth): conversation failed
+2026-11-03T19:52:00.477683+07:00 VINCENT sudo: pam_unix(sudo:auth): auth could not identify password for [rafi_ansf]
+2026-11-03T19:52:34.961433+07:00 VINCENT sudo: pam_unix(sudo:auth): conversation failed
+2026-11-03T19:52:34.964197+07:00 VINCENT sudo: pam_unix(sudo:auth): auth could not identify password for [rafi_ansf]
+2026-11-03T19:57:00.554314+07:00 VINCENT sudo: pam_unix(sudo:auth): conversation failed
+2026-11-03T19:57:00.555661+07:00 VINCENT sudo: pam_unix(sudo:auth): auth could not identify password for [rafi_ansf]
+2026-11-03T19:57:16.060378+07:00 VINCENT sudo: pam_unix(sudo:auth): conversation failed
+2026-11-03T19:57:16.060479+07:00 VINCENT sudo: pam_unix(sudo:auth): auth could not identify password for [rafi_ansf]
+2026-11-03T19:57:36.190236+07:00 VINCENT sudo: pam_unix(sudo:auth): conversation failed
+2026-11-03T19:57:36.190467+07:00 VINCENT sudo: pam_unix(sudo:auth): auth could not identify password for [rafi_ansf]
+2026-11-03T20:17:01.797953+07:00 VINCENT CRON[133889]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-03T20:17:01.802777+07:00 VINCENT CRON[133889]: pam_unix(cron:session): session closed for user root
+2026-11-03T20:28:22.054558+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-11-03T20:28:22.066801+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/3 ; PWD=/home/rafi_ansf ; USER=root ; COMMAND=/usr/bin/apt update
+2026-11-03T20:28:35.822140+07:00 VINCENT sudo: pam_unix(sudo:session): session closed for user root
+2026-11-03T20:28:35.832389+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-11-03T20:28:35.832518+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/3 ; PWD=/home/rafi_ansf ; USER=root ; COMMAND=/usr/bin/apt install gh -y
+2026-11-03T20:28:36.525524+07:00 VINCENT sudo: pam_unix(sudo:session): session closed for user root
+2026-11-03T20:57:25.689971+07:00 VINCENT systemd-logind[200]: The system will power off now!
+2026-11-03T20:57:26.423415+07:00 VINCENT systemd-logind[200]: System is powering down.
+2026-11-03T20:57:26.607564+07:00 VINCENT login: pam_unix(login:session): session closed for user rafi_ansf
+2026-11-04T13:05:06.319532+07:00 VINCENT systemd-logind[157]: New seat seat0.
+2026-11-04T13:05:06.432226+07:00 VINCENT (systemd): pam_unix(systemd-user:session): session opened for user rafi_ansf(uid=1000) by rafi_ansf(uid=0)
+2026-11-04T13:05:06.435047+07:00 VINCENT systemd-logind[157]: New session 'c1' of user 'rafi_ansf' with class 'manager' and type 'unspecified'.
+2026-11-04T13:05:08.808967+07:00 VINCENT login: pam_unix(login:session): session opened for user rafi_ansf(uid=1000) by rafi_ansf(uid=0)
+2026-11-04T13:05:08.814364+07:00 VINCENT systemd-logind[157]: New session 'c2' of user 'rafi_ansf' with class 'user' and type 'tty'.
+2026-11-04T13:17:01.924161+07:00 VINCENT CRON[5839]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-04T13:17:01.926783+07:00 VINCENT CRON[5839]: pam_unix(cron:session): session closed for user root
+2026-11-04T13:18:36.151233+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-11-04T13:18:36.153893+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/3 ; PWD=/home/rafi_ansf ; USER=root ; COMMAND=/usr/bin/mysql 
+2026-11-04T13:19:03.741196+07:00 VINCENT sudo: pam_unix(sudo:session): session closed for user root
+2026-11-04T13:20:39.095688+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-11-04T13:20:39.096895+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/3 ; PWD=/home/rafi_ansf ; USER=root ; COMMAND=/usr/bin/mysql 
+2026-11-04T13:21:16.810608+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-11-04T13:21:16.810808+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/3 ; PWD=/home/rafi_ansf ; USER=root ; COMMAND=/usr/bin/mysql 
+2026-11-04T13:21:54.535257+07:00 VINCENT sudo: pam_unix(sudo:session): session closed for user root
+2026-11-04T13:31:42.952855+07:00 VINCENT sudo: pam_unix(sudo:auth): conversation failed
+2026-11-04T13:31:42.963132+07:00 VINCENT sudo: pam_unix(sudo:auth): auth could not identify password for [rafi_ansf]
+2026-11-04T13:32:11.605616+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-11-04T13:32:11.606858+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/3 ; PWD=/home/rafi_ansf/projects/personal-notes/backend ; USER=root ; COMMAND=/usr/bin/mysql -e SELECT user,host,plugin FROM mysql.user WHERE user=\'notes_app\';
+2026-11-04T13:32:11.652892+07:00 VINCENT sudo: pam_unix(sudo:session): session closed for user root
+2026-11-04T13:38:06.875375+07:00 VINCENT sudo: pam_unix(sudo:auth): conversation failed
+2026-11-04T13:38:06.877888+07:00 VINCENT sudo: pam_unix(sudo:auth): auth could not identify password for [rafi_ansf]
+2026-11-04T13:42:15.312392+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-11-04T13:42:15.317550+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/5 ; PWD=/home/rafi_ansf/projects/personal-notes/backend ; USER=root ; COMMAND=/usr/bin/mysql -e ALTER USER \'notes_app\'@\'localhost\' IDENTIFIED BY \'e29abc4e2f3a6dc906ac5d07acb10154\';
+2026-11-04T13:42:15.345560+07:00 VINCENT sudo: pam_unix(sudo:session): session closed for user root
+2026-11-04T14:17:02.054446+07:00 VINCENT CRON[28640]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-04T14:17:02.057998+07:00 VINCENT CRON[28640]: pam_unix(cron:session): session closed for user root
+2026-11-04T14:29:29.529048+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-11-04T14:29:29.620939+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/5 ; PWD=/home/rafi_ansf/projects/personal-notes/backend ; USER=root ; COMMAND=/usr/bin/apt update
+2026-11-04T14:29:44.066476+07:00 VINCENT sudo: pam_unix(sudo:session): session closed for user root
+2026-11-04T14:29:44.074007+07:00 VINCENT sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-11-04T14:29:44.074700+07:00 VINCENT sudo: rafi_ansf : TTY=/dev/pts/5 ; PWD=/home/rafi_ansf/projects/personal-notes/backend ; USER=root ; COMMAND=/usr/bin/apt install gh -y
+2026-11-04T14:29:45.122927+07:00 VINCENT sudo: pam_unix(sudo:session): session closed for user root
+2026-11-04T15:17:01.989283+07:00 VINCENT CRON[48704]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-04T15:17:01.994470+07:00 VINCENT CRON[48704]: pam_unix(cron:session): session closed for user root
+2026-11-04T16:17:01.191504+07:00 VINCENT CRON[67920]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-04T16:17:01.198054+07:00 VINCENT CRON[67920]: pam_unix(cron:session): session closed for user root
+2026-11-04T17:17:01.296965+07:00 VINCENT CRON[85732]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-04T17:17:01.304177+07:00 VINCENT CRON[85732]: pam_unix(cron:session): session closed for user root
+2026-11-04T19:17:01.744101+07:00 VINCENT CRON[103820]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-04T19:17:01.755664+07:00 VINCENT CRON[103820]: pam_unix(cron:session): session closed for user root
+2026-11-04T20:15:01.876625+07:00 VINCENT CRON[122732]: pam_unix(cron:session): session opened for user rafi_ansf(uid=1000) by rafi_ansf(uid=0)

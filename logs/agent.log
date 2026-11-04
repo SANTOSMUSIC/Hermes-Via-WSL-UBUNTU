@@ -7316,3 +7316,11 @@ openai.APIStatusError: Error code: 410 - {'error': {'message': '[410]: {"type":"
 2026-11-04 20:04:04,774 INFO hermes_cli.mem_trim: memory trim: reason=messaging gateway housekeeping malloc_trim=1 rss_kib=332612->331904 rss_anon_kib=304160->303452 threads=19 duration_ms=280.5
 2026-11-04 20:05:05,009 INFO hermes_cli.mem_trim: memory trim: reason=messaging gateway housekeeping malloc_trim=1 rss_kib=332580->331872 rss_anon_kib=304128->303420 threads=14 duration_ms=182.0
 2026-11-04 20:06:05,242 INFO hermes_cli.mem_trim: memory trim: reason=messaging gateway housekeeping malloc_trim=1 rss_kib=332580->331828 rss_anon_kib=304128->303376 threads=15 duration_ms=129.1
+2026-11-04 20:07:05,420 INFO hermes_cli.mem_trim: memory trim: reason=messaging gateway housekeeping malloc_trim=1 rss_kib=332644->331820 rss_anon_kib=304192->303368 threads=15 duration_ms=135.4
+2026-11-04 20:08:05,617 INFO hermes_cli.mem_trim: memory trim: reason=messaging gateway housekeeping malloc_trim=1 rss_kib=332448->331848 rss_anon_kib=303996->303396 threads=14 duration_ms=130.0
+2026-11-04 20:09:05,786 INFO hermes_cli.mem_trim: memory trim: reason=messaging gateway housekeeping malloc_trim=1 rss_kib=332536->331852 rss_anon_kib=304084->303400 threads=14 duration_ms=129.8
+2026-11-04 20:10:05,956 INFO hermes_cli.mem_trim: memory trim: reason=messaging gateway housekeeping malloc_trim=1 rss_kib=332616->331856 rss_anon_kib=304164->303404 threads=16 duration_ms=124.0
+2026-11-04 20:11:06,157 INFO hermes_cli.mem_trim: memory trim: reason=messaging gateway housekeeping malloc_trim=1 rss_kib=332640->331880 rss_anon_kib=304188->303428 threads=16 duration_ms=152.1
+2026-11-04 20:12:06,339 INFO hermes_cli.mem_trim: memory trim: reason=messaging gateway housekeeping malloc_trim=1 rss_kib=332548->331900 rss_anon_kib=304096->303448 threads=16 duration_ms=147.9
+2026-11-04 20:13:06,551 INFO hermes_cli.mem_trim: memory trim: reason=messaging gateway housekeeping malloc_trim=1 rss_kib=332688->331900 rss_anon_kib=304236->303448 threads=14 duration_ms=156.9
+2026-11-04 20:14:06,813 INFO hermes_cli.mem_trim: memory trim: reason=messaging gateway housekeeping malloc_trim=1 rss_kib=332656->331976 rss_anon_kib=304204->303524 threads=14 duration_ms=221.2
