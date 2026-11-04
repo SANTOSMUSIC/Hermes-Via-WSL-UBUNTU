@@ -73,6 +73,15 @@ Thumbs.db
 *.temp
 .tmp/
 
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
 # Hermes specific
 .hermes-update-in-progress.lock
 .install_id.lock
