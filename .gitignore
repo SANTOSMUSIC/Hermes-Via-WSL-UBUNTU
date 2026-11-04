@@ -93,7 +93,7 @@ shared/
 team/
 plans/
 kanban/
-scripts/
+# scripts/ - DITRACK (helper scripts)
 skills/
 cron/
 memories/
