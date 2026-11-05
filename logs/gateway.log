@@ -447,3 +447,18 @@
 2026-11-05 13:08:48,271 INFO gateway.run: Gateway housekeeping started (interval=60s)
 2026-11-05 13:08:53,260 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
 2026-11-05 14:08:06,170 INFO gateway.run: curator: curator: auto: no changes; llm: skipped (consolidation off)
+2026-11-05 14:21:11,144 INFO gateway.run: kanban dispatcher [personal-notes]: spawned=5 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-11-05 14:22:11,253 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[25468]
+2026-11-05 14:22:11,426 INFO gateway.run: kanban dispatcher [personal-notes]: spawned=3 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-11-05 14:23:11,532 INFO gateway.run: kanban dispatcher: reaped 5 zombie worker(s), pids=[25464, 25465, 25466, 26670, 26672]
+2026-11-05 14:23:11,756 INFO gateway.run: kanban dispatcher [personal-notes]: spawned=4 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-11-05 14:24:11,837 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[25469]
+2026-11-05 14:25:11,948 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[27658]
+2026-11-05 14:25:12,048 INFO gateway.run: kanban dispatcher [personal-notes]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-11-05 14:25:48,636 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-11-05 14:26:12,223 INFO gateway.run: kanban dispatcher [personal-notes]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-11-05 14:26:18,662 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-11-05 14:27:12,305 INFO gateway.run: kanban dispatcher: reaped 2 zombie worker(s), pids=[27659, 27661]
+2026-11-05 14:27:12,416 INFO gateway.run: kanban dispatcher [personal-notes]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
+2026-11-05 14:28:12,527 INFO gateway.run: kanban dispatcher: reaped 2 zombie worker(s), pids=[30565, 26673]
+2026-11-05 14:29:12,754 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[31328]
