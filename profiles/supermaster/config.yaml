@@ -3,6 +3,8 @@ model:
   provider: custom
   base_url: http://localhost:20128/v1
   api_key: ${HERMES_CUSTOM_LOCALHOST_20128_API_KEY}
+  max_tokens: 8192
+  temperature: 0.3
 _config_version: 50
 telemetry:
   shared_metrics:
@@ -30,6 +32,13 @@ auxiliary:
     model_upgrade_enabled: false
   background_review:
     enabled: false
+  vision:
+    provider: custom
+    model: hermes-kuat
+    base_url: http://localhost:20128/v1
+    timeout: 30
+    download_timeout: 30
+    reasoning_effort: medium
 compression:
   threshold: 0.4
   target_ratio: 0.15

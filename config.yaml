@@ -76,6 +76,7 @@ model:
   api_key: ${HERMES_CUSTOM_LOCALHOST_20128_API_KEY}
 kanban:
   review_dispatch: true
+  failure_limit: 2
 
 # =============================================================================
 # Terminal Tool Configuration

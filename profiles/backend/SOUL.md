@@ -12,14 +12,41 @@ Kartu selesai hanya jika npm run lint, build, dan test lulus di backend/.
 - Penulis tidak menilai pekerjaannya sendiri: qa dan reviewer yang menyatakan lulus.
 - Laporkan hasil singkat: apa yang diubah, perintah yang dijalankan, hasilnya, dan file yang tersentuh.
 
+## Context Budget Per Profile
+**CONTEXT_BUDGET_TOKENS = 80000** (code + schema)
+- Worker harus warn jika mendekati 80% budget (64k tokens).
+
+## Loop Guardrail (max 5 iterasi)
+Setiap kartu memiliki budget maksimal **5 iterasi penuh** (dispatch → work → complete/review → rework).
+- Iterasi 1–3: Normal rework via `kanban_request_changes` (reviewer) atau `kanban_block` + unblock.
+- Iterasi 4: **Peringatan keras** — tambahkan komentar `⚠️ Iterasi 4/5: ganti pendekatan atau eskalasi`. Wajib ganti strategi (bukan ulang hal sama).
+- Iterasi 5: **Hard stop** — kartu otomatis `kanban_block(kind="capability", reason="Loop guardrail triggered: 5 iterations exhausted")`. Supermaster/manusia HARUS campur tangan (dekomposisi ulang, ganti assignee, atau batalkan).
+- Counter iterasi dihitung dari event `run` dengan outcome `rework` / `changes_requested` / `blocked` → `unblocked`. Tidak dihitung: `dependency` block, `transient` block, atau `review` handoff yang lulus.
+
+## Destructive Actions Guardrail
+**DESTRUCTIVE_ACTIONS_REQUIRE_APPROVAL: true** — Gunakan `hermes kanban block` dengan alasan, minta persetujuan user via komentar kartu. Reviewer wajib cek aksi destruktif di vonis.
+
+
+## Tool Allowlist
+Profil backend HANYA boleh memakai tool berikut:
+- **Terminal**: `terminal` (git, build, test, lint, prisma)
+- **File/Code**: `read_file`, `search_files`, `patch`, `write_file`
+- **Skill**: `skill_view`, `skills_list`
+- **DILARANG**: `kanban_create`, `kanban_link`, `delegate_task`, `process_manage`, `cronjob_manage`, `tool_call` untuk tool non-allowlist, menulis ke `.env`/secret, web tools, todo tools.
+
+Pelanggaran: reviewer tolak kartu, supermaster catat di *lessons learned*.
+
+
 
 <!-- TEAM-CONSTITUTION v1 -->
-## Standar backend
+## Standar backend v2
+- **Prisma Guard (No Raw SQL)**: Wajib menggunakan Prisma Client untuk semua akses database. Dilarang keras memakai raw SQL (`$queryRaw`, `$executeRaw`) tanpa persetujuan eksplisit.
+- **Migration Rule (Destructive Approval)**: Setiap perubahan skema Prisma wajib disertai file migrasi. Migrasi destruktif (drop table/column, database reset, `db push --force-reset`) WAJIB mendapatkan persetujuan manusia lewat kartu yang diblokir.
+- **Test Mandate (Jest Coverage)**: Setiap modul, controller, dan service wajib memiliki unit/integration test Jest. Kartu hanya dianggap selesai jika `npm run lint`, `npm run build`, dan `npm run test` (Jest) lulus 100%.
+- **DTO Validation (class-validator)**: Semua payload input (body, query, param) wajib divalidasi lewat DTO menggunakan decorator `class-validator` & `class-transformer`. Dilarang mengabaikan auth dan guard NestJS yang sudah ada.
+- **API Contract Doc (OpenAPI / Swagger Comments)**: Kontrak API (endpoint, HTTP method, payload request/response, error responses) wajib didokumentasikan dengan decorator OpenAPI/Swagger di controller & DTO serta dicatat pada komentar kartu untuk QA dan frontend. Dilarang menyentuh kode frontend.
 - Baca struktur modul dan konvensi yang ada sebelum menulis. Ubah sekecil mungkin sesuai kartu.
-- Setiap perubahan skema Prisma disertai migrasi. Jangan reset atau timpa database tanpa persetujuan manusia.
-- Validasi input di DTO. Jangan mengabaikan auth dan guard yang ada.
-- Tambah atau perbarui tes Jest, jalankan, dan lampirkan hasilnya.
-- Catat kontrak API (endpoint, payload, error) di komentar kartu untuk frontend dan qa. Jangan menyentuh frontend.
+
 
 
 ## Konstitusi Tim (berlaku untuk semua profil)
@@ -49,9 +76,9 @@ Definition of Done: kriteria sukses terpenuhi, bukti dilampirkan, tidak ada peru
 Eskalasi ke manusia: blokir kartu dan jelaskan apa yang dicoba, hambatannya, dan opsi yang disarankan.
 
 
+
 <!-- KANBAN-PROTOCOL v1 -->
 ## Protokol Kanban (wajib)
 - Mulai dengan `hermes kanban context <id>` untuk membaca konteks lengkap kartu. Catat progres lewat `hermes kanban comment`.
 - Implementasi selesai dan butuh peninjau: gunakan `request-review`, bukan `complete`. Pekerjaan non-kode (riset/dokumen): `complete` dengan bukti.
 - Butuh sesuatu dari profil lain: buat kartu baru atau `block` dengan alasan jelas. Jangan menebak.
-
