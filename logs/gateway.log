@@ -462,3 +462,5 @@
 2026-11-05 14:27:12,416 INFO gateway.run: kanban dispatcher [personal-notes]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
 2026-11-05 14:28:12,527 INFO gateway.run: kanban dispatcher: reaped 2 zombie worker(s), pids=[30565, 26673]
 2026-11-05 14:29:12,754 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[31328]
+2026-11-05 14:32:13,379 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[27660]
+2026-11-05 14:34:13,763 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[29635]
