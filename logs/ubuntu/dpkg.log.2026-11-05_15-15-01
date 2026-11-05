@@ -1,0 +1,36 @@
+2026-11-02 15:07:39 startup archives unpack
+2026-11-02 15:07:39 install python3-ruamel.yaml.clib:amd64 <none> 0.2.15+ds-1build1
+2026-11-02 15:07:39 status half-installed python3-ruamel.yaml.clib:amd64 0.2.15+ds-1build1
+2026-11-02 15:07:39 status unpacked python3-ruamel.yaml.clib:amd64 0.2.15+ds-1build1
+2026-11-02 15:07:39 install python3-ruamel.yaml:all <none> 0.18.10+ds-1build1
+2026-11-02 15:07:39 status half-installed python3-ruamel.yaml:all 0.18.10+ds-1build1
+2026-11-02 15:07:39 status unpacked python3-ruamel.yaml:all 0.18.10+ds-1build1
+2026-11-02 15:07:39 startup packages configure
+2026-11-02 15:07:39 configure python3-ruamel.yaml.clib:amd64 0.2.15+ds-1build1 <none>
+2026-11-02 15:07:39 status unpacked python3-ruamel.yaml.clib:amd64 0.2.15+ds-1build1
+2026-11-02 15:07:39 status half-configured python3-ruamel.yaml.clib:amd64 0.2.15+ds-1build1
+2026-11-02 15:07:39 status installed python3-ruamel.yaml.clib:amd64 0.2.15+ds-1build1
+2026-11-02 15:07:39 configure python3-ruamel.yaml:all 0.18.10+ds-1build1 <none>
+2026-11-02 15:07:39 status unpacked python3-ruamel.yaml:all 0.18.10+ds-1build1
+2026-11-02 15:07:39 status half-configured python3-ruamel.yaml:all 0.18.10+ds-1build1
+2026-11-02 15:07:40 status installed python3-ruamel.yaml:all 0.18.10+ds-1build1
+2026-11-05 14:00:38 startup archives unpack
+2026-11-05 14:00:38 upgrade libpcre2-8-0:amd64 10.46-1build1 10.46-1ubuntu0.1
+2026-11-05 14:00:38 status triggers-pending libc-bin:amd64 2.43-2ubuntu2.4
+2026-11-05 14:00:38 status half-configured libpcre2-8-0:amd64 10.46-1build1
+2026-11-05 14:00:38 status unpacked libpcre2-8-0:amd64 10.46-1build1
+2026-11-05 14:00:38 status half-installed libpcre2-8-0:amd64 10.46-1build1
+2026-11-05 14:00:38 status triggers-pending libselinux1:amd64 3.9-4build1
+2026-11-05 14:00:38 status unpacked libpcre2-8-0:amd64 10.46-1ubuntu0.1
+2026-11-05 14:00:39 startup packages configure
+2026-11-05 14:00:39 configure libpcre2-8-0:amd64 10.46-1ubuntu0.1 <none>
+2026-11-05 14:00:39 status unpacked libpcre2-8-0:amd64 10.46-1ubuntu0.1
+2026-11-05 14:00:39 status half-configured libpcre2-8-0:amd64 10.46-1ubuntu0.1
+2026-11-05 14:00:39 status installed libpcre2-8-0:amd64 10.46-1ubuntu0.1
+2026-11-05 14:00:39 startup packages configure
+2026-11-05 14:00:39 trigproc libselinux1:amd64 3.9-4build1 <none>
+2026-11-05 14:00:39 status half-configured libselinux1:amd64 3.9-4build1
+2026-11-05 14:00:39 status installed libselinux1:amd64 3.9-4build1
+2026-11-05 14:00:39 trigproc libc-bin:amd64 2.43-2ubuntu2.4 <none>
+2026-11-05 14:00:39 status half-configured libc-bin:amd64 2.43-2ubuntu2.4
+2026-11-05 14:00:39 status installed libc-bin:amd64 2.43-2ubuntu2.4
