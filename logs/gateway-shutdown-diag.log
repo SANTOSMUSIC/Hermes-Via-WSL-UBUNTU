@@ -582,3 +582,94 @@ hermes(114964)-+-timeout(147080)---bash(147082)-+-head(147090)
 [Tue Nov  3 14:19:01 2026] hv_balloon: Max. dynamic memory size: 3072 MB
 [Tue Nov  3 15:17:05 2026] WSL (88) ERROR: CheckConnection: getaddrinfo() failed: -5
 === end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-11-04T13:58:20Z
+--- ps (top 60 by cpu, comm only) ---
+    PID    PPID USER     %CPU %MEM STAT COMMAND
+ 138023  138021 rafi_an+  100  0.1 R    ps
+ 138025  138021 rafi_an+ 25.0  0.2 S    head
+ 138019     305 rafi_an+ 21.4  0.2 Ss   timeout
+    305     243 rafi_an+  1.4 11.1 Rsl  hermes
+    281       1 mysql     0.8 16.7 Ssl  mysqld
+ 137950      97 root      0.2  0.2 S    (udev-worker)
+  24311   24149 rafi_an+  0.2  2.8 Sl   MainThread
+ 138024  138021 rafi_an+  0.0  0.0 S    bash
+ 138021  138019 rafi_an+  0.0  0.1 S    bash
+ 137953      97 root      0.0  0.2 S    (udev-worker)
+ 137952      97 root      0.0  0.2 S    (udev-worker)
+ 137951      97 root      0.0  0.2 S    (udev-worker)
+ 137949      97 root      0.0  0.2 S    (udev-worker)
+ 137948      97 root      0.0  0.2 S    (udev-worker)
+ 137913      97 root      0.0  0.2 S    (udev-worker)
+ 137912      97 root      0.0  0.2 S    (udev-worker)
+ 137911      97 root      0.0  0.2 S    (udev-worker)
+ 137910      97 root      0.0  0.2 S    (udev-worker)
+ 137909      97 root      0.0  0.2 S    (udev-worker)
+ 137908      97 root      0.0  0.2 S    (udev-worker)
+ 137907      97 root      0.0  0.2 S    (udev-worker)
+ 137906      97 root      0.0  0.2 S    (udev-worker)
+ 137905      97 root      0.0  0.2 S    (udev-worker)
+ 137904      97 root      0.0  0.2 S    (udev-worker)
+ 137903      97 root      0.0  0.2 S    (udev-worker)
+ 137902      97 root      0.0  0.2 S    (udev-worker)
+ 136425      97 root      0.0  0.2 S    (udev-worker)
+ 136424      97 root      0.0  0.2 S    (udev-worker)
+ 102189  102188 rafi_an+  0.0  5.1 Sl   MainThread
+ 102188  102177 rafi_an+  0.0  0.0 S    sh
+ 102177  102023 rafi_an+  0.0  2.1 Sl   npm run dev
+ 102023       1 rafi_an+  0.0  0.2 Ss   bash
+  58598       1 rafi_an+  0.0  5.3 Sl   MainThread
+  36326       1 rafi_an+  0.0  3.7 Sl   MainThread
+  24149       1 rafi_an+  0.0  0.2 Ss   bash
+   7015    7014 root      0.0  0.2 T+   mysql
+   7014    7012 root      0.0  0.0 Ss   sudo
+   7012       1 root      0.0  0.1 S    sudo
+    424       2 root      0.0  0.0 Zs   login
+    259     243 rafi_an+  0.0  0.1 S    (sd-pam)
+    243       1 rafi_an+  0.0  0.4 Ss   systemd
+    157       1 root      0.0  0.3 Ss   systemd-logind
+    137       1 message+  0.0  0.1 Ss   dbus-daemon
+     97       1 root      0.0  0.3 Ss   systemd-udevd
+     86       1 systemd+  0.0  0.4 Ss   systemd-resolve
+     45       1 root      0.0  0.5 S<s  systemd-journal
+      8       2 root      0.0  0.0 Z+   init
+      3       2 root      0.0  0.0 S+   init-watcher
+      2       1 root      0.0  0.0 Sl+  init-systemd(Ub
+      1       0 root      0.0  0.5 Ss   systemd
+--- pstree of self ---
+hermes(305)-+-timeout(138019)---bash(138021)-+-head(138029)
+            |                                `-pstree(138028)
+            |-{hermes}(1005)
+            |-{hermes}(1150)
+            |-{hermes}(1234)
+            |-{hermes}(1235)
+            |-{hermes}(1449)
+            |-{hermes}(1513)
+            |-{hermes}(1612)
+            |-{hermes}(6276)
+            `-{hermes}(138020)
+--- loadavg ---
+0.25 0.12 0.06 1/274 138032
+--- recent dmesg (oom/killed) ---
+                            mapped:53111 shmem:1664 pagetables:4849
+                            sec_pagetables:0 bounce:0
+                            kernel_misc_reclaimable:0
+                            free:11634 free_pcp:0 free_cma:0
+[Wed Nov  4 19:47:45 2026] Node 0 active_anon:26656kB inactive_anon:1578996kB active_file:656748kB inactive_file:294112kB unevictable:0kB isolated(anon):0kB isolated(file):156kB mapped:212444kB dirty:356kB writeback:0kB shmem:6656kB shmem_thp:0kB shmem_pmdmapped:0kB anon_thp:63488kB kernel_stack:5328kB pagetables:19396kB sec_pagetables:0kB all_unreclaimable? no Balloon:0kB
+[Wed Nov  4 19:47:45 2026] Node 0 DMA32 free:46536kB boost:0kB min:22528kB low:28160kB high:33792kB reserved_highatomic:2048KB free_highatomic:1820KB active_anon:26656kB inactive_anon:1578996kB active_file:656748kB inactive_file:294112kB unevictable:0kB writepending:356kB zspages:0kB present:3144316kB managed:2980896kB mlocked:0kB bounce:0kB free_pcp:0kB local_pcp:0kB free_cma:0kB
+[Wed Nov  4 19:47:45 2026] lowmem_reserve[]: 0 0 0 0
+[Wed Nov  4 19:47:45 2026] Node 0 DMA32: 1470*4kB (UMEH) 626*8kB (UMEH) 396*16kB (UMEH) 423*32kB (UMEH) 169*64kB (UMEH) 36*128kB (UME) 2*256kB (EH) 0*512kB 0*1024kB 0*2048kB 0*4096kB = 46696kB
+[Wed Nov  4 19:47:45 2026] Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=1048576kB
+[Wed Nov  4 19:47:45 2026] Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=2048kB
+[Wed Nov  4 19:47:45 2026] 239533 total pagecache pages
+[Wed Nov  4 19:47:45 2026] 125 pages in swap cache
+[Wed Nov  4 19:47:45 2026] Free swap  = 2077400kB
+[Wed Nov  4 19:47:45 2026] Total swap = 2097152kB
+[Wed Nov  4 19:47:45 2026] 786079 pages RAM
+[Wed Nov  4 19:47:45 2026] 0 pages HighMem/MovableOnly
+[Wed Nov  4 19:47:45 2026] 40855 pages reserved
+[Wed Nov  4 19:47:45 2026] 0 pages hwpoisoned
+[Wed Nov  4 20:12:19 2026] WSL (89) ERROR: CheckConnection: getaddrinfo() failed: -5
+[Wed Nov  4 20:44:39 2026] WSL (94) ERROR: No buffer space available @telemetry.cpp:190 (StartTelemetryAgent)
+=== end ===
