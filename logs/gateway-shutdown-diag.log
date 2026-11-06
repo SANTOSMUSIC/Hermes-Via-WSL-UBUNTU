@@ -673,3 +673,4 @@ hermes(305)-+-timeout(138019)---bash(138021)-+-head(138029)
 [Wed Nov  4 20:12:19 2026] WSL (89) ERROR: CheckConnection: getaddrinfo() failed: -5
 [Wed Nov  4 20:44:39 2026] WSL (94) ERROR: No buffer space available @telemetry.cpp:190 (StartTelemetryAgent)
 === end ===
+timeout: failed to execute process: Input/output error (os error 5)
