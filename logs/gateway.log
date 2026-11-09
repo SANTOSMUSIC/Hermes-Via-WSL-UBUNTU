@@ -519,3 +519,20 @@
 2026-11-09 14:51:14,352 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[119888]
 2026-11-09 14:51:14,751 INFO gateway.run: kanban dispatcher [personal-notes]: spawned=1 reclaimed=0 crashed=0 timed_out=0 promoted=0 auto_blocked=0
 2026-11-09 14:53:22,641 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[122119]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 2026-11-10 00:50:31,222 INFO gateway.control_socket: Gateway control socket listening at /home/rafi_ansf/.hermes/gateway.sock
+2026-11-10 00:50:32,723 INFO gateway.run: Starting Hermes Gateway...
+2026-11-10 00:50:32,725 INFO gateway.run: Session storage: /home/rafi_ansf/.hermes/sessions
+2026-11-10 00:50:32,800 INFO gateway.run: Agent budget: max_iterations=150 (agent.max_turns from config.yaml, else the HERMES_MAX_ITERATIONS bridge)
+2026-11-10 00:50:32,800 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-10 00:50:32,954 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-10 00:50:36,681 WARNING gateway.run: No messaging platforms enabled.
+2026-11-10 00:50:36,681 INFO gateway.run: Gateway will continue running for cron job execution.
+2026-11-10 00:50:38,160 INFO gateway.run: Channel directory built: 0 target(s)
+2026-11-10 00:50:38,748 INFO gateway.run: Model context warmed: hermes-kode -> 262144 tokens (config)
+2026-11-10 00:50:38,748 INFO gateway.run: Turn machinery warmed in 5.8s (21 tool schema(s) materialized)
+2026-11-10 00:50:38,759 INFO gateway.run: Press Ctrl+C to stop
+2026-11-10 00:50:38,761 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/home/rafi_ansf/.hermes/kanban/.dispatcher.lock)
+2026-11-10 00:50:38,763 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=5 (set kanban.max_in_progress in config.yaml to override)
+2026-11-10 00:50:38,765 INFO gateway.run: Cron scheduler will tick 8 profile(s): ['default', 'backend', 'frontend', 'qa', 'researcher', 'reviewer', 'supermaster', 'writer']
+2026-11-10 00:50:38,774 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-10 00:50:43,763 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
