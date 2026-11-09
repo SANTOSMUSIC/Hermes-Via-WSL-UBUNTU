@@ -512,3 +512,6 @@
 2026-11-09 08:41:48,592 INFO gateway.run: Cron scheduler will tick 8 profile(s): ['default', 'backend', 'frontend', 'qa', 'researcher', 'reviewer', 'supermaster', 'writer']
 2026-11-09 08:41:48,602 INFO gateway.run: Gateway housekeeping started (interval=60s)
 2026-11-09 08:41:53,591 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-09 13:54:27,245 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-11-09 13:58:00,656 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
+2026-11-09 13:59:30,725 INFO gateway.run_profile_reconcile: [MULTIPLEX] Re-scanned profile 'supermaster' after config/.env change (0 adapter(s) connected)
