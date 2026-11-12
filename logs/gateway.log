@@ -564,3 +564,4 @@
 2026-11-12 23:33:57,345 INFO gateway.run: Cron scheduler will tick 8 profile(s): ['default', 'backend', 'frontend', 'qa', 'researcher', 'reviewer', 'supermaster', 'writer']
 2026-11-12 23:33:57,354 INFO gateway.run: Gateway housekeeping started (interval=60s)
 2026-11-12 23:34:02,343 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-13 00:33:08,204 INFO gateway.run: curator: curator: auto: no changes; llm: skipped (consolidation off)
