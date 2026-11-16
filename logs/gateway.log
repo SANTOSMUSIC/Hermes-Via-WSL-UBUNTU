@@ -593,3 +593,30 @@
 2026-11-13 19:54:44,724 INFO gateway.run: Cron scheduler will tick 8 profile(s): ['default', 'backend', 'frontend', 'qa', 'researcher', 'reviewer', 'supermaster', 'writer']
 2026-11-13 19:54:44,744 INFO gateway.run: Gateway housekeeping started (interval=60s)
 2026-11-13 19:54:49,719 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-11-13 20:35:57,269 INFO gateway.run: Received SIGTERM as a planned gateway stop — exiting cleanly
+2026-11-13 20:35:57,269 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=274 parent_name=systemd loadavg_1m=0.07
+2026-11-13 20:35:57,290 INFO gateway.run: Stopping gateway...
+2026-11-13 20:35:57,292 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.00s
+2026-11-13 20:35:57,294 INFO gateway.run: Shutdown phase: drain done at +0.00s (drain took 0.00s, timed_out=False, active_at_start=0, active_now=0, cron_at_start=0, cron_now=0, api_at_start=0, api_now=0, deferred_at_start=0, deferred_now=0)
+2026-11-13 20:35:57,294 INFO gateway.run: Shutdown phase: all adapters disconnected at +0.00s
+2026-11-13 20:35:57,304 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +0.01s
+2026-11-13 20:35:57,305 INFO gateway.run: Shutdown phase: executor quiesced at +0.01s
+2026-11-13 20:35:57,305 INFO gateway.run: Gateway housekeeping stopped
+2026-11-13 20:35:57,404 INFO gateway.run: Shutdown phase: SessionDB close done at +0.11s
+2026-11-16 08:50:59,853 INFO gateway.control_socket: Gateway control socket listening at /home/rafi_ansf/.hermes/gateway.sock
+2026-11-16 08:51:02,519 INFO gateway.run: Starting Hermes Gateway...
+2026-11-16 08:51:02,520 INFO gateway.run: Session storage: /home/rafi_ansf/.hermes/sessions
+2026-11-16 08:51:02,644 INFO gateway.run: Agent budget: max_iterations=150 (agent.max_turns from config.yaml, else the HERMES_MAX_ITERATIONS bridge)
+2026-11-16 08:51:02,645 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-11-16 08:51:02,887 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-11-16 08:51:08,776 WARNING gateway.run: No messaging platforms enabled.
+2026-11-16 08:51:08,779 INFO gateway.run: Gateway will continue running for cron job execution.
+2026-11-16 08:51:09,802 INFO gateway.run: Model context warmed: hermes-kode -> 262144 tokens (config)
+2026-11-16 08:51:09,805 INFO gateway.run: Turn machinery warmed in 6.9s (21 tool schema(s) materialized)
+2026-11-16 08:51:10,079 INFO gateway.run: Channel directory built: 0 target(s)
+2026-11-16 08:51:10,108 INFO gateway.run: Press Ctrl+C to stop
+2026-11-16 08:51:10,112 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/home/rafi_ansf/.hermes/kanban/.dispatcher.lock)
+2026-11-16 08:51:10,113 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=5 (set kanban.max_in_progress in config.yaml to override)
+2026-11-16 08:51:10,118 INFO gateway.run: Cron scheduler will tick 8 profile(s): ['default', 'backend', 'frontend', 'qa', 'researcher', 'reviewer', 'supermaster', 'writer']
+2026-11-16 08:51:10,133 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-11-16 08:51:15,116 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
