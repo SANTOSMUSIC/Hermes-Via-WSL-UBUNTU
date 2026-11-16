@@ -1,0 +1,15 @@
+{
+  "id": "proc_4d223faae937",
+  "command": "cd /home/rafi_ansf/projects/Nebeng-Reborn-fix/Nebeng-Backend && node dist/main.js > /tmp/backend.log 2>&1",
+  "cwd": "/home/rafi_ansf/projects/Nebeng-Reborn-fix/Nebeng-Backend",
+  "task_id": "default",
+  "owner_task_id": "20261116_085121_1ced00",
+  "session_key": "20261116_085121_1ced00",
+  "parent_session_id": "20261116_085121_1ced00",
+  "started_at": 1794802729.9134455,
+  "exit_code": 143,
+  "completion_reason": "exited",
+  "termination_source": "",
+  "notify_on_complete": true,
+  "output": ""
+}
